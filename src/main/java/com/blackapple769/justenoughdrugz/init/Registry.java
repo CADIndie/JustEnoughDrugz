@@ -2,7 +2,7 @@ package com.blackapple769.justenoughdrugz.init;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
 import com.blackapple769.justenoughdrugz.item.BluntItem;
-import com.blackapple769.justenoughdrugz.item.EdibleItem;
+import com.blackapple769.justenoughdrugz.item.Food;
 import com.blackapple769.justenoughdrugz.util.CreativeTabSorter;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -36,7 +36,7 @@ public class Registry {
     public static final RegistryObject<Item> BAGGIE = ITEMS.register("baggie", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> BLUNT = ITEMS.register("blunt", () -> new BluntItem(new Item.Properties().tab(ITEM_GROUP).durability(5)));
     public static final RegistryObject<Item> WEED_BAGGIE = ITEMS.register("weed_baggie", () -> new Item(new Item.Properties().tab(ITEM_GROUP).craftRemainder(BAGGIE.get())));
-    public static final RegistryObject<Item> WEED_EDIBLE = ITEMS.register("weed_edible", () -> new EdibleItem(new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> WEED_EDIBLE = ITEMS.register("weed_edible", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Food.WEED_EDIBLE)));
 
     public static final RegistryObject<Block> WEED_PLANT = BLOCKS.register("weed_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
