@@ -1,12 +1,12 @@
 {
   "item.justenoughdrugz.twenty_dollar_bill": "20 Dollars",
   "itemGroup.JustEnoughDrugz": "Just Enough Drugz",
-  "item.justenoughdrugz.weed_seed": "Weed Seeds",
-  "item.justenoughdrugz.weed": "Weed",
+  "item.justenoughdrugz.weed_seed": "Cannabis Seeds",
+  "item.justenoughdrugz.weed": "Cannabis",
   "item.justenoughdrugz.baggie": "Empty Baggie",
-  "item.justenoughdrugz.blunt": "Weed Blunt",
-  "item.justenoughdrugz.weed_baggie": "Baggie of Weed",
-  "block.justenoughdrugz.weed_plant": "Weed Seeds",
+  "item.justenoughdrugz.blunt": "Cannabis Blunt",
+  "item.justenoughdrugz.weed_baggie": "Baggie of Cannabis",
+  "block.justenoughdrugz.weed_plant": "Cannabis Seeds",
   "item.justenoughdrugz.weed_edible": "Cookie"
 
 }
