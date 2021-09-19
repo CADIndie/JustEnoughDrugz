@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X#",
+    "a  ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "X": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "a": {
+      "item": "justenoughdrugz:weed_baggie"
+    }
+  },
+  "result": {
+    "item": "justenoughdrugz:weed_edible",
+    "count": 8
+  }
+}

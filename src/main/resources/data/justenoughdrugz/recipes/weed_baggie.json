@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:baggie"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:weed_baggie"
+  }
+}

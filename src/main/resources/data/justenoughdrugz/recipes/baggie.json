@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxa",
+    "   ",
+    "   "
+  ],
+  "key":
+  {
+    "a":
+    {
+      "tag": "minecraft:logs"
+    },
+    "x":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:baggie",
+    "count": 4
+  }
+}
