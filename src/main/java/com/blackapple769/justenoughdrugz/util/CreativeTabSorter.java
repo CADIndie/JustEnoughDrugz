@@ -1,6 +1,6 @@
 package com.blackapple769.justenoughdrugz.util;
 
-import com.blackapple769.justenoughdrugz.init.Registry;
+import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -28,7 +28,7 @@ public class CreativeTabSorter extends CreativeModeTab {
     @Override
     public void fillItemList(@NotNull NonNullList<ItemStack> itemStack) {
         List<Item> items = new ArrayList<>(1);
-        Registry.ITEMS.getEntries().stream().map(RegistryObject::get).forEach(items::add);
+        RegistryHandler.ITEMS.getEntries().stream().map(RegistryObject::get).forEach(items::add);
 
         for (Item item : items) {
             item.fillItemCategory(this, itemStack);
@@ -41,7 +41,7 @@ public class CreativeTabSorter extends CreativeModeTab {
      */
     @Override
     public @NotNull ItemStack makeIcon() {
-        return new ItemStack(Registry.TWENTY_DOLLAR_BILL.get());
+        return new ItemStack(RegistryHandler.TWENTY_DOLLAR_BILL.get());
     }
 
 }

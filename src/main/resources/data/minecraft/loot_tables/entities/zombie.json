@@ -27,6 +27,31 @@
             }
           ],
           "name": "minecraft:rotten_flesh"
+
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 2.0
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              }
+            }
+          ],
+          "name": "justenoughdrugz:weed_seed"
+
         }
       ]
     },
@@ -42,10 +67,7 @@
           "type": "minecraft:item",
           "name": "minecraft:carrot"
         },
-        {
-          "type": "minecraft:item",
-          "name": "justenoughdrugz:weed_seeds"
-        },
+
         {
           "type": "minecraft:item",
           "functions": [

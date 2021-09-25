@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "justenoughdrugz:coca"
+  },
+  "result": "justenoughdrugz:dried_coca",
+  "experience": 0.50,
+  "cookingtime": 50
+}

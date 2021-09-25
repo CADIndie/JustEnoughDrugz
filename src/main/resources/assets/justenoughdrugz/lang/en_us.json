@@ -7,6 +7,14 @@
   "item.justenoughdrugz.blunt": "Cannabis Blunt",
   "item.justenoughdrugz.weed_baggie": "Baggie of Cannabis",
   "block.justenoughdrugz.weed_plant": "Cannabis Seeds",
-  "item.justenoughdrugz.weed_edible": "Cookie"
-
+  "item.justenoughdrugz.weed_edible": "Cookie",
+  "item.justenoughdrugz.cocaine_baggie": "Baggie of Cocaine",
+  "item.justenoughdrugz.gasoline": "Gasoline",
+  "item.justenoughdrugz.unrefined_oil": "Unrefined Oil",
+  "block.justenoughdrugz.oil_ore": "Oil Ore",
+  "item.justenoughdrugz.refined_oil": "Refined Oil",
+  "item.justenoughdrugz.coca": "Coca Leaf",
+  "block.justenoughdrugz.coca_plant": "Coca Seeds",
+  "item.justenoughdrugz.coca_seeds": "Coca Seeds",
+  "item.justenoughdrugz.dried_coca": "Dried Coca Leaf"
 }

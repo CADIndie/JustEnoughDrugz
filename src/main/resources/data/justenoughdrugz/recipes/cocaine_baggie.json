@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxa",
+    "xxx",
+    "F  "
+  ],
+  "key":
+  {
+    "a":
+    {
+      "item": "justenoughdrugz:baggie"
+    },
+    "x":
+    {
+      "item": "justenoughdrugz:dried_coca"
+    },
+    "F":
+    {
+      "item": "justenoughdrugz:gasoline"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:cocaine_baggie",
+    "count": 1
+  }
+}

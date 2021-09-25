@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    "xx ",
+    "   "
+  ],
+  "key":
+  {
+
+    "x":
+    {
+      "item": "justenoughdrugz:unrefined_oil"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:refined_oil",
+    "count": 1
+  }
+}

@@ -1,7 +1,7 @@
 package com.blackapple769.justenoughdrugz.client;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
-import com.blackapple769.justenoughdrugz.init.Registry;
+import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -22,7 +22,8 @@ public class ClientModEventSubscriber {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         // Register block renderers
-        ItemBlockRenderTypes.setRenderLayer(Registry.WEED_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RegistryHandler.WEED_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RegistryHandler.COCA_PLANT.get(), RenderType.cutout());
 
 
 
