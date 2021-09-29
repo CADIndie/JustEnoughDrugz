@@ -51,7 +51,6 @@
             }
           ],
           "name": "justenoughdrugz:weed_seed"
-
         }
       ]
     },
@@ -63,6 +62,7 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot"
         },
+
         {
           "type": "minecraft:item",
           "name": "minecraft:carrot"
@@ -98,6 +98,7 @@
           "chance": 0.025,
           "looting_multiplier": 0.01
         }
+
       ]
 
 

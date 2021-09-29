@@ -13,8 +13,17 @@
   "item.justenoughdrugz.unrefined_oil": "Unrefined Oil",
   "block.justenoughdrugz.oil_ore": "Oil Ore",
   "item.justenoughdrugz.refined_oil": "Refined Oil",
-  "item.justenoughdrugz.coca": "Coca Leaf",
+  "item.justenoughdrugz.coca": "Coca Leaves",
   "block.justenoughdrugz.coca_plant": "Coca Seeds",
   "item.justenoughdrugz.coca_seeds": "Coca Seeds",
-  "item.justenoughdrugz.dried_coca": "Dried Coca Leaf"
+  "item.justenoughdrugz.dried_coca": "Dried Coca Leaves",
+  "block.justenoughdrugz.sodium_bicarbonate_ore": "Sodium Bicarbonate ore",
+  "item.justenoughdrugz.sodium_bicarbonate": "Sodium Bicarbonate",
+  "item.justenoughdrugz.pipe": "Pipe",
+  "item.justenoughdrugz.crack_pipe": "Crack Pipe",
+  "item.justenoughdrugz.crack": "Crack Cocaine",
+  "item.justenoughdrugz.marijuana_pipe": "Weed Pipe",
+  "item.justenoughdrugz.golden_marijuana_pipe": "Golden Weed Pipe",
+  "item.justenoughdrugz.golden_crack_pipe": "Golden Crack Pipe",
+  "item.justenoughdrugz.golden_pipe": "Golden Pipe"
 }

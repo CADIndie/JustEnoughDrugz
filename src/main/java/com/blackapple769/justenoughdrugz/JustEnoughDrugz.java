@@ -56,6 +56,11 @@ public class JustEnoughDrugz {
                     .add(() -> OreGeneratorHandler.ORE_OIL_CONFIG);
 
         }
+        if (event.getCategory() == Biome.BiomeCategory.OCEAN) {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES)
+                    .add(() -> OreGeneratorHandler.SODIUM_BICARBONATE_ORE_CONFIG);
+
+        }
     }
 
 }

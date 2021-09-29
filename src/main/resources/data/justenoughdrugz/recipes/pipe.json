@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    "   ",
+    "   "
+  ],
+  "key":
+  {
+
+    "x":
+    {
+      "item": "minecraft:glass"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:pipe",
+    "count": 3
+  }
+}
