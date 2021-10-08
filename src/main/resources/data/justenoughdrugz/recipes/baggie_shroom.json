@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:golden_cap_shroom"
+    },
+    {
+      "item": "justenoughdrugz:golden_cap_shroom"
+    },
+    {
+      "item": "justenoughdrugz:golden_cap_shroom"
+    },
+    {
+      "item": "justenoughdrugz:golden_cap_shroom"
+    },
+    {
+      "item": "justenoughdrugz:golden_cap_shroom"
+    },
+    {
+      "item": "justenoughdrugz:baggie"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:baggie_shrooms"
+  }
+}

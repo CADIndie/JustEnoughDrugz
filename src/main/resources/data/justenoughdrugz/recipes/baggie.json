@@ -2,19 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "xxa",
-    "   ",
+    "xx ",
+    "xx ",
     "   "
   ],
   "key":
   {
-    "a":
-    {
-      "tag": "minecraft:logs"
-    },
+
     "x":
     {
-      "item": "minecraft:string"
+      "item": "justenoughdrugz:plastic"
     }
   },
   "result":

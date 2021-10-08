@@ -61,6 +61,12 @@ public class JustEnoughDrugz {
                     .add(() -> OreGeneratorHandler.SODIUM_BICARBONATE_ORE_CONFIG);
 
         }
+        if (event.getCategory() == Biome.BiomeCategory.SWAMP) {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION)
+                    .add(() -> ModConfiguredFeatures.PATCH_GOLDEN_CAP_MUSHROOM);
+
+        }
+
     }
 
 }

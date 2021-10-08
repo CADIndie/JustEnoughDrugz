@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:baggie_shrooms"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:golden_cap_shroom",
+    "count": 5
+  }
+}

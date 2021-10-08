@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "justenoughdrugz:item/golden_cap_shroom"
+  }
+}

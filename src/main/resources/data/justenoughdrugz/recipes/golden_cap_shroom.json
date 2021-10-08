@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "justenoughdrugz:golden_cap_mushroom_item"
+  },
+  "result": "justenoughdrugz:golden_cap_shroom",
+  "experience": 0.50,
+  "cookingtime": 50
+}
