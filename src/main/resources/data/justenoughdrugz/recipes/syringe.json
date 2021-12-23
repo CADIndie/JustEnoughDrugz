@@ -1,0 +1,26 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern":
+[
+"  a",
+" x ",
+"   "
+],
+"key":
+{
+"a":
+{
+"item": "minecraft:iron_nugget"
+},
+"x":
+{
+"item": "minecraft:glass_pane"
+}
+
+},
+"result":
+{
+"item": "justenoughdrugz:empty_syringe",
+"count": 1
+}
+}
