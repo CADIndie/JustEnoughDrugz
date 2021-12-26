@@ -1,16 +1,6 @@
 package com.blackapple769.justenoughdrugz;
 
-import com.blackapple769.justenoughdrugz.init.RegistryHandler;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.core.Registry;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
-import net.minecraft.world.level.levelgen.heightproviders.BiasedToBottomHeight;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 
 public class OreGeneratorHandler {
@@ -22,6 +12,8 @@ public class OreGeneratorHandler {
      * Initialize ore generation setup.
      * @param event the <code>FMLCommonSetupEvent</code> instance
      */
+
+    /**
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
 
@@ -41,5 +33,6 @@ public class OreGeneratorHandler {
                 ).range(new RangeDecoratorConfiguration(BiasedToBottomHeight.of(VerticalAnchor.bottom(), VerticalAnchor.belowTop(20), 20))).count(10)
         );
     }
+    */
 }
 
