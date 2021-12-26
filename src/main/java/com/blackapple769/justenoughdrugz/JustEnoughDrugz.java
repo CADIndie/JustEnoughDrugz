@@ -1,10 +1,7 @@
 package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,9 +43,13 @@ public class JustEnoughDrugz {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        OreGeneratorHandler.init(event);
+
+        //OreGeneratorHandler.init(event);
     }
+
     public void onBiomeLoading(BiomeLoadingEvent event) {
+        // TODO: remove comments later
+        /**
         // Biome modifications
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
         if (event.getCategory() != Biome.BiomeCategory.NETHER || event.getCategory() != Biome.BiomeCategory.THEEND) {
@@ -66,7 +67,7 @@ public class JustEnoughDrugz {
                     .add(() -> ModConfiguredFeatures.PATCH_GOLDEN_CAP_MUSHROOM);
 
         }
-
+         **/
     }
 
 }
