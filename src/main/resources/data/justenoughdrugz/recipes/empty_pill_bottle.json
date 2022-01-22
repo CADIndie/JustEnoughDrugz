@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:plastic"
+    }
+
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:empty_pill_bottle"
+  }
+}

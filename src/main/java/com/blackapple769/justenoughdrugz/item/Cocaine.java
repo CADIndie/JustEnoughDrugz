@@ -27,11 +27,11 @@ public class Cocaine extends Item {
 
 
 
-        playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0, false, true));
+        playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0, false, true));
         playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 1, false, true));
         playerIn.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 2, false, true));
         playerIn.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.HUNGER, 600, 0, false, true));
+
 
 
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());

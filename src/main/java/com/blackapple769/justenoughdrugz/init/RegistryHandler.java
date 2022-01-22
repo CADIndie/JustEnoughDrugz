@@ -3,6 +3,8 @@ package com.blackapple769.justenoughdrugz.init;
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
 import com.blackapple769.justenoughdrugz.item.*;
 import com.blackapple769.justenoughdrugz.potion.MorphineEffect;
+import com.blackapple769.justenoughdrugz.potion.PercocetsEffect;
+
 import com.blackapple769.justenoughdrugz.util.CreativeTabSorter;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -29,11 +31,15 @@ public class RegistryHandler {
         ITEMS.register(modEventBus);
         BLOCKS.register(modEventBus);
         EFFECTS.register(modEventBus);
-
     }
 
     public static final CreativeModeTab ITEM_GROUP = new CreativeTabSorter("JustEnoughDrugz");
+    public static final RegistryObject<Item> ONE_DOLLAR_BILL = ITEMS.register("one_dollar_bill", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> FIVE_DOLLAR_BILL = ITEMS.register("five_dollar_bill", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> TEN_DOLLAR_BILL = ITEMS.register("ten_dollar_bill", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> TWENTY_DOLLAR_BILL = ITEMS.register("twenty_dollar_bill", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> FIFTY_DOLLAR_BILL = ITEMS.register("fifty_dollar_bill", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> HUNDRED_DOLLAR_BILL = ITEMS.register("hundred_dollar_bill", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> WEED = ITEMS.register("weed", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> BAGGIE = ITEMS.register("baggie", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> BLUNT = ITEMS.register("blunt", () -> new BluntItem(new Item.Properties().tab(ITEM_GROUP).durability(5)));
@@ -59,9 +65,14 @@ public class RegistryHandler {
     public static final RegistryObject<Item> EMPTY_SYRINGE = ITEMS.register("empty_syringe", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> HEROINE_SYRINGE = ITEMS.register("heroin_syringe", () -> new Heroin(new Item.Properties().tab(ITEM_GROUP)));
 
+    public static final RegistryObject<Item> EMPTY_PILL_BOTTLE = ITEMS.register("empty_pill_bottle", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> PERCS_PILL_BOTTLE = ITEMS.register("percs_pill_bottle", () -> new Percocets(new Item.Properties().tab(ITEM_GROUP).durability(4)));
+
+
     public static final RegistryObject<Block> WEED_PLANT = BLOCKS.register("weed_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
     public static final RegistryObject<Block> COCA_PLANT = BLOCKS.register("coca_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-    public static final RegistryObject<FlowerBlock> GOLDEN_CAP_MUSHROOM = BLOCKS.register("golden_cap_mushroom", () -> new FlowerBlock(MobEffects.CONFUSION, 1200, BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak()));
+
+    public static final RegistryObject<FlowerBlock> GOLDEN_CAP_MUSHROOM = BLOCKS.register("golden_cap_mushroom", () -> new FlowerBlock(MobEffects.CONFUSION, 600, BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak()));
 
     public static final RegistryObject<OreBlock> SODIUM_BICARBONATE_ORE = BLOCKS.register("sodium_bicarbonate_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f, 1.0f)));
     public static final RegistryObject<OreBlock> OIL_ORE = BLOCKS.register("oil_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f, 1.0f)));
@@ -73,5 +84,5 @@ public class RegistryHandler {
     public static final RegistryObject<BlockItem> SODIUM_BICARBONATE_ORE_ITEM = ITEMS.register("sodium_bicarbonate_ore_item", () -> new BlockItem(SODIUM_BICARBONATE_ORE.get(), new Properties().tab(ITEM_GROUP)));
 
     public static final RegistryObject<MorphineEffect> MORPHINE_EFFECT = EFFECTS.register("morphine_effect", () -> new MorphineEffect(MobEffectCategory.NEUTRAL, 3484189));
-
+    public static final RegistryObject<PercocetsEffect> PERC_EFFECT = EFFECTS.register("perc_effect", () -> new PercocetsEffect(MobEffectCategory.NEUTRAL, 3484189));
 }

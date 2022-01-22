@@ -26,17 +26,11 @@ public class MarijuanaPipe extends Item {
             playerIn.addItem(new ItemStack(RegistryHandler.PIPE.get(), 1));
         }
 
-
-
-
-        playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 6000, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.LUCK, 6000, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.HUNGER, 6000, 0, false, true));
-
-
-
+        playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 0, false, true));
+        playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0, false, true));
+        playerIn.addEffect(new MobEffectInstance(MobEffects.LUCK, 400, 0, false, true));
+        playerIn.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, false, true));
+        playerIn.addEffect(new MobEffectInstance(MobEffects.HUNGER, 400, 0, false, true));
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }
 }

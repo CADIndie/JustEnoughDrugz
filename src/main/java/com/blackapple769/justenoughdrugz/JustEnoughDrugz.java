@@ -1,10 +1,14 @@
 package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -18,15 +22,11 @@ public class JustEnoughDrugz {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-
-
-
     public JustEnoughDrugz() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
         RegistryHandler.init();
-
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -35,7 +35,6 @@ public class JustEnoughDrugz {
         modEventBus.addListener(this::setup);
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
 
-        forgeBus.addListener(EventPriority.HIGH, this::onBiomeLoading);
 
 
 
@@ -44,30 +43,29 @@ public class JustEnoughDrugz {
 
     private void setup(final FMLCommonSetupEvent event) {
 
-        //OreGeneratorHandler.init(event);
+        OreGeneratorHandler.init();
+
     }
 
+
+    @SubscribeEvent(priority = EventPriority.HIGH)
     public void onBiomeLoading(BiomeLoadingEvent event) {
-        // TODO: remove comments later
-        /**
-        // Biome modifications
+
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
-        if (event.getCategory() != Biome.BiomeCategory.NETHER || event.getCategory() != Biome.BiomeCategory.THEEND) {
-            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES)
-                    .add(() -> OreGeneratorHandler.ORE_OIL_CONFIG);
+        if (event.getCategory() != Biome.BiomeCategory.NETHER && event.getCategory() != Biome.BiomeCategory.THEEND) {
+
+            generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OreGeneratorHandler.OIL_ORE_FEATURE);
+
+
+            if (event.getCategory() == Biome.BiomeCategory.OCEAN) {
+                generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OreGeneratorHandler.SODIUM_BICARBONATE_FEATURE);
+
+            }
+            if(event.getCategory() == Biome.BiomeCategory.SWAMP){
+                generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModConfiguredFeatures.PATCH_GOLDEN_CAP_MUSHROOM);
+            }
 
         }
-        if (event.getCategory() == Biome.BiomeCategory.OCEAN) {
-            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES)
-                    .add(() -> OreGeneratorHandler.SODIUM_BICARBONATE_ORE_CONFIG);
-
-        }
-        if (event.getCategory() == Biome.BiomeCategory.SWAMP) {
-            event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION)
-                    .add(() -> ModConfiguredFeatures.PATCH_GOLDEN_CAP_MUSHROOM);
-
-        }
-         **/
     }
 
 }

@@ -26,9 +26,6 @@ public class CrackPipe extends Item {
             playerIn.addItem(new ItemStack(RegistryHandler.PIPE.get(), 1));
         }
 
-
-
-
         playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 2, false, true));
         playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 1, false, true));
         playerIn.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 300, 2, false, true));

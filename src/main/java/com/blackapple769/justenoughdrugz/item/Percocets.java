@@ -10,14 +10,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.antlr.v4.runtime.misc.NotNull;
 
-public class Heroin extends Item {
-
-    /**
-     * Constructor for MorphineItem.
-     * @param properties the <code>Properties</code> for the item
-     */
-    public Heroin(Properties properties) {
-        super(properties);
+public class Percocets extends Item {
+    public Percocets(Properties pProperties) {
+        super(pProperties);
     }
 
     /**
@@ -28,15 +23,24 @@ public class Heroin extends Item {
      * @return ActionResult extending ItemStack
      */
     @Override
-    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, Player playerIn, @NotNull InteractionHand handIn) {
+    public @NotNull
+    InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, Player playerIn, @NotNull InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
-        playerIn.addEffect(new MobEffectInstance(RegistryHandler.MORPHINE_EFFECT.get(), 400, 3, false, true));
+        playerIn.addEffect(new MobEffectInstance(RegistryHandler.PERC_EFFECT.get(), 650, 3, false, true));
         if (!playerIn.isCreative()) {
-            itemstack.shrink(1);
-            playerIn.getInventory().add(new ItemStack(RegistryHandler.EMPTY_SYRINGE.get()));
+            if(itemstack.getDamageValue() == itemstack.getMaxDamage()-1){
+                playerIn.getInventory().add(new ItemStack(RegistryHandler.EMPTY_PILL_BOTTLE.get()));
+
+                itemstack.shrink(1);
+
+
+            }else{
+                itemstack.hurtAndBreak(1, playerIn, (entity) -> entity.broadcastBreakEvent(playerIn.getUsedItemHand()));
+
+            }
+
+
         }
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }
-
-
 }
