@@ -1,7 +1,7 @@
 package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
-import com.blackapple769.justenoughdrugz.util.ServerConfig;
+import com.blackapple769.justenoughdrugz.util.CommonConfig;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -22,10 +22,10 @@ public class OreGeneratorHandler {
     public static PlacedFeature SULFUR_FEATURE;
     public static PlacedFeature LITHIUM_FEATURE;
 
-    static final List<Integer> OIL_ORE_CONFIG = ServerConfig.OIL_ORE_CONFIG.get();
-    static final List<Integer> SODIUM_BICARBONATE_CONFIG = ServerConfig.SODIUM_BICARBONATE_ORE_CONFIG.get();
-    static final List<Integer> SULFUR_ORE_CONFIG = ServerConfig.SULFUR_ORE_CONFIG.get();
-    static final List<Integer> LITHIUM_ORE_CONFIG = ServerConfig.LITHIUM_ORE_CONFIG.get();
+    static final List<Integer> OIL_ORE_CONFIG = CommonConfig.OIL_ORE_CONFIG.get();
+    static final List<Integer> SODIUM_BICARBONATE_CONFIG = CommonConfig.SODIUM_BICARBONATE_ORE_CONFIG.get();
+    static final List<Integer> SULFUR_ORE_CONFIG = CommonConfig.SULFUR_ORE_CONFIG.get();
+    static final List<Integer> LITHIUM_ORE_CONFIG = CommonConfig.LITHIUM_ORE_CONFIG.get();
 
     static List<OreConfiguration.TargetBlockState> targetBlockStates;
     static ConfiguredFeature<?, ?> configuredFeature;

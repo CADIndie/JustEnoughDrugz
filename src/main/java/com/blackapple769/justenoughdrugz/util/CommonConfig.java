@@ -6,18 +6,18 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.*;
 
-public class ServerConfig {
+public class CommonConfig {
 
-	public static final ForgeConfigSpec SERVER_SPEC;
-	public static final ServerConfig SERVER;
+	public static final ForgeConfigSpec COMMON_SPEC;
+	public static final CommonConfig COMMON;
 
 	public static ForgeConfigSpec.ConfigValue<List<Integer>> OIL_ORE_CONFIG;
 	public static ForgeConfigSpec.ConfigValue<List<Integer>> SODIUM_BICARBONATE_ORE_CONFIG;
 	public static ForgeConfigSpec.ConfigValue<List<Integer>> SULFUR_ORE_CONFIG;
 	public static ForgeConfigSpec.ConfigValue<List<Integer>> LITHIUM_ORE_CONFIG;
 
-	ServerConfig(ForgeConfigSpec.Builder builder) {
-		builder.push("Server Configuration");
+	CommonConfig(ForgeConfigSpec.Builder builder) {
+		builder.push("Common Configuration");
 
 		builder.push("Ore Generation");
 		List<Integer> oil_ore_config_list = new ArrayList<>(3);
@@ -50,9 +50,9 @@ public class ServerConfig {
 	}
 
 	static {
-		Pair<ServerConfig, ForgeConfigSpec> serverConfigForgeConfigSpecPair = new Builder().configure(ServerConfig::new);
+		Pair<CommonConfig, ForgeConfigSpec> commonConfigForgeConfigSpecPair = new Builder().configure(CommonConfig::new);
 
-		SERVER_SPEC = serverConfigForgeConfigSpecPair.getRight();
-		SERVER = serverConfigForgeConfigSpecPair.getLeft();
+		COMMON_SPEC = commonConfigForgeConfigSpecPair.getRight();
+		COMMON = commonConfigForgeConfigSpecPair.getLeft();
 	}
 }

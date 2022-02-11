@@ -1,7 +1,7 @@
 package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
-import com.blackapple769.justenoughdrugz.util.ServerConfig;
+import com.blackapple769.justenoughdrugz.util.CommonConfig;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,7 +27,7 @@ public class JustEnoughDrugz {
 
     public JustEnoughDrugz() {
         // Register configuration file
-        ModLoadingContext.get().registerConfig(Type.COMMON, ServerConfig.SERVER_SPEC);
+        ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.COMMON_SPEC);
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
