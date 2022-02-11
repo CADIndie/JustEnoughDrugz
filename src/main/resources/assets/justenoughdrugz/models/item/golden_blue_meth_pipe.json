@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "justenoughdrugz:item/golden_blue_meth_pipe"
+  }
+}

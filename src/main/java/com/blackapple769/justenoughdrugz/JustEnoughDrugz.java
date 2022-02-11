@@ -25,44 +25,36 @@ public class JustEnoughDrugz {
     public JustEnoughDrugz() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-
         RegistryHandler.init();
-
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
 
-
-
-
-
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-
         OreGeneratorHandler.init();
+        PotionRecipe.setupBrewingRecipes();
 
     }
-
-
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onBiomeLoading(BiomeLoadingEvent event) {
 
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
         if (event.getCategory() != Biome.BiomeCategory.NETHER && event.getCategory() != Biome.BiomeCategory.THEEND) {
-
             generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OreGeneratorHandler.OIL_ORE_FEATURE);
-
-
+            generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OreGeneratorHandler.SULFUR_FEATURE);
+            generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OreGeneratorHandler.LITHIUM_FEATURE);
             if (event.getCategory() == Biome.BiomeCategory.OCEAN) {
                 generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, OreGeneratorHandler.SODIUM_BICARBONATE_FEATURE);
-
             }
             if(event.getCategory() == Biome.BiomeCategory.SWAMP){
                 generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModConfiguredFeatures.PATCH_GOLDEN_CAP_MUSHROOM);
+            }
+            if(event.getCategory() == Biome.BiomeCategory.SAVANNA || event.getCategory() == Biome.BiomeCategory.DESERT){
+                generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModConfiguredFeatures.PATCH_EPHEDRA_PLANT);
             }
 
         }

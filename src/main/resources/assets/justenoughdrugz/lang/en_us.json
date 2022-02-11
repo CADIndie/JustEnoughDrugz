@@ -38,7 +38,41 @@
   "item.justenoughdrugz.heroin_syringe": "Heroin",
   "effect.justenoughdrugz.morphine_effect": "Heroin",
   "effect.justenoughdrugz.perc_effect": "Percocets",
+  "effect.justenoughdrugz.meth_effect": "Meth",
+
   "item.justenoughdrugz.empty_syringe": "Empty Syringe",
   "item.justenoughdrugz.empty_pill_bottle": "Empty Pill Bottle",
-  "item.justenoughdrugz.percs_pill_bottle": "Percocets"
+  "item.justenoughdrugz.percs_pill_bottle": "Percocets",
+
+  "item.justenoughdrugz.clear_meth": "Baggie of meth",
+  "item.justenoughdrugz.blue_meth": "Baggie of meth",
+  "item.justenoughdrugz.orange_meth": "Baggie of meth",
+  "item.justenoughdrugz.green_meth": "Baggie of meth",
+  "item.justenoughdrugz.ephedrine": "Ephedrine",
+  "item.justenoughdrugz.pure_ephedrine": "Pure ephedrine",
+  "item.justenoughdrugz.refined_lithium": "Refined lithium",
+  "item.justenoughdrugz.unrefined_lithium": "Unrefined lithium",
+  "item.justenoughdrugz.sulfur": "Sulfur powder",
+
+  "item.justenoughdrugz.blue_meth_syringe": "Meth Syringe",
+  "item.justenoughdrugz.clear_meth_syringe": "Meth Syringe",
+  "item.justenoughdrugz.cheap_meth_syringe": "Meth Syringe",
+
+  "item.justenoughdrugz.blue_meth_pipe": "Meth Pipe",
+  "item.justenoughdrugz.clear_meth_pipe": "Meth Pipe",
+  "item.justenoughdrugz.cheap_meth_pipe": "Meth Pipe",
+
+  "item.justenoughdrugz.golden_blue_meth_pipe": "Golden Meth Pipe",
+  "item.justenoughdrugz.golden_clear_meth_pipe": "Golden Meth Pipe",
+  "item.justenoughdrugz.golden_cheap_meth_pipe": "Golden Meth Pipe",
+
+  "item.justenoughdrugz.cheap_meth_vile": "Vile Of Meth",
+  "item.justenoughdrugz.clear_meth_vile": "Vile Of Meth",
+  "item.justenoughdrugz.blue_meth_vile": "Vile Of Meth",
+
+  "block.justenoughdrugz.sulfur_ore": "Sulfur ore",
+  "block.justenoughdrugz.lithium_ore": "Lithium ore",
+  "block.justenoughdrugz.ephedra_plant": "Ephedra"
+
+
 }
