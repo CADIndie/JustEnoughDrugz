@@ -1,6 +1,7 @@
 package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import com.blackapple769.justenoughdrugz.util.CommonConfig;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.MinecraftForge;
@@ -9,7 +10,9 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig.Type;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +26,9 @@ public class JustEnoughDrugz {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public JustEnoughDrugz() {
+        // Register configuration file
+        ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.COMMON_SPEC);
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         RegistryHandler.init();
@@ -30,8 +36,6 @@ public class JustEnoughDrugz {
         MinecraftForge.EVENT_BUS.register(this);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
-        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-
     }
 
     private void setup(final FMLCommonSetupEvent event) {
