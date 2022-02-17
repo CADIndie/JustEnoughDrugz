@@ -19,7 +19,7 @@ public class BlueMeth extends Item {
     public @NotNull
     InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, Player playerIn, @NotNull InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
-        playerIn.addEffect(new MobEffectInstance(RegistryHandler.METH_EFFECT.get(), 800, 5, false, true));
+        playerIn.addEffect(new MobEffectInstance(RegistryHandler.METH_EFFECT.get(), 800, 4, false, true));
         if (!playerIn.isCreative()) {
             itemstack.shrink(1);
             playerIn.getInventory().add(new ItemStack(RegistryHandler.BAGGIE.get()));

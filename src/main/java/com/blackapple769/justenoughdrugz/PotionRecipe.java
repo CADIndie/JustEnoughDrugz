@@ -41,5 +41,9 @@ public class PotionRecipe {
                 new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
                 Ingredient.of(new ItemStack(RegistryHandler.ORANGE_METH.get())),
                 new ItemStack(RegistryHandler.CHEAP_METH_VILE.get())));
+
+
     }
+
+
 }

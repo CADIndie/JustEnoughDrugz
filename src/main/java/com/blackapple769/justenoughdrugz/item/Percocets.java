@@ -30,16 +30,10 @@ public class Percocets extends Item {
         if (!playerIn.isCreative()) {
             if(itemstack.getDamageValue() == itemstack.getMaxDamage()-1){
                 playerIn.getInventory().add(new ItemStack(RegistryHandler.EMPTY_PILL_BOTTLE.get()));
-
                 itemstack.shrink(1);
-
-
             }else{
                 itemstack.hurtAndBreak(1, playerIn, (entity) -> entity.broadcastBreakEvent(playerIn.getUsedItemHand()));
-
             }
-
-
         }
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }

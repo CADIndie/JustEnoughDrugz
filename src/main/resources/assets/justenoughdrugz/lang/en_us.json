@@ -39,6 +39,9 @@
   "effect.justenoughdrugz.morphine_effect": "Heroin",
   "effect.justenoughdrugz.perc_effect": "Percocets",
   "effect.justenoughdrugz.meth_effect": "Meth",
+  "effect.justenoughdrugz.lean_effect": "Lean",
+  "effect.justenoughdrugz.caffeine_effect": "Caffeine",
+
 
   "item.justenoughdrugz.empty_syringe": "Empty Syringe",
   "item.justenoughdrugz.empty_pill_bottle": "Empty Pill Bottle",
@@ -72,7 +75,12 @@
 
   "block.justenoughdrugz.sulfur_ore": "Sulfur ore",
   "block.justenoughdrugz.lithium_ore": "Lithium ore",
-  "block.justenoughdrugz.ephedra_plant": "Ephedra"
+  "block.justenoughdrugz.ephedra_plant": "Ephedra",
+  "item.justenoughdrugz.spirt": "Spirt",
+  "item.justenoughdrugz.lean": "Lean",
+  "item.justenoughdrugz.styrofoam_cup": "Styrofoam Cup",
+  "item.justenoughdrugz.cough_syrup": "Cough Syrup",
+  "item.justenoughdrugz.dried_coffee_beans": "Dried Coffee Beans",
 
-
+  "block.justenoughdrugz.coffee_plant": "Coffee Beans"
 }

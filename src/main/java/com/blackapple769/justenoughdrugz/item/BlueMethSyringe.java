@@ -19,7 +19,7 @@ public class BlueMethSyringe extends Item {
     public @NotNull
     InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, Player playerIn, @NotNull InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
-        playerIn.addEffect(new MobEffectInstance(RegistryHandler.METH_EFFECT.get(), 1600, 6, false, true));
+        playerIn.addEffect(new MobEffectInstance(RegistryHandler.METH_EFFECT.get(), 1600, 4, false, true));
         if (!playerIn.isCreative()) {
             itemstack.shrink(1);
             playerIn.getInventory().add(new ItemStack(RegistryHandler.EMPTY_SYRINGE.get()));

@@ -22,6 +22,7 @@ public class ClientModEventSubscriber {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         // Register block renderers
+        ItemBlockRenderTypes.setRenderLayer(RegistryHandler.COFFEE_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.WEED_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.COCA_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.GOLDEN_CAP_MUSHROOM.get(), RenderType.cutout());

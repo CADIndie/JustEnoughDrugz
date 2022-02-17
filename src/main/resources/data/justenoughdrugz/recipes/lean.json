@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:styrofoam_cup"
+    },
+    {
+      "item": "justenoughdrugz:cough_syrup"
+    },
+    {
+      "item": "justenoughdrugz:spirt"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:lean"
+  }
+}

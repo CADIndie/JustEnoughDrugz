@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "justenoughdrugz:coffee_beans"
+  },
+  "result": "justenoughdrugz:dried_coffee_beans",
+  "experience": 0.7,
+  "cookingtime": 200
+}
