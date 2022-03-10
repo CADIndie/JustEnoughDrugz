@@ -1,7 +1,6 @@
 package com.blackapple769.justenoughdrugz.init;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
-import com.blackapple769.justenoughdrugz.block.GrowLight;
 import com.blackapple769.justenoughdrugz.item.*;
 import com.blackapple769.justenoughdrugz.potion.*;
 import com.blackapple769.justenoughdrugz.util.CreativeTabSorter;
@@ -101,7 +100,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> EMPTY_PILL_BOTTLE = ITEMS.register("empty_pill_bottle", () -> new Item(new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> PERCS_PILL_BOTTLE = ITEMS.register("percs_pill_bottle", () -> new Percocets(new Item.Properties().tab(ITEM_GROUP).durability(4)));
 
-    public static final RegistryObject<Block> GROW_LAMP = BLOCKS.register("grow_lamp", () -> new GrowLight(BlockBehaviour.Properties.of(Material.METAL).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+    //public static final RegistryObject<Block> GROW_LAMP = BLOCKS.register("grow_lamp", () -> new GrowLight(BlockBehaviour.Properties.of(Material.METAL).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
     public static final RegistryObject<Block> WEED_PLANT = BLOCKS.register("weed_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
     public static final RegistryObject<Block> COCA_PLANT = BLOCKS.register("coca_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
@@ -118,7 +117,7 @@ public class RegistryHandler {
     public static final RegistryObject<OreBlock> SULFUR_ORE = BLOCKS.register("sulfur_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f, 1.0f)));
     public static final RegistryObject<OreBlock> LITHIUM_ORE = BLOCKS.register("lithium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f, 1.0f)));
 
-    public static final RegistryObject<BlockItem> GROW_LAMP_ITEM = ITEMS.register("grow_lamp_item", () -> new BlockItem(GROW_LAMP.get(), new Properties().tab(ITEM_GROUP)));
+    //public static final RegistryObject<BlockItem> GROW_LAMP_ITEM = ITEMS.register("grow_lamp_item", () -> new BlockItem(GROW_LAMP.get(), new Properties().tab(ITEM_GROUP)));
 
     public static final RegistryObject<BlockItem> COFFEE_BEANS = ITEMS.register("coffee_beans", () -> new BlockItem(COFFEE_PLANT.get(), new Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> WEED_SEED = ITEMS.register("weed_seed", () -> new BlockItem(WEED_PLANT.get(), new Properties().tab(ITEM_GROUP)));

@@ -76,8 +76,9 @@ public class GrowLight extends HorizontalDirectionalBlock implements SimpleWater
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(LIT, false).setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);
+        return defaultBlockState().setValue(FACING, context.getHorizontalDirection()).setValue(LIT, false).setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER);
     }
+
 
     /**
      * Set FluidState properties.

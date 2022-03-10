@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:plastic"
+    },
+    {
+      "item": "justenoughdrugz:plastic"
+    }
+
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:baggie"
+  }
+}

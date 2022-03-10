@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:pipe"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:marijuana_pipe"
+  }
+}
