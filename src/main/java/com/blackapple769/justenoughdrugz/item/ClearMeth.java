@@ -21,8 +21,9 @@ public class ClearMeth extends Item {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
         playerIn.addEffect(new MobEffectInstance(RegistryHandler.METH_EFFECT.get(), 400, 2, false, true));
         if (!playerIn.isCreative()) {
-            itemstack.shrink(1);
             playerIn.getInventory().add(new ItemStack(RegistryHandler.BAGGIE.get()));
+            itemstack.shrink(1);
+
         }
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }
