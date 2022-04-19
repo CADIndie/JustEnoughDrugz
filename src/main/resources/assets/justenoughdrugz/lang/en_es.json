@@ -68,10 +68,18 @@
 	"block.justenoughdrugz.sulfur_ore": "Oruro de azufre",
 	"block.justenoughdrugz.lithium_ore": "mineral de litio",
 	"block.justenoughdrugz.ephedra_plant": "Ephedra",
-	"item.justenoughdrugz.spirt": "Escupida",
+	"item.justenoughdrugz.spirt": "Spirt",
 	"item.justenoughdrugz.lean": "Lean",
 	"item.justenoughdrugz.styrofoam_cup": "Copa Styrofoam",
 	"item.justenoughdrugz.cough_syrup": "Tos Siro",
 	"item.justenoughdrugz.dried_coffee_beans": "Beans de café seco",
-	"block.justenoughdrugz.coffee_plant": "Café frijoles"
+	"block.justenoughdrugz.coffee_plant": "Café frijoles",
+	"effect.justenoughdrugz.dmt_effect": "DMT",
+	"item.justenoughdrugz.mimosa_hostilis_bark": "Mimosa Hostilis Bark",
+	"item.justenoughdrugz.dmt": "DMT",
+	"item.justenoughdrugz.dmt_syringe": "DMT Syringe",
+	"item.justenoughdrugz.golden_dmt_pipe": "Golden DMT pipe",
+	"item.justenoughdrugz.dmt_pipe": "Pipe de DMT",
+	"item.justenoughdrugz.dmt_vile": "Vile of DMT",
+	"block.justenoughdrugz.mimosa_hostilis_plant": "Mimosa Hostilis"
 }

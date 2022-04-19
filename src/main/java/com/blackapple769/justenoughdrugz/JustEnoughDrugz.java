@@ -60,6 +60,9 @@ public class JustEnoughDrugz {
             if(event.getCategory() == Biome.BiomeCategory.SAVANNA || event.getCategory() == Biome.BiomeCategory.DESERT){
                 generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModConfiguredFeatures.PATCH_EPHEDRA_PLANT);
             }
+            if(event.getCategory() == Biome.BiomeCategory.JUNGLE || event.getCategory() == Biome.BiomeCategory.SAVANNA){
+                generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModConfiguredFeatures.PATCH_MIMOSA_PLANT);
+            }
 
         }
     }

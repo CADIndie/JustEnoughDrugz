@@ -22,8 +22,15 @@ public class MarijuanaPipe extends Item {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
 
         if(!playerIn.isCreative()){
+            if(itemstack.is(RegistryHandler.GOLDEN_MARIJUANA_PIPE.get())){
+                playerIn.getInventory().add(new ItemStack(RegistryHandler.GOLDEN_PIPE.get()));
+
+            }else{
+                playerIn.getInventory().add(new ItemStack(RegistryHandler.PIPE.get()));
+
+            }
             itemstack.shrink(1);
-            playerIn.addItem(new ItemStack(RegistryHandler.PIPE.get(), 1));
+
         }
 
         playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 0, false, true));

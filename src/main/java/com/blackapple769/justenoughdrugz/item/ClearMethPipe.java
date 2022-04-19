@@ -21,16 +21,12 @@ public class ClearMethPipe extends Item {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
         playerIn.addEffect(new MobEffectInstance(RegistryHandler.METH_EFFECT.get(), 600, 2, false, true));
         if (!playerIn.isCreative()) {
-
             if(itemstack.is(RegistryHandler.GOLDEN_CLEAR_METH_PIPE.get())){
                 playerIn.getInventory().add(new ItemStack(RegistryHandler.GOLDEN_PIPE.get()));
-
             }else{
                 playerIn.getInventory().add(new ItemStack(RegistryHandler.PIPE.get()));
-
             }
             itemstack.shrink(1);
-
         }
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }

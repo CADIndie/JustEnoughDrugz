@@ -22,6 +22,8 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> EPHEDRA_PLANT_PATCH = FeatureUtils.register("patch_ephedra_plant", Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(RegistryHandler.EPHEDRA_PLANT.get()))))));
     public static final PlacedFeature PATCH_EPHEDRA_PLANT = PlacementUtils.register("patch_ephedra_plant", ModConfiguredFeatures.EPHEDRA_PLANT_PATCH.placed(RarityFilter.onAverageOnceEvery(64), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 3)), BiomeFilter.biome()));
 
+    public static final ConfiguredFeature<?, ?> MIMOSA_PLANT_PATCH = FeatureUtils.register("patch_mimosa_plant", Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(RegistryHandler.MIMOSA_HOSTILIS_PLANT.get()))))));
+    public static final PlacedFeature PATCH_MIMOSA_PLANT = PlacementUtils.register("patch_mimosa_plant", ModConfiguredFeatures.MIMOSA_PLANT_PATCH.placed(RarityFilter.onAverageOnceEvery(64), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 3)), BiomeFilter.biome()));
     private static <FC extends FeatureConfiguration> ConfiguredFeature<FC, ?> register(String p_127056_, ConfiguredFeature<FC, ?> p_127057_) {
         return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, p_127056_, p_127057_);
     }

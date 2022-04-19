@@ -36,12 +36,14 @@
   "item.justenoughdrugz.golden_cap_shroom": "Golden Cap Shroom",
   "item.justenoughdrugz.baggie_shrooms": "Baggie of Shrooms",
   "item.justenoughdrugz.heroin_syringe": "Heroin",
+  "item.justenoughdrugz.mimosa_hostilis_bark": "Mimosa Hostilis Bark",
+  "item.justenoughdrugz.dmt": "DMT",
   "effect.justenoughdrugz.morphine_effect": "Heroin",
   "effect.justenoughdrugz.perc_effect": "Percocets",
   "effect.justenoughdrugz.meth_effect": "Meth",
   "effect.justenoughdrugz.lean_effect": "Lean",
   "effect.justenoughdrugz.caffeine_effect": "Caffeine",
-
+  "effect.justenoughdrugz.dmt_effect": "DMT",
 
   "item.justenoughdrugz.empty_syringe": "Empty Syringe",
   "item.justenoughdrugz.empty_pill_bottle": "Empty Pill Bottle",
@@ -60,6 +62,7 @@
   "item.justenoughdrugz.blue_meth_syringe": "Meth Syringe",
   "item.justenoughdrugz.clear_meth_syringe": "Meth Syringe",
   "item.justenoughdrugz.cheap_meth_syringe": "Meth Syringe",
+  "item.justenoughdrugz.dmt_syringe": "DMT Syringe",
 
   "item.justenoughdrugz.blue_meth_pipe": "Meth Pipe",
   "item.justenoughdrugz.clear_meth_pipe": "Meth Pipe",
@@ -69,13 +72,20 @@
   "item.justenoughdrugz.golden_clear_meth_pipe": "Golden Meth Pipe",
   "item.justenoughdrugz.golden_cheap_meth_pipe": "Golden Meth Pipe",
 
+  "item.justenoughdrugz.golden_dmt_pipe": "Golden DMT pipe",
+  "item.justenoughdrugz.dmt_pipe": "DMT pipe",
+
+
   "item.justenoughdrugz.cheap_meth_vile": "Vile Of Meth",
   "item.justenoughdrugz.clear_meth_vile": "Vile Of Meth",
   "item.justenoughdrugz.blue_meth_vile": "Vile Of Meth",
+  "item.justenoughdrugz.dmt_vile": "Vile of DMT",
 
   "block.justenoughdrugz.sulfur_ore": "Sulfur ore",
   "block.justenoughdrugz.lithium_ore": "Lithium ore",
   "block.justenoughdrugz.ephedra_plant": "Ephedra",
+  "block.justenoughdrugz.mimosa_hostilis_plant": "Mimosa Hostilis",
+
   "item.justenoughdrugz.spirt": "Spirt",
   "item.justenoughdrugz.lean": "Lean",
   "item.justenoughdrugz.styrofoam_cup": "Styrofoam Cup",
