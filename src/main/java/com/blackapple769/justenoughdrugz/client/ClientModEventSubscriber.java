@@ -13,8 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 @Mod.EventBusSubscriber(modid = JustEnoughDrugz.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModEventSubscriber {
 
-    private static final Minecraft mc = Minecraft.getInstance();
-
     /**
      * Event handler for the FMLClientSetupEvent.
      * @param event the <code>FMLClientSetupEvent</code> instance

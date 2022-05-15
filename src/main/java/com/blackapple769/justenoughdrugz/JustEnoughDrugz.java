@@ -1,5 +1,6 @@
 package com.blackapple769.justenoughdrugz;
 
+import com.blackapple769.justenoughdrugz.init.PostSetupHandler;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -9,7 +10,6 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.core.Holder;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -20,8 +20,6 @@ import org.apache.logging.log4j.Logger;
 @Mod("justenoughdrugz")
 public class JustEnoughDrugz {
     public static final String MOD_ID = "justenoughdrugz";
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
 
     public JustEnoughDrugz() {
         // Register the setup method for modloading
@@ -42,6 +40,8 @@ public class JustEnoughDrugz {
     private void setup(final FMLCommonSetupEvent event) {
         OreGeneratorHandler.init();
         PotionRecipe.setupBrewingRecipes();
+
+        PostSetupHandler.init();
     }
 
     public void onBiomeLoading(BiomeLoadingEvent event) {
