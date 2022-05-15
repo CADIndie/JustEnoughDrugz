@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:empty_syringe"
+    },
+    {
+      "item": "justenoughdrugz:dmt_vile"
+    }
+
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:dmt_syringe"
+  }
+}

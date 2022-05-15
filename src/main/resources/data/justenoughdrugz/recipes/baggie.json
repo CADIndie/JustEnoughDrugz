@@ -1,22 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
-    "xx ",
-    "xx ",
-    "   "
-  ],
-  "key":
-  {
+  "type": "minecraft:crafting_shapeless",
 
-    "x":
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:plastic"
+    },
     {
       "item": "justenoughdrugz:plastic"
     }
-  },
-  "result":
-  {
-    "item": "justenoughdrugz:baggie",
-    "count": 4
+
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:baggie"
   }
 }

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    },
+    {
+      "item": "justenoughdrugz:weed"
+    }
+
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:blunt"
+  }
+}

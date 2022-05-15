@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "justenoughdrugz:baggie"
+    },
+    {
+      "item": "justenoughdrugz:gasoline"
+    },
+    {
+      "item": "justenoughdrugz:ephedra_plant_item"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:green_meth"
+  }
+}

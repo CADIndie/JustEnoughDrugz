@@ -34,8 +34,8 @@ public class JustEnoughDrugz {
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
-        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
 
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         forgeBus.addListener(EventPriority.HIGH, this::onBiomeLoading);
     }
 

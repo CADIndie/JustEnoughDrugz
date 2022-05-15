@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    "xx ",
+    "   "
+  ],
+  "key":
+  {
+
+    "x":
+    {
+      "item": "justenoughdrugz:unrefined_lithium"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:refined_lithium",
+    "count": 1
+  }
+}

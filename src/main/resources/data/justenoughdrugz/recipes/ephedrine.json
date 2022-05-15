@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "justenoughdrugz:ephedra_plant_item"
+  },
+  "result": "justenoughdrugz:ephedrine",
+  "experience": 0.7,
+  "cookingtime": 800
+}

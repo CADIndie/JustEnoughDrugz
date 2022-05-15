@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "minecraft:poppy"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "justenoughdrugz:empty_pill_bottle"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:percs_pill_bottle"
+  }
+}
