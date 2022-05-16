@@ -1,63 +1,6 @@
 {
-	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/handheld",
 	"textures": {
-		"1": "justenoughdrugz:item/empty_pill_bottle_top",
-		"2": "justenoughdrugz:item/empty_pill_bottle_bottom",
-		"particle": "justenoughdrugz:item/empty_pill_bottle_bottom"
-	},
-	"elements": [
-		{
-			"from": [5, 0, 6],
-			"to": [7, 4, 8],
-			"faces": {
-				"north": {"uv": [0, 0, 2, 4], "texture": "#2"},
-				"east": {"uv": [2, 0, 4, 4], "texture": "#2"},
-				"south": {"uv": [0, 4, 2, 8], "texture": "#2"},
-				"west": {"uv": [4, 0, 6, 4], "texture": "#2"},
-				"up": {"uv": [4, 6, 2, 4], "texture": "#2"},
-				"down": {"uv": [6, 4, 4, 6], "texture": "#2"}
-			}
-		},
-		{
-			"from": [4.75, 4, 5.75],
-			"to": [7.25, 4.5, 8.25],
-			"faces": {
-				"north": {"uv": [0, 0, 2.5, 0.25], "texture": "#1"},
-				"east": {"uv": [0, 0, 2.5, 0.25], "texture": "#1"},
-				"south": {"uv": [0, 0, 2.5, 0.25], "texture": "#1"},
-				"west": {"uv": [0, 0, 2.5, 0.25], "texture": "#1"},
-				"up": {"uv": [0, 0, 2.5, 2.5], "texture": "#1"},
-				"down": {"uv": [0, 0, 2.5, 2.5], "texture": "#1"}
-			}
-		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"translation": [2.25, 6.75, 2.25]
-		},
-		"thirdperson_lefthand": {
-			"translation": [-2.25, 6.75, 2.25]
-		},
-		"firstperson_righthand": {
-			"translation": [0, 6.25, 1.25]
-		},
-		"firstperson_lefthand": {
-			"translation": [0, 6.25, 1.25]
-		},
-		"ground": {
-			"translation": [0, 5.25, 0]
-		},
-		"gui": {
-			"rotation": [25, 25, 0],
-			"translation": [4, 10, 0],
-			"scale": [2, 2, 2]
-		},
-		"head": {
-			"translation": [0, 15.25, 0]
-		},
-		"fixed": {
-			"translation": [3.75, 10.5, 0],
-			"scale": [2, 2, 2]
-		}
+		"layer0": "justenoughdrugz:item/empty_pill_bottle"
 	}
 }

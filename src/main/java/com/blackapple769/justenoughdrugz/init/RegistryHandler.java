@@ -112,6 +112,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> SPIRT = ITEMS.register("spirt", () -> new Spirt((new Item.Properties()).tab(ITEM_GROUP).durability(2)));
 
+    public static final RegistryObject<Item> CUP_OF_COFFEE = ITEMS.register("cup_of_coffee", () -> new CupOfCoffee((new Item.Properties()).tab(ITEM_GROUP).durability(5)));
+
     public static final RegistryObject<Item> COUGH_SYRUP = ITEMS.register("cough_syrup", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
 
     public static final RegistryObject<Item> DRIED_COFFEE_BEANS = ITEMS.register("dried_coffee_beans", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
