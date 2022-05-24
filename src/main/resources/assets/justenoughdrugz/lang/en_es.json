@@ -82,5 +82,7 @@
 	"item.justenoughdrugz.dmt_pipe": "Pipe de DMT",
 	"item.justenoughdrugz.dmt_vile": "Vile of DMT",
 	"block.justenoughdrugz.mimosa_hostilis_plant": "Mimosa Hostilis",
-	"item.justenoughdrugz.cup_of_coffee": "Taza de café"
+	"item.justenoughdrugz.cup_of_coffee": "Taza de café",
+	"block.justenoughdrugz.plantable_ephedra": "Raíz de efedra",
+	"item.justenoughdrugz.ephedra_berries": "Bayas de efedra"
 }

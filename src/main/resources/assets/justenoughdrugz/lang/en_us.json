@@ -28,8 +28,8 @@
   "item.justenoughdrugz.crack_pipe": "Crack Pipe",
   "item.justenoughdrugz.crack": "Crack Cocaine",
   "item.justenoughdrugz.marijuana_pipe": "Cannabis Pipe",
-  "item.justenoughdrugz.golden_marijuana_pipe": "Golden Weed Pipe",
-  "item.justenoughdrugz.golden_crack_pipe": "Golden Crack Pipe",
+  "item.justenoughdrugz.golden_marijuana_pipe": "Weed Pipe",
+  "item.justenoughdrugz.golden_crack_pipe": "Crack Pipe",
   "item.justenoughdrugz.golden_pipe": "Golden Pipe",
   "block.justenoughdrugz.golden_cap_mushroom": "Golden Cap Mushroom",
   "item.justenoughdrugz.plastic": "Plastic",
@@ -49,36 +49,36 @@
   "item.justenoughdrugz.empty_pill_bottle": "Empty Pill Bottle",
   "item.justenoughdrugz.percs_pill_bottle": "Percocets",
 
-  "item.justenoughdrugz.clear_meth": "Baggie of meth",
-  "item.justenoughdrugz.blue_meth": "Baggie of meth",
-  "item.justenoughdrugz.orange_meth": "Baggie of meth",
-  "item.justenoughdrugz.green_meth": "Baggie of meth",
+  "item.justenoughdrugz.clear_meth": "Baggie of Clear Meth",
+  "item.justenoughdrugz.blue_meth": "Baggie of Blue Meth",
+  "item.justenoughdrugz.orange_meth": "Baggie of Orange Meth",
+  "item.justenoughdrugz.green_meth": "Baggie of Green Meth",
   "item.justenoughdrugz.ephedrine": "Ephedrine",
   "item.justenoughdrugz.pure_ephedrine": "Pure ephedrine",
   "item.justenoughdrugz.refined_lithium": "Refined lithium",
   "item.justenoughdrugz.unrefined_lithium": "Unrefined lithium",
   "item.justenoughdrugz.sulfur": "Sulfur powder",
 
-  "item.justenoughdrugz.blue_meth_syringe": "Meth Syringe",
-  "item.justenoughdrugz.clear_meth_syringe": "Meth Syringe",
-  "item.justenoughdrugz.cheap_meth_syringe": "Meth Syringe",
+  "item.justenoughdrugz.blue_meth_syringe": "Blue Meth Syringe",
+  "item.justenoughdrugz.clear_meth_syringe": "Clear Meth Syringe",
+  "item.justenoughdrugz.cheap_meth_syringe": "Cheap Meth Syringe",
   "item.justenoughdrugz.dmt_syringe": "DMT Syringe",
 
-  "item.justenoughdrugz.blue_meth_pipe": "Meth Pipe",
-  "item.justenoughdrugz.clear_meth_pipe": "Meth Pipe",
-  "item.justenoughdrugz.cheap_meth_pipe": "Meth Pipe",
+  "item.justenoughdrugz.blue_meth_pipe": "Blue Meth Pipe",
+  "item.justenoughdrugz.clear_meth_pipe": "Clear Meth Pipe",
+  "item.justenoughdrugz.cheap_meth_pipe": "Cheap Meth Pipe",
 
-  "item.justenoughdrugz.golden_blue_meth_pipe": "Golden Meth Pipe",
-  "item.justenoughdrugz.golden_clear_meth_pipe": "Golden Meth Pipe",
-  "item.justenoughdrugz.golden_cheap_meth_pipe": "Golden Meth Pipe",
+  "item.justenoughdrugz.golden_blue_meth_pipe": "Blue Meth Pipe",
+  "item.justenoughdrugz.golden_clear_meth_pipe": "Clear Meth Pipe",
+  "item.justenoughdrugz.golden_cheap_meth_pipe": "Cheap Meth Pipe",
 
-  "item.justenoughdrugz.golden_dmt_pipe": "Golden DMT pipe",
+  "item.justenoughdrugz.golden_dmt_pipe": "DMT pipe",
   "item.justenoughdrugz.dmt_pipe": "DMT pipe",
 
 
-  "item.justenoughdrugz.cheap_meth_vile": "Vile Of Meth",
-  "item.justenoughdrugz.clear_meth_vile": "Vile Of Meth",
-  "item.justenoughdrugz.blue_meth_vile": "Vile Of Meth",
+  "item.justenoughdrugz.cheap_meth_vile": "Cheap Meth Vile",
+  "item.justenoughdrugz.clear_meth_vile": "Clear Meth Vile",
+  "item.justenoughdrugz.blue_meth_vile": "Blue Meth Vile",
   "item.justenoughdrugz.dmt_vile": "Vile of DMT",
 
   "block.justenoughdrugz.sulfur_ore": "Sulfur ore",
@@ -92,6 +92,11 @@
   "item.justenoughdrugz.cough_syrup": "Cough Syrup",
   "item.justenoughdrugz.dried_coffee_beans": "Dried Coffee Beans",
   "item.justenoughdrugz.cup_of_coffee": "Cup of coffee",
+
+  "block.justenoughdrugz.plantable_ephedra": "Ephedra Root",
+  "item.justenoughdrugz.ephedra_berries": "Ephedra Berries",
+
+
 
 
   "block.justenoughdrugz.coffee_plant": "Coffee Beans"

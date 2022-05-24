@@ -24,6 +24,8 @@ public class ClientModEventSubscriber {
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.COCA_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.GOLDEN_CAP_MUSHROOM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.MIMOSA_HOSTILIS_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RegistryHandler.EPHEDRA_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RegistryHandler.PLANTABLE_EPHEDRA.get(), RenderType.cutout());
 
     }
 }

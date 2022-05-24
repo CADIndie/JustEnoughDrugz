@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:pipe"
+    },
+    {
+      "item": "justenoughdrugz:green_meth"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:cheap_meth_pipe"
+  }
+}
