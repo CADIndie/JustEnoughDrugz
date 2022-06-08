@@ -27,7 +27,7 @@ public class CupOfCoffee extends Item {
             player.awardStat(Stats.ITEM_USED.get(this));
         }
         if (livingEntity instanceof Player player) {
-            player.addEffect(new MobEffectInstance(RegistryHandler.CAFFEINE_EFFECT.get(), 1200, 2, false, true));
+            player.addEffect(new MobEffectInstance(RegistryHandler.CAFFEINE_EFFECT.get(), 1200, 1, false, true));
             if (!player.isCreative())
                 if (stack.getDamageValue() == stack.getMaxDamage() - 1) {
                     stack.shrink(1);

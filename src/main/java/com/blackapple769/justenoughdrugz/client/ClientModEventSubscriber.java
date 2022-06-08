@@ -1,6 +1,7 @@
 package com.blackapple769.justenoughdrugz.client;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
+import com.blackapple769.justenoughdrugz.client.gui.JEDZOverlays;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -26,6 +27,8 @@ public class ClientModEventSubscriber {
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.MIMOSA_HOSTILIS_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.EPHEDRA_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.PLANTABLE_EPHEDRA.get(), RenderType.cutout());
+
+        JEDZOverlays.init();
 
     }
 }

@@ -76,10 +76,10 @@
   "item.justenoughdrugz.dmt_pipe": "DMT pipe",
 
 
-  "item.justenoughdrugz.cheap_meth_vile": "Cheap Meth Vile",
-  "item.justenoughdrugz.clear_meth_vile": "Clear Meth Vile",
-  "item.justenoughdrugz.blue_meth_vile": "Blue Meth Vile",
-  "item.justenoughdrugz.dmt_vile": "Vile of DMT",
+  "item.justenoughdrugz.cheap_meth_vile": "Cheap Meth Vial",
+  "item.justenoughdrugz.clear_meth_vile": "Clear Meth Vial",
+  "item.justenoughdrugz.blue_meth_vile": "Blue Meth Vial",
+  "item.justenoughdrugz.dmt_vile": "Vial of DMT",
 
   "block.justenoughdrugz.sulfur_ore": "Sulfur ore",
   "block.justenoughdrugz.lithium_ore": "Lithium ore",
@@ -96,7 +96,17 @@
   "block.justenoughdrugz.plantable_ephedra": "Ephedra Root",
   "item.justenoughdrugz.ephedra_berries": "Ephedra Berries",
 
+  "justenoughdrugz.subtitle.item.bong.use": "Hitting Bong",
+  "justenoughdrugz.subtitle.item.bong.used_up": "Empty Bong",
+  "item.justenoughdrugz.blue_bong": "Blue Bong",
+  "item.justenoughdrugz.red_bong": "Red Bong",
+  "item.justenoughdrugz.pink_bong": "Pink Bong",
+  "item.justenoughdrugz.green_bong": "Green Bong",
 
+
+  "effect.justenoughdrugz.weed_effect": "Weed",
+  "effect.justenoughdrugz.shroom_effect": "Shroom",
+  "effect.justenoughdrugz.coke_effect": "Cocaine",
 
 
   "block.justenoughdrugz.coffee_plant": "Coffee Beans"

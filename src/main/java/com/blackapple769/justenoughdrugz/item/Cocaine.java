@@ -19,19 +19,12 @@ public class Cocaine extends Item {
     public @NotNull
     InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, Player playerIn, @NotNull InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
-
         if (!playerIn.isCreative()) {
             itemstack.shrink(1);
             playerIn.addItem(new ItemStack(RegistryHandler.BAGGIE.get(), 1));
         }
 
-
-
-        playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 1, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 2, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.HUNGER, 600, 0, false, true));
+        playerIn.addEffect(new MobEffectInstance(RegistryHandler.COKE_EFFECT.get(), 300, 1, false, true));
 
 
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());

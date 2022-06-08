@@ -11,9 +11,6 @@ public class MorphineEffect extends MobEffect {
 
     private int duration;
 
-
-
-
     public MorphineEffect(MobEffectCategory p_19451_, int p_19452_) {
         super(p_19451_, p_19452_);
     }

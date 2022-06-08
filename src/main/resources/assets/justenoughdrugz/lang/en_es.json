@@ -84,5 +84,17 @@
 	"block.justenoughdrugz.mimosa_hostilis_plant": "Mimosa Hostilis",
 	"item.justenoughdrugz.cup_of_coffee": "Taza de café",
 	"block.justenoughdrugz.plantable_ephedra": "Raíz de efedra",
-	"item.justenoughdrugz.ephedra_berries": "Bayas de efedra"
+	"item.justenoughdrugz.ephedra_berries": "Bayas de efedra",
+
+	"justenoughdrugz.subtitle.item.bong.use": "recibiendo el golpe de bong",
+	"justenoughdrugz.subtitle.item.bong.used_up": "Bong vacío",
+
+	"item.justenoughdrugz.blue_bong": "bong azul",
+	"item.justenoughdrugz.red_bong": "bong rojo",
+	"item.justenoughdrugz.pink_bong": "Bong rosa",
+	"item.justenoughdrugz.green_bong": "Bong Verde",
+
+	"effect.justenoughdrugz.weed_effect": "Hierba",
+	"effect.justenoughdrugz.shroom_effect": "Seta",
+	"effect.justenoughdrugz.coke_effect": "Cocaína"
 }
