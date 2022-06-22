@@ -93,8 +93,11 @@
 	"item.justenoughdrugz.red_bong": "bong rojo",
 	"item.justenoughdrugz.pink_bong": "Bong rosa",
 	"item.justenoughdrugz.green_bong": "Bong Verde",
+	"item.justenoughdrugz.yellow_bong": "Bong amarillo",
+
 
 	"effect.justenoughdrugz.weed_effect": "Hierba",
 	"effect.justenoughdrugz.shroom_effect": "Seta",
-	"effect.justenoughdrugz.coke_effect": "Cocaína"
+	"effect.justenoughdrugz.coke_effect": "Cocaína",
+
 }

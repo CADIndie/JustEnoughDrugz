@@ -75,7 +75,6 @@
   "item.justenoughdrugz.golden_dmt_pipe": "Pipe de DMT",
   "item.justenoughdrugz.dmt_pipe": "Pipe de DMT",
 
-
   "item.justenoughdrugz.cheap_meth_vile": "Frasco de Metanfetamina Barata",
   "item.justenoughdrugz.clear_meth_vile": "Frasco de Metanfetamina Pura",
   "item.justenoughdrugz.blue_meth_vile": "Frasco de Metanfetamina Azul",
@@ -103,11 +102,11 @@
   "item.justenoughdrugz.red_bong": "Bong Vermelho",
   "item.justenoughdrugz.pink_bong": "Bong rosa",
   "item.justenoughdrugz.green_bong": "Bong Verde",
+  "item.justenoughdrugz.yellow_bong": "Bong amarelo",
 
   "effect.justenoughdrugz.weed_effect": "Erva daninha",
   "effect.justenoughdrugz.shroom_effect": "Cogumelo",
   "effect.justenoughdrugz.coke_effect": "Cocaína",
-
 
   "block.justenoughdrugz.coffee_plant": "Grãos de Café"
 }

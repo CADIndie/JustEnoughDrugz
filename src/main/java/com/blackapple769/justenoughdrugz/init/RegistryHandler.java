@@ -120,6 +120,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RED_BONG = ITEMS.register("red_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> GREEN_BONG = ITEMS.register("green_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> PINK_BONG = ITEMS.register("pink_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
+    public static final RegistryObject<Item> YELLOW_BONG = ITEMS.register("yellow_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
 
 
     //block

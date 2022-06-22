@@ -27,6 +27,8 @@ public class ClientModEventSubscriber {
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.MIMOSA_HOSTILIS_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.EPHEDRA_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(RegistryHandler.PLANTABLE_EPHEDRA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RegistryHandler.COFFEE_PLANT.get(), RenderType.cutout());
+
 
         JEDZOverlays.init();
 
