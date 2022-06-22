@@ -37,6 +37,13 @@ public class CommonConfig {
 	public static ForgeConfigSpec.ConfigValue<Integer> LITHIUM_ORE_SIZE;
 	public static ForgeConfigSpec.DoubleValue LITHIUM_ORE_EXPOSED_DISCARD_CHANCE;
 
+	public static ForgeConfigSpec.ConfigValue<Boolean> ENABLE_RED_PHOSPHORUS;
+	public static ForgeConfigSpec.ConfigValue<Integer> RED_PHOSPHORUS_WEIGHT;
+	public static ForgeConfigSpec.ConfigValue<Integer> RED_PHOSPHORUS_TOP_ANCHOR;
+	public static ForgeConfigSpec.ConfigValue<Integer> RED_PHOSPHORUS_BOTTOM_ANCHOR;
+	public static ForgeConfigSpec.ConfigValue<Integer> RED_PHOSPHORUS_SIZE;
+	public static ForgeConfigSpec.DoubleValue RED_PHOSPHORUS_EXPOSED_DISCARD_CHANCE;
+
 	public static final ForgeConfigSpec COMMON_SPEC;
 	public static final CommonConfig COMMON;
 
@@ -63,6 +70,16 @@ public class CommonConfig {
 		SODIUM_BICARBONATE_BOTTOM_ANCHOR = builder.defineInRange("Sodium bicarbonate bottom anchor", -64, -64, 320);
 		SODIUM_BICARBONATE_SIZE = builder.defineInRange("Sodium bicarbonate size", 10, 0, Integer.MAX_VALUE);
 		SODIUM_BICARBONATE_EXPOSED_DISCARD_CHANCE = builder.defineInRange("Sodium bicarbonate exposed to air discard chance", 0.85D, 0D, 1D);
+		builder.pop();
+
+		builder.push("Red phosphorus");
+		ENABLE_RED_PHOSPHORUS = builder.comment("Enable generation of Red phosphorus")
+				.define("Enable Red phosphorus Generation", true);
+		RED_PHOSPHORUS_WEIGHT = builder.defineInRange("Red phosphorus weight", 20, 1, Integer.MAX_VALUE);
+		RED_PHOSPHORUS_TOP_ANCHOR = builder.defineInRange("Red phosphorus top anchor", 60, -64, 320);
+		RED_PHOSPHORUS_BOTTOM_ANCHOR = builder.defineInRange("Red phosphorus bottom anchor", 40, -64, 320);
+		RED_PHOSPHORUS_SIZE = builder.defineInRange("Red phosphorus size", 3, 0, Integer.MAX_VALUE);
+		RED_PHOSPHORUS_EXPOSED_DISCARD_CHANCE = builder.defineInRange("Red phosphorus exposed to air discard chance", 0.8D, 0D, 1D);
 		builder.pop();
 
 

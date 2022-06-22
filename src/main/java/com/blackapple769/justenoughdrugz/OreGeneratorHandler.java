@@ -21,6 +21,7 @@ public class OreGeneratorHandler {
     public static PlacedFeature SODIUM_BICARBONATE_FEATURE;
     public static PlacedFeature SULFUR_FEATURE;
     public static PlacedFeature LITHIUM_FEATURE;
+    public static PlacedFeature RED_PHOSPHORUS_FEATURE;
 
 
     public static void init() {
@@ -34,6 +35,17 @@ public class OreGeneratorHandler {
                         BiomeFilter.biome(),
                         InSquarePlacement.spread(),
                         CountPlacement.of(CommonConfig.OIL_ORE_WEIGHT.get())
+                ));
+        RED_PHOSPHORUS_FEATURE = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.SCATTERED_ORE,
+                        new OreConfiguration(OreReplacementTargets.RED_PHOSPHORUS_TARGETS, CommonConfig.RED_PHOSPHORUS_SIZE.get(),
+                                (float) ((double) CommonConfig.RED_PHOSPHORUS_EXPOSED_DISCARD_CHANCE.get())))),
+
+                List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(CommonConfig.RED_PHOSPHORUS_BOTTOM_ANCHOR.get()),
+                                VerticalAnchor.absolute(CommonConfig.RED_PHOSPHORUS_TOP_ANCHOR.get())),
+                        BiomeFilter.biome(),
+                        InSquarePlacement.spread(),
+                        CountPlacement.of(CommonConfig.RED_PHOSPHORUS_WEIGHT.get())
                 ));
 
         SODIUM_BICARBONATE_FEATURE = new PlacedFeature(
@@ -91,11 +103,15 @@ public class OreGeneratorHandler {
         public static final List<OreConfiguration.TargetBlockState> SODIUM_BICARBONATE_TARGETS = List.of(
                 OreConfiguration.target(ReplacementRules.REGULAR_STONE,
                         RegistryHandler.SODIUM_BICARBONATE_ORE.get().defaultBlockState())
-
+        );
+        public static final List<OreConfiguration.TargetBlockState> RED_PHOSPHORUS_TARGETS = List.of(
+                OreConfiguration.target(ReplacementRules.SAND,
+                        RegistryHandler.RED_PHOSPHORUS_BLOCK.get().defaultBlockState())
         );
     }
 
     public static final class ReplacementRules {
         public static final RuleTest REGULAR_STONE = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        public static final RuleTest SAND = new TagMatchTest(BlockTags.SAND);
     }
 }

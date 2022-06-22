@@ -93,8 +93,23 @@
 	"item.justenoughdrugz.red_bong": "bong rojo",
 	"item.justenoughdrugz.pink_bong": "Bong rosa",
 	"item.justenoughdrugz.green_bong": "Bong Verde",
+	"item.justenoughdrugz.yellow_bong": "Bong amarillo",
+
 
 	"effect.justenoughdrugz.weed_effect": "Hierba",
 	"effect.justenoughdrugz.shroom_effect": "Seta",
-	"effect.justenoughdrugz.coke_effect": "Cocaína"
+	"effect.justenoughdrugz.coke_effect": "Cocaína",
+
+	"item.justenoughdrugz.hazmat_mask": "Máscara de materiales peligrosos",
+	"item.justenoughdrugz.hazmat_shirt": "Hazmat Arriba",
+	"item.justenoughdrugz.hazmat_leggings": "Leggings de materiales peligrosos",
+	"item.justenoughdrugz.hazmat_shoes": "Botas hazmat",
+
+	"item.justenoughdrugz.methylamine": "Metilamina",
+	"item.justenoughdrugz.red_phosphorus": "Fósforo rojo",
+
+	"block.justenoughdrugz.red_phosphorus_block": "Bloque de fósforo rojo"
+
+
+
 }

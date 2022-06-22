@@ -3,6 +3,7 @@ package com.blackapple769.justenoughdrugz.event;
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
 import com.blackapple769.justenoughdrugz.client.gui.JEDZOverlays;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import com.blackapple769.justenoughdrugz.item.armor.HazmatArmorItem;
 import com.blackapple769.justenoughdrugz.item.data.Data;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,6 +38,14 @@ public class ClientForgeEventSubscriber {
                         || Data.data.player.hasEffect(RegistryHandler.METH_EFFECT.get())
                         || Data.data.player.hasEffect(RegistryHandler.PERC_EFFECT.get())) {
                     JEDZOverlays.GENERIC_EFFECT_ELEMENT.render((ForgeIngameGui) minecraft.gui,
+                            event.getMatrixStack(),
+                            event.getPartialTicks(),
+                            screenWidth,
+                            screenHeight);
+                }
+
+                if(HazmatArmorItem.maskEquipped){
+                    JEDZOverlays.HAZMAT_OVERLAY_ELEMENT.render((ForgeIngameGui) minecraft.gui,
                             event.getMatrixStack(),
                             event.getPartialTicks(),
                             screenWidth,

@@ -102,12 +102,24 @@
   "item.justenoughdrugz.red_bong": "Red Bong",
   "item.justenoughdrugz.pink_bong": "Pink Bong",
   "item.justenoughdrugz.green_bong": "Green Bong",
+  "item.justenoughdrugz.yellow_bong": "Yellow Bong",
+
 
 
   "effect.justenoughdrugz.weed_effect": "Weed",
   "effect.justenoughdrugz.shroom_effect": "Shroom",
   "effect.justenoughdrugz.coke_effect": "Cocaine",
 
+  "block.justenoughdrugz.coffee_plant": "Coffee Beans",
 
-  "block.justenoughdrugz.coffee_plant": "Coffee Beans"
+  "item.justenoughdrugz.hazmat_mask": "Hazmat Mask",
+  "item.justenoughdrugz.hazmat_shirt": "Hazmat Top",
+  "item.justenoughdrugz.hazmat_leggings": "Hazmat Leggings",
+  "item.justenoughdrugz.hazmat_shoes": "Hazmat Boots",
+
+  "item.justenoughdrugz.methylamine": "Methylamine",
+  "item.justenoughdrugz.red_phosphorus": "Red Phosphorus",
+  "block.justenoughdrugz.red_phosphorus_block": "Red Phosphorus Block"
+
+
 }

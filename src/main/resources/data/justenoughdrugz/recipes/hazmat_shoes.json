@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "X X",
+    "X X",
+    "   "
+  ],
+  "key":
+  {
+
+    "X":
+    {
+      "item": "justenoughdrugz:plastic"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:hazmat_shoes",
+    "count": 1
+  }
+}

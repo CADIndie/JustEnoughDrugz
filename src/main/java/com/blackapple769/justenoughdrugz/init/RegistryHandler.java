@@ -1,13 +1,20 @@
 package com.blackapple769.justenoughdrugz.init;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
+import com.blackapple769.justenoughdrugz.block.Flask;
+import com.blackapple769.justenoughdrugz.block.FlaskEntity;
 import com.blackapple769.justenoughdrugz.item.*;
+import com.blackapple769.justenoughdrugz.item.armor.HazmatArmorItem;
+import com.blackapple769.justenoughdrugz.item.materials.CustomArmorMaterials;
 import com.blackapple769.justenoughdrugz.potion.*;
 import com.blackapple769.justenoughdrugz.util.CreativeTabSorter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -17,6 +24,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,6 +32,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import com.google.common.collect.Sets;
 import net.minecraft.sounds.SoundEvent;
 
 
@@ -37,13 +46,21 @@ public class RegistryHandler {
 
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, JustEnoughDrugz.MOD_ID);
 
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, JustEnoughDrugz.MOD_ID);
+
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, JustEnoughDrugz.MOD_ID);
+
+
 
     public static void init() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modEventBus);
         BLOCKS.register(modEventBus);
+        ENTITY_TYPES.register(modEventBus);
         EFFECTS.register(modEventBus);
         SOUND_EVENTS.register(modEventBus);
+        BLOCK_ENTITIES.register(modEventBus);
+
 
     }
 
@@ -116,10 +133,24 @@ public class RegistryHandler {
     public static final RegistryObject<Item> EMPTY_PILL_BOTTLE = ITEMS.register("empty_pill_bottle", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> PERCS_PILL_BOTTLE = ITEMS.register("percs_pill_bottle", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).durability(4), 650, 3, EMPTY_PILL_BOTTLE.get()));
     public static final RegistryObject<Item> EPHEDRA_BERRIES = ITEMS.register("ephedra_berries", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> RED_PHOSPHORUS = ITEMS.register("red_phosphorus", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> METHYLAMINE = ITEMS.register("methylamine", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
+
+
+
     public static final RegistryObject<Item> BLUE_BONG = ITEMS.register("blue_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> RED_BONG = ITEMS.register("red_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> GREEN_BONG = ITEMS.register("green_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> PINK_BONG = ITEMS.register("pink_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
+    public static final RegistryObject<Item> YELLOW_BONG = ITEMS.register("yellow_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
+
+
+    //armor
+    public static final RegistryObject<HazmatArmorItem> HAZMAT_MASK = ITEMS.register("hazmat_mask", () -> new HazmatArmorItem(CustomArmorMaterials.PLASTIC, EquipmentSlot.HEAD, 1));
+    public static final RegistryObject<HazmatArmorItem> HAZMAT_SHIRT = ITEMS.register("hazmat_shirt", () -> new HazmatArmorItem(CustomArmorMaterials.PLASTIC, EquipmentSlot.CHEST, 1));
+    public static final RegistryObject<HazmatArmorItem> HAZMAT_LEGGINGS = ITEMS.register("hazmat_leggings", () -> new HazmatArmorItem(CustomArmorMaterials.PLASTIC, EquipmentSlot.LEGS, 2));
+    public static final RegistryObject<HazmatArmorItem> HAZMAT_SHOES = ITEMS.register("hazmat_shoes", () -> new HazmatArmorItem(CustomArmorMaterials.PLASTIC, EquipmentSlot.FEET, 1));
+
 
 
     //block
@@ -134,6 +165,9 @@ public class RegistryHandler {
     public static final RegistryObject<OreBlock> OIL_ORE = BLOCKS.register("oil_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)));
     public static final RegistryObject<OreBlock> SULFUR_ORE = BLOCKS.register("sulfur_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)));
     public static final RegistryObject<OreBlock> LITHIUM_ORE = BLOCKS.register("lithium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)));
+    public static final RegistryObject<Block> FLASK = BLOCKS.register("flask", () -> new Flask(BlockBehaviour.Properties.of(Material.GLASS).strength(0.1f, 0.5f).sound(SoundType.GLASS).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<OreBlock> RED_PHOSPHORUS_BLOCK = BLOCKS.register("red_phosphorus_block", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)));
+
 
     //blockItems
     public static final RegistryObject<BlockItem> COFFEE_BEANS = ITEMS.register("coffee_beans", () -> new BlockItem(COFFEE_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
@@ -147,6 +181,10 @@ public class RegistryHandler {
     public static final RegistryObject<BlockItem> SULFUR_ORE_ITEM = ITEMS.register("sulfur_ore_item", () -> new BlockItem(SULFUR_ORE.get(), (new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> LITHIUM_ORE_ITEM = ITEMS.register("lithium_ore_item", () -> new BlockItem(LITHIUM_ORE.get(), (new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> MIMOSA_HOSTILIS_PLANT_ITEM = ITEMS.register("mimosa_hostilis_plant_item", () -> new BlockItem(MIMOSA_HOSTILIS_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<BlockItem> RED_PHOSPHORUS_BLOCK_ITEM = ITEMS.register("red_phosphorus_block_item", () -> new BlockItem(RED_PHOSPHORUS_BLOCK.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<BlockItem> FLASK_ITEM = ITEMS.register("flask_item", () -> new BlockItem(FLASK.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+
+
 
     //effects
     public static final RegistryObject<MethEffect> METH_EFFECT = EFFECTS.register("meth_effect", () -> new MethEffect(MobEffectCategory.NEUTRAL, 3484189));
@@ -163,5 +201,8 @@ public class RegistryHandler {
     //sounds
     public static final RegistryObject<SoundEvent> BONG_USE_EFFECT = SOUND_EVENTS.register("bong_use_effect", () -> new SoundEvent(new ResourceLocation(JustEnoughDrugz.MOD_ID, "bong_use")));
     public static final RegistryObject<SoundEvent> USED_UP_BONG = SOUND_EVENTS.register("used_up_bong", () -> new SoundEvent(new ResourceLocation(JustEnoughDrugz.MOD_ID, "used_up_bong")));
+
+    //block entities
+    public static final RegistryObject<BlockEntityType<FlaskEntity>> FLASK_ENTITY = BLOCK_ENTITIES.register("flask", () -> new BlockEntityType<>(FlaskEntity::new, Sets.newHashSet(FLASK.get()), null));
 
 }

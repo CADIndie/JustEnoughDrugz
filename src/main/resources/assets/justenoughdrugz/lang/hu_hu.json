@@ -94,11 +94,24 @@
   "item.justenoughdrugz.red_bong": "Piros Bong",
   "item.justenoughdrugz.pink_bong": "Rózsaszín Bong",
   "item.justenoughdrugz.green_bong": "Zöld Bong",
+  "item.justenoughdrugz.yellow_bong": "Sárga Bong",
+
 
   "effect.justenoughdrugz.weed_effect": "Gyom",
   "effect.justenoughdrugz.shroom_effect": "Shroom",
   "effect.justenoughdrugz.coke_effect": "Kokain",
 
 
-  "block.justenoughdrugz.coffee_plant": "Kávébabok"
+  "block.justenoughdrugz.coffee_plant": "Kávébabok",
+
+  "item.justenoughdrugz.hazmat_mask": "Hazmat maszk",
+  "item.justenoughdrugz.hazmat_shirt": "Hazmat lap teteje",
+  "item.justenoughdrugz.hazmat_leggings": "Hazmat Leggings",
+  "item.justenoughdrugz.hazmat_shoes": "Hazmat csizma",
+
+  "item.justenoughdrugz.methylamine": "Methylamine",
+  "item.justenoughdrugz.red_phosphorus": "Metil-amin",
+
+  "block.justenoughdrugz.red_phosphorus_block": "Bloco de fósforo vermelho"
+
 }

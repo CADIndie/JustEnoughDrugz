@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    "XGX",
+    " C "
+  ],
+  "key":
+  {
+
+    "X":
+    {
+      "item": "justenoughdrugz:plastic"
+    },
+    "C":
+    {
+      "item": "minecraft:charcoal"
+    },
+    "G":
+    {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:hazmat_mask",
+    "count": 1
+  }
+}

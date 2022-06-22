@@ -37,7 +37,7 @@ public class BluntItem extends Item {
 
     @Override
     public @org.jetbrains.annotations.NotNull UseAnim getUseAnimation(ItemStack pStack) {
-        return UseAnim.EAT;
+        return UseAnim.NONE;
     }
 
     public @NotNull InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {

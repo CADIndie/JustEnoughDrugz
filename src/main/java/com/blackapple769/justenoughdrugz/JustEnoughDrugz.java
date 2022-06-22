@@ -2,6 +2,7 @@ package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.PostSetupHandler;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,14 +14,14 @@ import net.minecraft.core.Holder;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 import org.jline.utils.Log;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("justenoughdrugz")
 public class JustEnoughDrugz {
     public static final String MOD_ID = "justenoughdrugz";
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public JustEnoughDrugz() {
         // Register the setup method for modloading
@@ -62,6 +63,9 @@ public class JustEnoughDrugz {
             }
             if(event.getCategory() == Biome.BiomeCategory.JUNGLE){
                 generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, Holder.direct(ModConfiguredFeatures.PATCH_MIMOSA_PLANT));
+            }
+            if(event.getCategory() == Biome.BiomeCategory.RIVER){
+                generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(OreGeneratorHandler.RED_PHOSPHORUS_FEATURE));
             }
         }
     }

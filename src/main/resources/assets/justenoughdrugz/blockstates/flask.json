@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "hasbase=false,hasadditional=false,isstirred=false": {
+      "model": "justenoughdrugz:block/flask"
+    },
+    "hasbase=true,hasadditional=true,isstirred=false": {
+      "model": "justenoughdrugz:block/flask_has_both_chemical"
+    },
+    "hasbase=false,hasadditional=true,isstirred=false": {
+      "model": "justenoughdrugz:block/flask_has_one_chemical"
+    },
+    "hasbase=true,hasadditional=false,isstirred=false": {
+      "model": "justenoughdrugz:block/flask_has_one_chemical"
+    },
+    "isstirred=true": {
+      "model": "justenoughdrugz:block/flask_is_stirred"
+    }
+  }
+}

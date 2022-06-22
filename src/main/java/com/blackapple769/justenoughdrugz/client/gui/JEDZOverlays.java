@@ -1,6 +1,7 @@
 package com.blackapple769.justenoughdrugz.client.gui;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
+import com.blackapple769.justenoughdrugz.item.armor.HazmatArmorItem;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferBuilder;
@@ -19,9 +20,12 @@ public class JEDZOverlays {
     final static Minecraft minecraft = Minecraft.getInstance();
     private static final ResourceLocation SHROOM_LOCATION = new ResourceLocation(JustEnoughDrugz.MOD_ID,"textures/misc/generic_effect.png");
     private static final ResourceLocation WEED_LOCATION = new ResourceLocation("textures/misc/nausea.png");
+    private static final ResourceLocation HAZMAT_OVERLAY_LOCATION = new ResourceLocation(JustEnoughDrugz.MOD_ID,"textures/misc/hazmat_overlay.png");
 
     public static IIngameOverlay HALLUCINATION_EFFECT_ELEMENT;
     public static IIngameOverlay GENERIC_EFFECT_ELEMENT;
+    public static IIngameOverlay HAZMAT_OVERLAY_ELEMENT;
+
 
     public static void init() {
         GENERIC_EFFECT_ELEMENT = OverlayRegistry.registerOverlayTop("Generic Overlay", (gui, poseStack, partialTick, screenWidth, screenHeight) -> {
@@ -41,6 +45,15 @@ public class JEDZOverlays {
             }
             renderShroomOverlay(shroomScaler);
 
+        });
+
+        HAZMAT_OVERLAY_ELEMENT = OverlayRegistry.registerOverlayTop("Hazmat Overlay", (gui, poseStack, partialTick, screenWidth, screenHeight) -> {
+            gui.setupOverlayRenderState(true, false);
+
+            Minecraft minecraft = Minecraft.getInstance();
+            if (HazmatArmorItem.maskEquipped && minecraft.options.getCameraType().isFirstPerson()) {
+                renderHazmatOverlay(screenWidth, screenHeight, 1.0f);
+            }
         });
 
 
@@ -109,6 +122,26 @@ public class JEDZOverlays {
         RenderSystem.disableBlend();
         RenderSystem.depthMask(true);
         RenderSystem.enableDepthTest();
+    }
+
+    private static void renderHazmatOverlay(int screenWidth, int screenHeight, float alpha) {
+        RenderSystem.disableDepthTest();
+        RenderSystem.depthMask(false);
+        RenderSystem.defaultBlendFunc();
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, alpha);
+        RenderSystem.setShaderTexture(0, HAZMAT_OVERLAY_LOCATION);
+        Tesselator tesselator = Tesselator.getInstance();
+        BufferBuilder bufferbuilder = tesselator.getBuilder();
+        bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+        bufferbuilder.vertex(0.0D, (double)screenHeight, -90.0D).uv(0.0F, 1.0F).endVertex();
+        bufferbuilder.vertex((double)screenWidth, (double)screenHeight, -90.0D).uv(1.0F, 1.0F).endVertex();
+        bufferbuilder.vertex((double)screenWidth, 0.0D, -90.0D).uv(1.0F, 0.0F).endVertex();
+        bufferbuilder.vertex(0.0D, 0.0D, -90.0D).uv(0.0F, 0.0F).endVertex();
+        tesselator.end();
+        RenderSystem.depthMask(true);
+        RenderSystem.enableDepthTest();
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
     }
 }
 
