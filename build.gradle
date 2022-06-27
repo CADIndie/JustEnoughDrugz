@@ -3,7 +3,9 @@ buildscript {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
         maven { url = 'https://maven.parchmentmc.org' }
+
         mavenCentral()
+
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
@@ -17,6 +19,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
+
 version = '1.0.1'
 group = 'com.blackapple769.justenoughdrugz' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 
@@ -117,13 +120,10 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    // Put repositories for dependencies here
-    // ForgeGradle automatically adds the Forge maven and Maven Central for you
-
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so
-    // flatDir {
-    //  dirs 'libs'
-    // }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev/"
+    }
 }
 
 dependencies {
@@ -132,6 +132,8 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
 
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
