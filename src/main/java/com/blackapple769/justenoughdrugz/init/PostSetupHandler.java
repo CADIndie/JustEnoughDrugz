@@ -4,22 +4,39 @@ import com.blackapple769.justenoughdrugz.item.GenericEffectItem;
 public class PostSetupHandler {
 
 	public static void init() {
-		((GenericEffectItem) RegistryHandler.BLUE_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.ORANGE_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.CLEAR_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.GREEN_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.HIGH_QUALITY_BLUE_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.MEDIUM_QUALITY_BLUE_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.HIGH_QUALITY_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.MEDIUM_QUALITY_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.LOW_QUALITY_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.BURNT_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.UNDERCOOKED_METH.get()).setEffect(RegistryHandler.METH_EFFECT.get());
 
-		((GenericEffectItem) RegistryHandler.BLUE_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.CLEAR_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.CHEAP_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
 
-		((GenericEffectItem) RegistryHandler.BLUE_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.CLEAR_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.CHEAP_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.HIGH_QUALITY_BLUE_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.MEDIUM_QUALITY_BLUE_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.HIGH_QUALITY_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.MEDIUM_QUALITY_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.LOW_QUALITY_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.BURNT_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.UNDERCOOKED_METH_SYRINGE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
 
-		((GenericEffectItem) RegistryHandler.GOLDEN_BLUE_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.GOLDEN_CLEAR_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
-		((GenericEffectItem) RegistryHandler.GOLDEN_CHEAP_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+
+		((GenericEffectItem) RegistryHandler.HIGH_QUALITY_BLUE_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.MEDIUM_QUALITY_BLUE_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.HIGH_QUALITY_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.MEDIUM_QUALITY_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.LOW_QUALITY_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.BURNT_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.UNDERCOOKED_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+
+		((GenericEffectItem) RegistryHandler.GOLDEN_HIGH_QUALITY_BLUE_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.GOLDEN_MEDIUM_QUALITY_BLUE_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.GOLDEN_HIGH_QUALITY_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.GOLDEN_MEDIUM_QUALITY_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.GOLDEN_LOW_QUALITY_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.GOLDEN_BURNT_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
+		((GenericEffectItem) RegistryHandler.GOLDEN_UNDERCOOKED_METH_PIPE.get()).setEffect(RegistryHandler.METH_EFFECT.get());
 
 		((GenericEffectItem) RegistryHandler.DMT_SYRINGE.get()).setEffect(RegistryHandler.DMT_EFFECT.get());
 		((GenericEffectItem) RegistryHandler.DMT_PIPE.get()).setEffect(RegistryHandler.DMT_EFFECT.get());

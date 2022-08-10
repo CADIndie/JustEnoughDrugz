@@ -17,30 +17,12 @@ public class PotionRecipe {
 		}
 	}
 	static void setupBrewingRecipes() {
+		//TODO add new meth types to vials
 		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
 				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.POISON)),
 				Ingredient.of(new ItemStack(RegistryHandler.EPHEDRINE.get())),
 				new ItemStack(RegistryHandler.PURE_EPHEDRINE.get())));
 
-		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
-				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
-				Ingredient.of(new ItemStack(RegistryHandler.CLEAR_METH.get())),
-				new ItemStack(RegistryHandler.CLEAR_METH_VILE.get())));
-
-		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
-				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
-				Ingredient.of(new ItemStack(RegistryHandler.BLUE_METH.get())),
-				new ItemStack(RegistryHandler.BLUE_METH_VILE.get())));
-
-		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
-				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
-				Ingredient.of(new ItemStack(RegistryHandler.GREEN_METH.get())),
-				new ItemStack(RegistryHandler.CHEAP_METH_VILE.get())));
-
-		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
-				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
-				Ingredient.of(new ItemStack(RegistryHandler.ORANGE_METH.get())),
-				new ItemStack(RegistryHandler.CHEAP_METH_VILE.get())));
 
 		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
 				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),

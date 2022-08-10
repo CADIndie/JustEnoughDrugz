@@ -1,11 +1,12 @@
 {
+  "itemGroup.JustEnoughDrugzMeth": "Just Enough Drugz - Meth",
+  "itemGroup.JustEnoughDrugz": "Just Enough Drugz",
   "item.justenoughdrugz.one_dollar_bill": "1 Dollar",
   "item.justenoughdrugz.five_dollar_bill": "5 Dollars",
   "item.justenoughdrugz.ten_dollar_bill": "10 Dollars",
   "item.justenoughdrugz.twenty_dollar_bill": "20 Dollars",
   "item.justenoughdrugz.fifty_dollar_bill": "50 Dollars",
   "item.justenoughdrugz.hundred_dollar_bill": "100 Dollars",
-  "itemGroup.JustEnoughDrugz": "Just Enough Drugz",
   "item.justenoughdrugz.weed_seed": "Cannabis Seeds",
   "item.justenoughdrugz.weed": "Cannabis Bud",
   "item.justenoughdrugz.baggie": "Empty Baggie",

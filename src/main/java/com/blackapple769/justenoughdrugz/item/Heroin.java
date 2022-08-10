@@ -39,6 +39,4 @@ public class Heroin extends Item {
 
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }
-
-
 }

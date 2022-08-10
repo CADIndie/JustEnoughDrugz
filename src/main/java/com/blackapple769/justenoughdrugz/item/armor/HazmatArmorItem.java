@@ -23,7 +23,7 @@ public class HazmatArmorItem extends ArmorItem {
     public static boolean maskEquipped = false;
 
     public HazmatArmorItem(ArmorMaterial material, EquipmentSlot slot, int type) {
-        super(material, slot, (new Item.Properties().tab(RegistryHandler.ITEM_GROUP)));
+        super(material, slot, (new Item.Properties().tab(RegistryHandler.METH_GROUP)));
         if (type == 2) {
             isLeggings = true;
         }
@@ -46,6 +46,7 @@ public class HazmatArmorItem extends ArmorItem {
                     player.getItemBySlot(EquipmentSlot.FEET).getItem() == RegistryHandler.HAZMAT_SHOES.get()) {
 
                 setEffectState(!effectEnabled);
+                player.removeAllEffects();
             }
             maskEquipped = true;
 

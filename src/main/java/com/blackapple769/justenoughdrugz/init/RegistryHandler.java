@@ -3,6 +3,8 @@ package com.blackapple769.justenoughdrugz.init;
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
 import com.blackapple769.justenoughdrugz.block.Flask;
 import com.blackapple769.justenoughdrugz.block.FlaskEntity;
+import com.blackapple769.justenoughdrugz.block.Pan;
+import com.blackapple769.justenoughdrugz.block.PanEntity;
 import com.blackapple769.justenoughdrugz.item.*;
 import com.blackapple769.justenoughdrugz.item.armor.HazmatArmorItem;
 import com.blackapple769.justenoughdrugz.item.materials.CustomArmorMaterials;
@@ -65,6 +67,7 @@ public class RegistryHandler {
     }
 
     public static final CreativeModeTab ITEM_GROUP = new CreativeTabSorter("JustEnoughDrugz");
+    public static final CreativeModeTab METH_GROUP = new CreativeTabSorter("JustEnoughDrugzMeth");
 
     //items
     public static final RegistryObject<Item> ONE_DOLLAR_BILL = ITEMS.register("one_dollar_bill", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
@@ -93,15 +96,6 @@ public class RegistryHandler {
     public static final RegistryObject<Item> PLASTIC = ITEMS.register("plastic", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> BAGGIE_SHROOMS = ITEMS.register("baggie_shrooms", () -> new Item((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(BAGGIE.get())));
     public static final RegistryObject<Item> GOLDEN_CAP_SHROOM = ITEMS.register("golden_cap_shroom", () -> new Shroom((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> SULFUR = ITEMS.register("sulfur", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> BLUE_METH = ITEMS.register("blue_meth", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(BAGGIE.get()), 800, 4, BAGGIE.get()));
-    public static final RegistryObject<Item> ORANGE_METH = ITEMS.register("orange_meth", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(BAGGIE.get()), 200, 0, BAGGIE.get()));
-    public static final RegistryObject<Item> CLEAR_METH = ITEMS.register("clear_meth", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(BAGGIE.get()), 400, 2, BAGGIE.get()));
-    public static final RegistryObject<Item> GREEN_METH = ITEMS.register("green_meth", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(BAGGIE.get()), 200, 0, BAGGIE.get()));
-    public static final RegistryObject<Item> EPHEDRINE = ITEMS.register("ephedrine", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> PURE_EPHEDRINE = ITEMS.register("pure_ephedrine", () -> new Item((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
-    public static final RegistryObject<Item> UNREFINED_LITHIUM = ITEMS.register("unrefined_lithium", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> REFINED_LITHIUM = ITEMS.register("refined_lithium", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> STYROFOAM_CUP = ITEMS.register("styrofoam_cup", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> LEAN = ITEMS.register("lean", () -> new Lean((new Item.Properties()).tab(ITEM_GROUP).durability(2)));
     public static final RegistryObject<Item> SPIRT = ITEMS.register("spirt", () -> new Spirt((new Item.Properties()).tab(ITEM_GROUP).durability(2)));
@@ -111,38 +105,86 @@ public class RegistryHandler {
     public static final RegistryObject<Item> MIMOSA_HOSTILIS_BARK = ITEMS.register("mimosa_hostilis_bark", () -> new MimosaBark((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> DMT = ITEMS.register("dmt", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> EMPTY_SYRINGE = ITEMS.register("empty_syringe", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> BLUE_METH_SYRINGE = ITEMS.register("blue_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 1600, 4, EMPTY_SYRINGE.get()));
-    public static final RegistryObject<Item> CLEAR_METH_SYRINGE = ITEMS.register("clear_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 800, 4, EMPTY_SYRINGE.get()));
-    public static final RegistryObject<Item> CHEAP_METH_SYRINGE = ITEMS.register("cheap_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 400, 2, EMPTY_SYRINGE.get()));
     public static final RegistryObject<Item> DMT_SYRINGE = ITEMS.register("dmt_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 400, 4, EMPTY_SYRINGE.get()));
     public static final RegistryObject<Item> HEROINE_SYRINGE = ITEMS.register("heroin_syringe", () -> new Heroin((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> BLUE_METH_PIPE = ITEMS.register("blue_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1), 800, 3, PIPE.get()));
-    public static final RegistryObject<Item> CLEAR_METH_PIPE = ITEMS.register("clear_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1), 600, 2, PIPE.get()));
-    public static final RegistryObject<Item> CHEAP_METH_PIPE = ITEMS.register("cheap_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1), 400, 1, PIPE.get()));
     public static final RegistryObject<Item> CRACK_PIPE = ITEMS.register("crack_pipe", () -> new CrackPipe((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1)));
     public static final RegistryObject<Item> MARIJUANA_PIPE = ITEMS.register("marijuana_pipe", () -> new MarijuanaPipe((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1)));
     public static final RegistryObject<Item> DMT_PIPE = ITEMS.register("dmt_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1), 400, 2, PIPE.get()));
-    public static final RegistryObject<Item> GOLDEN_BLUE_METH_PIPE = ITEMS.register("golden_blue_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 800, 3, GOLDEN_PIPE.get()));
-    public static final RegistryObject<Item> GOLDEN_CLEAR_METH_PIPE = ITEMS.register("golden_clear_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 600, 2, GOLDEN_PIPE.get()));
-    public static final RegistryObject<Item> GOLDEN_CHEAP_METH_PIPE = ITEMS.register("golden_cheap_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP), 400, 1, GOLDEN_PIPE.get()));
     public static final RegistryObject<Item> GOLDEN_DMT_PIPE = ITEMS.register("golden_dmt_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).stacksTo(1), 400, 2, GOLDEN_PIPE.get()));
-    public static final RegistryObject<Item> CHEAP_METH_VILE = ITEMS.register("cheap_meth_vile", () -> new Item((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
-    public static final RegistryObject<Item> BLUE_METH_VILE = ITEMS.register("blue_meth_vile", () -> new Item((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
-    public static final RegistryObject<Item> CLEAR_METH_VILE = ITEMS.register("clear_meth_vile", () -> new Item((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> DMT_VILE = ITEMS.register("dmt_vile", () -> new Item((new Item.Properties()).tab(ITEM_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> EMPTY_PILL_BOTTLE = ITEMS.register("empty_pill_bottle", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> PERCS_PILL_BOTTLE = ITEMS.register("percs_pill_bottle", () -> new GenericEffectItem((new Item.Properties()).tab(ITEM_GROUP).durability(4), 650, 3, EMPTY_PILL_BOTTLE.get()));
-    public static final RegistryObject<Item> EPHEDRA_BERRIES = ITEMS.register("ephedra_berries", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> RED_PHOSPHORUS = ITEMS.register("red_phosphorus", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> METHYLAMINE = ITEMS.register("methylamine", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
 
-
-
+    //bongs
     public static final RegistryObject<Item> BLUE_BONG = ITEMS.register("blue_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> RED_BONG = ITEMS.register("red_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> GREEN_BONG = ITEMS.register("green_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> PINK_BONG = ITEMS.register("pink_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
     public static final RegistryObject<Item> YELLOW_BONG = ITEMS.register("yellow_bong", () -> new Bong((new Item.Properties()).tab(ITEM_GROUP).durability(3)));
+
+    //meth syringes
+    public static final RegistryObject<Item> HIGH_QUALITY_BLUE_METH_SYRINGE = ITEMS.register("high_quality_blue_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 1000, 6, EMPTY_SYRINGE.get()));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_BLUE_METH_SYRINGE = ITEMS.register("medium_quality_blue_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 1000, 5, EMPTY_SYRINGE.get()));
+    public static final RegistryObject<Item> HIGH_QUALITY_METH_SYRINGE = ITEMS.register("high_quality_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 600, 3, EMPTY_SYRINGE.get()));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_METH_SYRINGE = ITEMS.register("medium_quality_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 600, 2, EMPTY_SYRINGE.get()));
+    public static final RegistryObject<Item> LOW_QUALITY_METH_SYRINGE = ITEMS.register("low_quality_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 600, 1, EMPTY_SYRINGE.get()));
+    public static final RegistryObject<Item> UNDERCOOKED_METH_SYRINGE = ITEMS.register("undercooked_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 50, 0, EMPTY_SYRINGE.get()));
+    public static final RegistryObject<Item> BURNT_METH_SYRINGE = ITEMS.register("burnt_meth_syringe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP), 50, 0, EMPTY_SYRINGE.get()));
+
+    //meth pipes
+    public static final RegistryObject<Item> HIGH_QUALITY_BLUE_METH_PIPE = ITEMS.register("high_quality_blue_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 800, 3, PIPE.get()));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_BLUE_METH_PIPE = ITEMS.register("medium_quality_blue_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 600, 2, PIPE.get()));
+    public static final RegistryObject<Item> HIGH_QUALITY_METH_PIPE = ITEMS.register("high_quality_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 400, 1, PIPE.get()));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_METH_PIPE = ITEMS.register("medium_quality_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 800, 3, PIPE.get()));
+    public static final RegistryObject<Item> LOW_QUALITY_METH_PIPE = ITEMS.register("low_quality_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 600, 2, PIPE.get()));
+    public static final RegistryObject<Item> UNDERCOOKED_METH_PIPE = ITEMS.register("undercooked_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 400, 1, PIPE.get()));
+    public static final RegistryObject<Item> BURNT_METH_PIPE = ITEMS.register("burnt_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 800, 3, PIPE.get()));
+
+
+    public static final RegistryObject<Item> GOLDEN_HIGH_QUALITY_BLUE_METH_PIPE = ITEMS.register("golden_high_quality_blue_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 800, 3, PIPE.get()));
+    public static final RegistryObject<Item> GOLDEN_MEDIUM_QUALITY_BLUE_METH_PIPE = ITEMS.register("golden_medium_quality_blue_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 600, 2, PIPE.get()));
+    public static final RegistryObject<Item> GOLDEN_HIGH_QUALITY_METH_PIPE = ITEMS.register("golden_high_quality_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 400, 1, PIPE.get()));
+    public static final RegistryObject<Item> GOLDEN_MEDIUM_QUALITY_METH_PIPE = ITEMS.register("golden_medium_quality_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 800, 3, PIPE.get()));
+    public static final RegistryObject<Item> GOLDEN_LOW_QUALITY_METH_PIPE = ITEMS.register("golden_low_quality_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 600, 2, PIPE.get()));
+    public static final RegistryObject<Item> GOLDEN_UNDERCOOKED_METH_PIPE = ITEMS.register("golden_undercooked_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 400, 1, PIPE.get()));
+    public static final RegistryObject<Item> GOLDEN_BURNT_METH_PIPE = ITEMS.register("golden_burnt_meth_pipe", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).stacksTo(1), 800, 3, PIPE.get()));
+
+    //meth vials
+    public static final RegistryObject<Item> HIGH_QUALITY_BLUE_METH_VIAL = ITEMS.register("high_quality_blue_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_BLUE_METH_VIAL = ITEMS.register("medium_quality_blue_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> HIGH_QUALITY_METH_VIAL = ITEMS.register("high_quality_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_METH_VIAL = ITEMS.register("medium_quality_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> LOW_QUALITY_METH_VIAL = ITEMS.register("low_quality_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> BURNT_METH_VIAL = ITEMS.register("burnt_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> UNDERCOOKED_METH_VIAL = ITEMS.register("undercooked_meth_vial", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+
+    //meth
+    public static final RegistryObject<Item> HIGH_QUALITY_BLUE_METH = ITEMS.register("high_quality_blue_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 800, 4, BAGGIE.get()));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_BLUE_METH = ITEMS.register("medium_quality_blue_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 800, 3, BAGGIE.get()));
+    public static final RegistryObject<Item> HIGH_QUALITY_METH = ITEMS.register("high_quality_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 400, 3, BAGGIE.get()));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_METH = ITEMS.register("medium_quality_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 400, 2, BAGGIE.get()));
+    public static final RegistryObject<Item> LOW_QUALITY_METH = ITEMS.register("low_quality_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 400, 1, BAGGIE.get()));
+    public static final RegistryObject<Item> BURNT_METH = ITEMS.register("burnt_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 50, 0, BAGGIE.get()));
+    public static final RegistryObject<Item> UNDERCOOKED_METH = ITEMS.register("undercooked_meth", () -> new GenericEffectItem((new Item.Properties()).tab(METH_GROUP).craftRemainder(BAGGIE.get()), 50, 0, BAGGIE.get()));
+
+    //meth sludge
+    public static final RegistryObject<Item> HIGH_QUALITY_BLUE_METH_SLUDGE = ITEMS.register("high_quality_blue_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_BLUE_METH_SLUDGE = ITEMS.register("medium_quality_blue_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> BURNT_METH_SLUDGE = ITEMS.register("burnt_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> UNDERCOOKED_METH_SLUDGE = ITEMS.register("undercooked_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> HIGH_QUALITY_METH_SLUDGE = ITEMS.register("high_quality_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> MEDIUM_QUALITY_METH_SLUDGE = ITEMS.register("medium_quality_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> LOW_QUALITY_METH_SLUDGE = ITEMS.register("low_quality_meth_sludge", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+
+    //meth chemicals
+    public static final RegistryObject<Item> EPHEDRA_BERRIES = ITEMS.register("ephedra_berries", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> RED_PHOSPHORUS = ITEMS.register("red_phosphorus", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> METHYLAMINE = ITEMS.register("methylamine", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> EPHEDRINE = ITEMS.register("ephedrine", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> PURE_EPHEDRINE = ITEMS.register("pure_ephedrine", () -> new Item((new Item.Properties()).tab(METH_GROUP).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> UNREFINED_LITHIUM = ITEMS.register("unrefined_lithium", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> REFINED_LITHIUM = ITEMS.register("refined_lithium", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<Item> SULFUR = ITEMS.register("sulfur", () -> new Item((new Item.Properties()).tab(METH_GROUP)));
 
 
     //armor
@@ -167,22 +209,24 @@ public class RegistryHandler {
     public static final RegistryObject<OreBlock> LITHIUM_ORE = BLOCKS.register("lithium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)));
     public static final RegistryObject<Block> FLASK = BLOCKS.register("flask", () -> new Flask(BlockBehaviour.Properties.of(Material.GLASS).strength(0.1f, 0.5f).sound(SoundType.GLASS).requiresCorrectToolForDrops().noOcclusion()));
     public static final RegistryObject<OreBlock> RED_PHOSPHORUS_BLOCK = BLOCKS.register("red_phosphorus_block", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)));
+    public static final RegistryObject<Pan> PAN = BLOCKS.register("pan", () -> new Pan(BlockBehaviour.Properties.of(Material.METAL).strength(0.1f, 0.5f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion()));
 
 
     //blockItems
     public static final RegistryObject<BlockItem> COFFEE_BEANS = ITEMS.register("coffee_beans", () -> new BlockItem(COFFEE_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> WEED_SEED = ITEMS.register("weed_seed", () -> new BlockItem(WEED_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<BlockItem> EPHEDRA_ROOT = ITEMS.register("ephedra_root", () -> new BlockItem(PLANTABLE_EPHEDRA.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<BlockItem> EPHEDRA_ROOT = ITEMS.register("ephedra_root", () -> new BlockItem(PLANTABLE_EPHEDRA.get(), (new Item.Properties()).tab(METH_GROUP)));
     public static final RegistryObject<BlockItem> COCA_SEEDS = ITEMS.register("coca_seeds", () -> new BlockItem(COCA_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> OIL_ORE_ITEM = ITEMS.register("oil_ore_item", () -> new BlockItem(OIL_ORE.get(), (new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> GOLDEN_CAP_MUSHROOM_ITEM = ITEMS.register("golden_cap_mushroom_item", () -> new BlockItem(GOLDEN_CAP_MUSHROOM.get(), (new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<BlockItem> SODIUM_BICARBONATE_ORE_ITEM = ITEMS.register("sodium_bicarbonate_ore_item", () -> new BlockItem(SODIUM_BICARBONATE_ORE.get(), (new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<BlockItem> EPHEDRA_PLANT_ITEM = ITEMS.register("ephedra_plant_item", () -> new BlockItem(EPHEDRA_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<BlockItem> SULFUR_ORE_ITEM = ITEMS.register("sulfur_ore_item", () -> new BlockItem(SULFUR_ORE.get(), (new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<BlockItem> LITHIUM_ORE_ITEM = ITEMS.register("lithium_ore_item", () -> new BlockItem(LITHIUM_ORE.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<BlockItem> EPHEDRA_PLANT_ITEM = ITEMS.register("ephedra_plant_item", () -> new BlockItem(EPHEDRA_PLANT.get(), (new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<BlockItem> SULFUR_ORE_ITEM = ITEMS.register("sulfur_ore_item", () -> new BlockItem(SULFUR_ORE.get(), (new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<BlockItem> LITHIUM_ORE_ITEM = ITEMS.register("lithium_ore_item", () -> new BlockItem(LITHIUM_ORE.get(), (new Item.Properties()).tab(METH_GROUP)));
     public static final RegistryObject<BlockItem> MIMOSA_HOSTILIS_PLANT_ITEM = ITEMS.register("mimosa_hostilis_plant_item", () -> new BlockItem(MIMOSA_HOSTILIS_PLANT.get(), (new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<BlockItem> RED_PHOSPHORUS_BLOCK_ITEM = ITEMS.register("red_phosphorus_block_item", () -> new BlockItem(RED_PHOSPHORUS_BLOCK.get(), (new Item.Properties()).tab(ITEM_GROUP)));
-    public static final RegistryObject<BlockItem> FLASK_ITEM = ITEMS.register("flask_item", () -> new BlockItem(FLASK.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+    public static final RegistryObject<BlockItem> RED_PHOSPHORUS_BLOCK_ITEM = ITEMS.register("red_phosphorus_block_item", () -> new BlockItem(RED_PHOSPHORUS_BLOCK.get(), (new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<BlockItem> FLASK_ITEM = ITEMS.register("flask_item", () -> new BlockItem(FLASK.get(), (new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<BlockItem> PAN_ITEM = ITEMS.register("pan_item", () -> new BlockItem(PAN.get(), (new Item.Properties()).tab(METH_GROUP)));
 
 
 
@@ -204,5 +248,6 @@ public class RegistryHandler {
 
     //block entities
     public static final RegistryObject<BlockEntityType<FlaskEntity>> FLASK_ENTITY = BLOCK_ENTITIES.register("flask", () -> new BlockEntityType<>(FlaskEntity::new, Sets.newHashSet(FLASK.get()), null));
+    public static final RegistryObject<BlockEntityType<PanEntity>> PAN_ENTITY = BLOCK_ENTITIES.register("pan", () -> new BlockEntityType<>(PanEntity::new, Sets.newHashSet(PAN.get()), null));
 
 }
