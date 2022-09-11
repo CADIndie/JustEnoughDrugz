@@ -13,12 +13,19 @@ public class MethEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
-		if (this.duration > 100) {
-			livingEntity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, this.duration - 100, amplifier, false, false));
-			livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, this.duration - 100, amplifier, false, false));
+		if(amplifier == 1){
+			livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, this.duration, 3, false, false));
+			livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, this.duration, 3, false, false));
+			livingEntity.addEffect(new MobEffectInstance(MobEffects.WITHER, this.duration, 2, false, false));
+		}else{
+			if (this.duration > 100) {
+				livingEntity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, this.duration - 100, amplifier, false, false));
+				livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, this.duration - 100, amplifier, false, false));
+			}
+			if (this.duration <= 100)
+				livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, this.duration, amplifier, false, false));
 		}
-		if (this.duration <= 100)
-			livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, this.duration, amplifier, false, false));
+
 	}
 
 	@Override

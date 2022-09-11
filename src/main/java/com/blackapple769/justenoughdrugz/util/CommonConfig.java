@@ -54,7 +54,7 @@ public class CommonConfig {
 		builder.push("Oil Ore");
 		ENABLE_OII_ORE = builder.comment("Enable generation of Oil Ore")
 				.define("Enable Oil Ore Generation", true);
-		OIL_ORE_WEIGHT = builder.defineInRange("Oil Ore weight", 10, 1, Integer.MAX_VALUE);
+		OIL_ORE_WEIGHT = builder.defineInRange("Oil Ore weight", 15, 1, Integer.MAX_VALUE);
 		OIL_ORE_TOP_ANCHOR = builder.defineInRange("Oil Ore top anchor", 30, -64, 320);
 		OIL_ORE_BOTTOM_ANCHOR = builder.defineInRange("Oil Ore bottom anchor", -64, -64, 320);
 		OIL_ORE_SIZE = builder.defineInRange("Oil Ore size", 16, 0, Integer.MAX_VALUE);
@@ -86,7 +86,7 @@ public class CommonConfig {
 		builder.push("Sulfur ore");
 		ENABLE_SULFUR_ORE = builder.comment("Enable generation of Sulfur ore")
 				.define("Enable Sulfur ore Generation", true);
-		SULFUR_ORE_WEIGHT = builder.defineInRange("Sulfur ore weight", 6, 1, Integer.MAX_VALUE);
+		SULFUR_ORE_WEIGHT = builder.defineInRange("Sulfur ore weight", 9, 1, Integer.MAX_VALUE);
 		SULFUR_ORE_TOP_ANCHOR = builder.defineInRange("Sulfur ore top anchor", 30, -64, 320);
 		SULFUR_ORE_BOTTOM_ANCHOR = builder.defineInRange("Sulfur ore bottom anchor", -64, -64, 320);
 		SULFUR_ORE_SIZE = builder.defineInRange("Sulfur ore size", 5, 0, Integer.MAX_VALUE);
@@ -97,7 +97,7 @@ public class CommonConfig {
 		builder.push("Lithium ore");
 		ENABLE_LITHIUM_ORE = builder.comment("Enable generation of Lithium ore")
 				.define("Enable Lithium ore Generation", true);
-		LITHIUM_ORE_WEIGHT = builder.defineInRange("Lithium ore weight", 6, 1, Integer.MAX_VALUE);
+		LITHIUM_ORE_WEIGHT = builder.defineInRange("Lithium ore weight", 9, 1, Integer.MAX_VALUE);
 		LITHIUM_ORE_TOP_ANCHOR = builder.defineInRange("Lithium ore top anchor", 64, -64, 320);
 		LITHIUM_ORE_BOTTOM_ANCHOR = builder.defineInRange("Lithium ore bottom anchor", -64, -64, 320);
 		LITHIUM_ORE_SIZE = builder.defineInRange("Lithium ore size", 10, 0, Integer.MAX_VALUE);

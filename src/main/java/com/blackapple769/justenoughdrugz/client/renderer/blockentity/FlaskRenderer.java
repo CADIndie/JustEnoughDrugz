@@ -17,12 +17,13 @@ import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
 public class FlaskRenderer implements BlockEntityRenderer<FlaskEntity> {
-
     public FlaskRenderer() {
+
     }
 
     @Override
     public void render(FlaskEntity tileEntityIn, float partialTicks, @NotNull PoseStack matrixStackIn, @NotNull MultiBufferSource bufferIn, int combinedLightIn, int combinedOverlayIn) {
+        tileEntityIn.load(tileEntityIn.getUpdateTag());
         NonNullList<ItemStack> tileEntityInventory = tileEntityIn.getInventory();
         int cookingProgress = tileEntityIn.getCookProgress();
         Direction direction = tileEntityIn.getBlockState().getValue(Flask.FACING);
@@ -53,7 +54,8 @@ public class FlaskRenderer implements BlockEntityRenderer<FlaskEntity> {
             }
         }
 
-        for (int i = 0; i < cookingProgress; i++) {
+        if(cookingProgress > 0){
+            for (int i = 0; i < cookingProgress; i++) {
                 ItemStack itemstack = new ItemStack(Items.FLINT_AND_STEEL);
                 matrixStackIn.pushPose();
                 // Actual position of the item
@@ -80,8 +82,10 @@ public class FlaskRenderer implements BlockEntityRenderer<FlaskEntity> {
                 Minecraft.getInstance().getItemRenderer().renderStatic(itemstack, ItemTransforms.TransformType.FIXED, combinedLightIn, combinedOverlayIn, matrixStackIn, bufferIn, 0);
                 matrixStackIn.popPose();
 
+            }
         }
     }
+
 
 
 }

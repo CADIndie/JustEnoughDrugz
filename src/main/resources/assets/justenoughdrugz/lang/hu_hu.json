@@ -82,36 +82,70 @@
   "item.justenoughdrugz.cough_syrup": "Cough Syrup",
   "item.justenoughdrugz.dried_coffee_beans": "Szárított Kávébab",
   "item.justenoughdrugz.cup_of_coffee": "csésze kávé",
-
-
   "block.justenoughdrugz.plantable_ephedra": "Ephedra gyökér",
   "item.justenoughdrugz.ephedra_berries": "Ephedra bogyók",
-
   "justenoughdrugz.subtitle.item.bong.use": "Bong elütése",
   "justenoughdrugz.subtitle.item.bong.used_up": "Üres Bong",
-
   "item.justenoughdrugz.blue_bong": "Kék Bong",
   "item.justenoughdrugz.red_bong": "Piros Bong",
   "item.justenoughdrugz.pink_bong": "Rózsaszín Bong",
   "item.justenoughdrugz.green_bong": "Zöld Bong",
   "item.justenoughdrugz.yellow_bong": "Sárga Bong",
-
-
   "effect.justenoughdrugz.weed_effect": "Gyom",
   "effect.justenoughdrugz.shroom_effect": "Shroom",
   "effect.justenoughdrugz.coke_effect": "Kokain",
-
-
   "block.justenoughdrugz.coffee_plant": "Kávébabok",
-
   "item.justenoughdrugz.hazmat_mask": "Hazmat maszk",
   "item.justenoughdrugz.hazmat_shirt": "Hazmat lap teteje",
   "item.justenoughdrugz.hazmat_leggings": "Hazmat Leggings",
   "item.justenoughdrugz.hazmat_shoes": "Hazmat csizma",
-
   "item.justenoughdrugz.methylamine": "Methylamine",
   "item.justenoughdrugz.red_phosphorus": "Metil-amin",
+  "block.justenoughdrugz.red_phosphorus_block": "Bloco de fósforo vermelho",
 
-  "block.justenoughdrugz.red_phosphorus_block": "Bloco de fósforo vermelho"
 
+  "item.justenoughdrugz.high_quality_blue_meth_syringe": "Jeringa de metanfetamina azul de alta calidad",
+  "item.justenoughdrugz.medium_quality_blue_meth_syringe": "Jeringa de metanfetamina azul de calidad media",
+  "item.justenoughdrugz.high_quality_meth_syringe": "Jeringa de metanfetamina de alta calidad",
+  "item.justenoughdrugz.medium_quality_meth_syringe": "Jeringa de metanfetamina de calidad media",
+  "item.justenoughdrugz.low_quality_meth_syringe": "Jeringa de metanfetamina de baja calidad",
+  "item.justenoughdrugz.undercooked_meth_syringe": "Jeringa de metanfetamina poco cocida",
+  "item.justenoughdrugz.burnt_meth_syringe": "Jeringa de metanfetamina quemada",
+  "item.justenoughdrugz.high_quality_blue_meth_pipe": "Tubo de metanfetamina azul de alta calidad",
+  "item.justenoughdrugz.medium_quality_blue_meth_pipe": "Tubo de metanfetamina azul de calidad media",
+  "item.justenoughdrugz.high_quality_meth_pipe": "Tubo de metanfetamina de alta calidad",
+  "item.justenoughdrugz.medium_quality_meth_pipe": "Tubo de metanfetamina de calidad media",
+  "item.justenoughdrugz.low_quality_meth_pipe": "Tubo de metanfetamina de baja calidad",
+  "item.justenoughdrugz.undercooked_meth_pipe": "Pipa de metanfetamina poco cocida",
+  "item.justenoughdrugz.burnt_meth_pipe": "Pipa de metanfetamina quemada",
+  "item.justenoughdrugz.golden_high_quality_blue_meth_pipe": "Pipa de metanfetamina azul dorada de alta calidad",
+  "item.justenoughdrugz.golden_medium_quality_blue_meth_pipe": "Pipa de metanfetamina azul de calidad media dorada",
+  "item.justenoughdrugz.golden_high_quality_meth_pipe": "Pipa de metanfetamina dorada de alta calidad",
+  "item.justenoughdrugz.golden_medium_quality_meth_pipe": "Tubo de metanfetamina de calidad media dorada",
+  "item.justenoughdrugz.golden_low_quality_meth_pipe": "Pipa de metanfetamina dorada de baja calidad",
+  "item.justenoughdrugz.golden_undercooked_meth_pipe": "Pipa de metanfetamina dorada poco cocida",
+  "item.justenoughdrugz.golden_burnt_meth_pipe": "Pipa de metanfetamina dorada quemada",
+  "item.justenoughdrugz.high_quality_blue_meth_vial": "Vial de metanfetamina azul de alta calidad",
+  "item.justenoughdrugz.medium_quality_blue_meth_vial": "Vial de metanfetamina azul de calidad media",
+  "item.justenoughdrugz.high_quality_meth_vial": "Vial de metanfetamina de alta calidad",
+  "item.justenoughdrugz.medium_quality_meth_vial": "Vial de metanfetamina de calidad media",
+  "item.justenoughdrugz.low_quality_meth_vial": "Vial de metanfetamina de baja calidad",
+  "item.justenoughdrugz.undercooked_meth_vial": "Vial de metanfetamina poco cocida",
+  "item.justenoughdrugz.burnt_meth_vial": "Vial de metanfetamina quemada",
+  "item.justenoughdrugz.high_quality_blue_meth": "Metanfetamina azul de alta calidad",
+  "item.justenoughdrugz.medium_quality_blue_meth": "Metanfetamina azul de calidad media",
+  "item.justenoughdrugz.high_quality_meth": "Metanfetamina de alta calidad",
+  "item.justenoughdrugz.medium_quality_meth": "Metanfetamina de calidad media",
+  "item.justenoughdrugz.low_quality_meth": "Metanfetamina de baja calidad",
+  "item.justenoughdrugz.undercooked_meth": "Metanfetamina poco cocida",
+  "item.justenoughdrugz.burnt_meth": "Metanfetamina quemada",
+  "item.justenoughdrugz.high_quality_blue_meth_sludge": "Lodo de metanfetamina azul de alta calidad",
+  "item.justenoughdrugz.medium_quality_blue_meth_sludge": "Lodo de metanfetamina azul de calidad media",
+  "item.justenoughdrugz.high_quality_meth_sludge": "Lodos de metanfetamina de alta calidad",
+  "item.justenoughdrugz.medium_quality_meth_sludge": "Lodos de metanfetamina de calidad media",
+  "item.justenoughdrugz.low_quality_meth_sludge": "Lodos de metanfetamina de baja calidad",
+  "item.justenoughdrugz.undercooked_meth_sludge": "Lodo de metanfetamina poco cocido",
+  "item.justenoughdrugz.burnt_meth_sludge": "Lodo de metanfetamina quemada",
+  "block.justenoughdrugz.flask": "Matraz",
+  "block.justenoughdrugz.pan": "Caballero"
 }

@@ -1,6 +1,7 @@
 package com.blackapple769.justenoughdrugz.client.gui;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
+import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import com.blackapple769.justenoughdrugz.item.armor.HazmatArmorItem;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -14,6 +15,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraftforge.client.gui.IIngameOverlay;
 import net.minecraftforge.client.gui.OverlayRegistry;
+import net.minecraftforge.registries.RegistryObject;
 
 
 public class JEDZOverlays {
@@ -37,13 +39,16 @@ public class JEDZOverlays {
         });
 
         HALLUCINATION_EFFECT_ELEMENT = OverlayRegistry.registerOverlayTop("Shroom", (gui, poseStack, partialTick, screenWidth, screenHeight) -> {
-            gui.setupOverlayRenderState(true, false);
+            gui.setupOverlayRenderState(false, false);
+            Minecraft minecraft = Minecraft.getInstance();
             assert minecraft.player != null;
-            float shroomScaler = Mth.lerp(partialTick, 0.0f, 0.5f);
-            if(shroomScaler >= 0.02f){
-                shroomScaler = 0.02f;
+            if (minecraft.player.hasEffect(RegistryHandler.LEAN_EFFECT.get())
+                    || minecraft.player.hasEffect(RegistryHandler.COKE_EFFECT.get())
+                    || minecraft.player.hasEffect(RegistryHandler.SHROOM_EFFECT.get())
+                    || minecraft.player.hasEffect(RegistryHandler.DMT_EFFECT.get())) {
+                renderShroomOverlay();
             }
-            renderShroomOverlay(shroomScaler);
+
 
         });
 
@@ -58,13 +63,13 @@ public class JEDZOverlays {
 
 
     }
-    private static void renderShroomOverlay(float pScalar) {
+    private static void renderShroomOverlay() {
         int i = minecraft.getWindow().getGuiScaledWidth();
         int j = minecraft.getWindow().getGuiScaledHeight();
-        double d0 = Mth.lerp((double)pScalar, 2.0D, 1.0D);
-        float f = 0.2F * pScalar;
-        float f1 = 0.4F * pScalar;
-        float f2 = 0.2F * pScalar;
+        double d0 = Mth.lerp((double)0.3F, 2.0D, 1.0D);
+        float f = 0.2F * 0.3F;
+        float f1 = 0.4F * 0.3F;
+        float f2 = 0.2F * 0.3F;
         double d1 = (double)i * d0;
         double d2 = (double)j * d0;
         double d3 = ((double)i - d1) / 2.0D;

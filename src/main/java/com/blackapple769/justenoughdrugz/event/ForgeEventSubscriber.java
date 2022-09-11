@@ -1,19 +1,26 @@
 package com.blackapple769.justenoughdrugz.event;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
+import com.blackapple769.justenoughdrugz.OreGeneratorHandler;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import com.blackapple769.justenoughdrugz.util.CommonConfig;
 import com.google.common.collect.ImmutableList;
+import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome.BiomeCategory;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.RegistryEvent.MissingMappings;
 import net.minecraftforge.event.RegistryEvent.MissingMappings.Mapping;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 @EventBusSubscriber(modid = JustEnoughDrugz.MOD_ID, bus = Bus.FORGE)
 public class ForgeEventSubscriber {

@@ -1,5 +1,6 @@
 package com.blackapple769.justenoughdrugz.block;
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
+import com.blackapple769.justenoughdrugz.client.renderer.blockentity.FlaskRenderer;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -21,11 +22,14 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class FlaskEntity extends BlockEntity {
     private final NonNullList<ItemStack> items = NonNullList.withSize(2, ItemStack.EMPTY);
     public boolean canBeStirred;
+    public boolean canBeCooked;
+
     public int[] isStirred = new int[1];
     public float methQuality = 0f;
     public String methColor;
@@ -72,7 +76,9 @@ public class FlaskEntity extends BlockEntity {
             isStirred[0] = 0;
             methColor = "";
             methQuality = 0f;
-            this.cookProgress[0] = 0;
+            cookProgress[0] = 0;
+            canBeStirred = false;
+            canBeCooked = false;
             Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Flask.HASBASE, false), 3);
             Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Flask.HASADDITIONAL, false), 3);
             Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Flask.ISSTIRRED, false), 3);
@@ -88,6 +94,7 @@ public class FlaskEntity extends BlockEntity {
         super.load(pTag);
         this.items.clear();
         canBeStirred = false;
+        canBeCooked = false;
         methQuality = 0.0f;
         ContainerHelper.loadAllItems(pTag, this.items);
 
@@ -125,7 +132,8 @@ public class FlaskEntity extends BlockEntity {
 
         if (pTag.contains("CookProgress", 11)) {
             int[] aint = pTag.getIntArray("CookProgress");
-            System.arraycopy(aint, 0, this.cookProgress, 0, Math.min(this.cookProgress.length, aint.length));
+            System.arraycopy(aint, 0, cookProgress, 0, Math.min(cookProgress.length, aint.length));
+
         }
 
         if (pTag.contains("isStirred", 11)) {
@@ -135,6 +143,7 @@ public class FlaskEntity extends BlockEntity {
 
         if(this.items.get(0) != ItemStack.EMPTY && this.items.get(1) != ItemStack.EMPTY){
             canBeStirred = true;
+            canBeCooked = true;
         }
     }
 
@@ -142,9 +151,6 @@ public class FlaskEntity extends BlockEntity {
     protected void saveAdditional(@NotNull CompoundTag pTag) {
         super.saveAdditional(pTag);
         writeItems(pTag);
-        pTag.putIntArray("CookProgress", this.cookProgress);
-        pTag.putIntArray("isStirred", this.isStirred);
-
     }
 
     private void markUpdated() {
@@ -152,12 +158,15 @@ public class FlaskEntity extends BlockEntity {
         Objects.requireNonNull(this.getLevel()).sendBlockUpdated(this.getBlockPos(), this.getBlockState(), this.getBlockState(), 3);
         if(this.items.get(0) != ItemStack.EMPTY && this.items.get(1) != ItemStack.EMPTY){
             canBeStirred = true;
+            canBeCooked = true;
         }
     }
 
     private CompoundTag writeItems(CompoundTag nbt) {
         super.saveAdditional(nbt);
         ContainerHelper.saveAllItems(nbt, items, true);
+        nbt.putIntArray("CookProgress", cookProgress);
+        nbt.putIntArray("isStirred", isStirred);
         return nbt;
     }
 
@@ -183,6 +192,10 @@ public class FlaskEntity extends BlockEntity {
     public NonNullList<ItemStack> getInventory(){
         return items;
     }
+    public int getCookProgress(){
+        return cookProgress[0];
+    }
+
 
     @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
@@ -190,7 +203,7 @@ public class FlaskEntity extends BlockEntity {
         handleUpdateTag(pkt.getTag());
     }
     public void cook(){
-        if(canBeStirred){
+        if(canBeCooked){
             this.cookProgress[0] += 1;
             if (this.cookProgress[0] > 5) {
                 methQuality -= 0.10;
@@ -201,19 +214,12 @@ public class FlaskEntity extends BlockEntity {
             }
             markUpdated();
         }
-
     }
 
-    public int getCookProgress(){
-        return this.cookProgress[0];
-    }
 
     public void setChemicalBase(Player player, InteractionHand handIn){
-        ItemStack item = player.getItemInHand(handIn);
+        ItemStack item = new ItemStack(player.getItemInHand(handIn).getItem());
         if(!item.isEmpty() && this.items.get(0) == ItemStack.EMPTY){
-            if(!player.isCreative()){
-                player.getItemInHand(handIn).shrink(1);
-            }
             if(item.is(RegistryHandler.METHYLAMINE.get())){
                 methColor = "blue";
                 methQuality += 0.85f;
@@ -233,12 +239,15 @@ public class FlaskEntity extends BlockEntity {
 
             this.items.set(0,item);
             Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Flask.HASBASE, true), 3);
+            if(!player.isCreative()){
+                player.getItemInHand(handIn).shrink(1);
+            }
             markUpdated();
         }
     }
 
     public void setAdditionalChemical(Player player, InteractionHand handIn){
-        ItemStack item = player.getItemInHand(handIn);
+        ItemStack item = new ItemStack(player.getItemInHand(handIn).getItem());
         if(!item.isEmpty() && this.items.get(1) == ItemStack.EMPTY){
             if(!player.isCreative()){
                 player.getItemInHand(handIn).shrink(1);
@@ -250,7 +259,7 @@ public class FlaskEntity extends BlockEntity {
                 methQuality += 0.10f;
             }
             if(item.is(RegistryHandler.SULFUR.get())){
-                methQuality += 0.06f;
+                methQuality += 0.04f;
             }
             if(item.is(RegistryHandler.UNREFINED_LITHIUM.get())){
                 methQuality += 0.02f;
@@ -258,7 +267,11 @@ public class FlaskEntity extends BlockEntity {
 
             this.items.set(1,item);
             Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Flask.HASADDITIONAL, true), 3);
+            if(!player.isCreative()){
+                player.getItemInHand(handIn).shrink(1);
+            }
             markUpdated();
+
         }
     }
 }

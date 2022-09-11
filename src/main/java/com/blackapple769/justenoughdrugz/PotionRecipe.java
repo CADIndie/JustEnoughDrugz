@@ -29,6 +29,50 @@ public class PotionRecipe {
 				Ingredient.of(new ItemStack(RegistryHandler.DMT.get())),
 				new ItemStack(RegistryHandler.DMT_VILE.get())));
 
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.DRIED_COFFEE_BEANS.get())),
+				new ItemStack(RegistryHandler.CUP_OF_COFFEE.get())));
+
+
+		//meth vials
+		//blue
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.HIGH_QUALITY_BLUE_METH.get())),
+				new ItemStack(RegistryHandler.HIGH_QUALITY_BLUE_METH_VIAL.get())));
+
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.MEDIUM_QUALITY_BLUE_METH.get())),
+				new ItemStack(RegistryHandler.MEDIUM_QUALITY_BLUE_METH_VIAL.get())));
+
+		//clear
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.HIGH_QUALITY_METH.get())),
+				new ItemStack(RegistryHandler.HIGH_QUALITY_METH_VIAL.get())));
+
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.MEDIUM_QUALITY_METH.get())),
+				new ItemStack(RegistryHandler.MEDIUM_QUALITY_METH_VIAL.get())));
+
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.LOW_QUALITY_METH.get())),
+				new ItemStack(RegistryHandler.LOW_QUALITY_METH_VIAL.get())));
+
+		//other
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.UNDERCOOKED_METH.get())),
+				new ItemStack(RegistryHandler.UNDERCOOKED_METH_VIAL.get())));
+
+		BrewingRecipeRegistry.addRecipe(new BrewingRecipe(
+				new MyNbtIngredient(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)),
+				Ingredient.of(new ItemStack(RegistryHandler.BURNT_METH.get())),
+				new ItemStack(RegistryHandler.BURNT_METH_VIAL.get())));
 	}
 
 

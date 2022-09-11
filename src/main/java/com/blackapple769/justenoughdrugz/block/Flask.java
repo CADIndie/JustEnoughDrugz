@@ -7,6 +7,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -47,9 +48,6 @@ public class Flask extends HorizontalDirectionalBlock implements EntityBlock{
                                 || player.getItemInHand(handIn).is(RegistryHandler.PURE_EPHEDRINE.get()))
                         {
                             flaskEntity.setChemicalBase(player, handIn);
-                            if(!player.isCreative()){
-                                player.getItemInHand(handIn).shrink(1);
-                            }
                             return InteractionResult.SUCCESS;
                         }
 
@@ -97,5 +95,13 @@ public class Flask extends HorizontalDirectionalBlock implements EntityBlock{
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new FlaskEntity(pPos, pState);
+    }
+
+    public float getShadeBrightness(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return 1.0F;
+    }
+
+    public boolean propagatesSkylightDown(BlockState pState, BlockGetter pReader, BlockPos pPos) {
+        return true;
     }
 }

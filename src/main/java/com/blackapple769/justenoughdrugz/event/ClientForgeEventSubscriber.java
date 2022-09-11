@@ -24,16 +24,13 @@ public class ClientForgeEventSubscriber {
                 int screenHeight = event.getWindow().getGuiScaledHeight();
                 int screenWidth = event.getWindow().getGuiScaledWidth();
 
-                if (Data.data.player.hasEffect(RegistryHandler.SHROOM_EFFECT.get())
-                        || Data.data.player.hasEffect(RegistryHandler.DMT_EFFECT.get())
-                        || Data.data.player.hasEffect(RegistryHandler.LEAN_EFFECT.get())
-                        || Data.data.player.hasEffect(RegistryHandler.COKE_EFFECT.get())) {
-                    JEDZOverlays.HALLUCINATION_EFFECT_ELEMENT.render((ForgeIngameGui) minecraft.gui,
+
+                JEDZOverlays.HALLUCINATION_EFFECT_ELEMENT.render((ForgeIngameGui) minecraft.gui,
                             event.getMatrixStack(),
                             event.getPartialTicks(),
                             screenWidth,
                             screenHeight);
-                }
+
 
                 if (Data.data.player.hasEffect(RegistryHandler.WEED_EFFECT.get())
                         || Data.data.player.hasEffect(RegistryHandler.METH_EFFECT.get())
@@ -53,8 +50,6 @@ public class ClientForgeEventSubscriber {
                             screenHeight);
                 }
             }
-
         }
-
     }
 }

@@ -105,8 +105,6 @@
   "item.justenoughdrugz.green_bong": "Green Bong",
   "item.justenoughdrugz.yellow_bong": "Yellow Bong",
 
-
-
   "effect.justenoughdrugz.weed_effect": "Weed",
   "effect.justenoughdrugz.shroom_effect": "Shroom",
   "effect.justenoughdrugz.coke_effect": "Cocaine",
@@ -120,7 +118,52 @@
 
   "item.justenoughdrugz.methylamine": "Methylamine",
   "item.justenoughdrugz.red_phosphorus": "Red Phosphorus",
-  "block.justenoughdrugz.red_phosphorus_block": "Red Phosphorus Block"
+  "block.justenoughdrugz.red_phosphorus_block": "Red Phosphorus Block",
+
+  "item.justenoughdrugz.high_quality_blue_meth_syringe": "High Quality Blue Meth Syringe",
+  "item.justenoughdrugz.medium_quality_blue_meth_syringe": "Medium Quality Blue Meth Syringe",
+  "item.justenoughdrugz.high_quality_meth_syringe": "High Quality Meth Syringe",
+  "item.justenoughdrugz.medium_quality_meth_syringe": "Medium Quality Meth Syringe",
+  "item.justenoughdrugz.low_quality_meth_syringe": "Low Quality Meth Syringe",
+  "item.justenoughdrugz.undercooked_meth_syringe": "Undercooked Meth Syringe",
+  "item.justenoughdrugz.burnt_meth_syringe": "Burnt Meth Syringe",
+  "item.justenoughdrugz.high_quality_blue_meth_pipe": "High Quality Blue Meth Pipe",
+  "item.justenoughdrugz.medium_quality_blue_meth_pipe": "Medium Quality Blue Meth Pipe",
+  "item.justenoughdrugz.high_quality_meth_pipe": "High Quality Meth Pipe",
+  "item.justenoughdrugz.medium_quality_meth_pipe": "Medium Quality Meth Pipe",
+  "item.justenoughdrugz.low_quality_meth_pipe": "Low Quality Meth Pipe",
+  "item.justenoughdrugz.undercooked_meth_pipe": "Undercooked Meth Pipe",
+  "item.justenoughdrugz.burnt_meth_pipe": "Burnt Meth Pipe",
+  "item.justenoughdrugz.golden_high_quality_blue_meth_pipe": "Golden High Quality Blue Meth Pipe",
+  "item.justenoughdrugz.golden_medium_quality_blue_meth_pipe": "Golden Medium Quality Blue Meth Pipe",
+  "item.justenoughdrugz.golden_high_quality_meth_pipe": "Golden High Quality Meth Pipe",
+  "item.justenoughdrugz.golden_medium_quality_meth_pipe": "Golden Medium Quality Meth Pipe",
+  "item.justenoughdrugz.golden_low_quality_meth_pipe": "Golden Low Quality Meth Pipe",
+  "item.justenoughdrugz.golden_undercooked_meth_pipe": "Golden Undercooked Meth Pipe",
+  "item.justenoughdrugz.golden_burnt_meth_pipe": "Golden Burnt Meth Pipe",
+  "item.justenoughdrugz.high_quality_blue_meth_vial": "High Quality Blue Meth Vial",
+  "item.justenoughdrugz.medium_quality_blue_meth_vial": "Medium Quality Blue Meth Vial",
+  "item.justenoughdrugz.high_quality_meth_vial": "High Quality Meth Vial",
+  "item.justenoughdrugz.medium_quality_meth_vial": "Medium Quality Meth Vial",
+  "item.justenoughdrugz.low_quality_meth_vial": "Low Quality Meth Vial",
+  "item.justenoughdrugz.undercooked_meth_vial": "Undercooked Meth Vial",
+  "item.justenoughdrugz.burnt_meth_vial": "Burnt Meth Vial",
+  "item.justenoughdrugz.high_quality_blue_meth": "High Quality Blue Meth",
+  "item.justenoughdrugz.medium_quality_blue_meth": "Medium Quality Blue Meth",
+  "item.justenoughdrugz.high_quality_meth": "High Quality Meth",
+  "item.justenoughdrugz.medium_quality_meth": "Medium Quality Meth",
+  "item.justenoughdrugz.low_quality_meth": "Low Quality Meth",
+  "item.justenoughdrugz.undercooked_meth": "Undercooked Meth",
+  "item.justenoughdrugz.burnt_meth": "Burnt Meth",
+  "item.justenoughdrugz.high_quality_blue_meth_sludge": "High Quality Blue Meth Sludge",
+  "item.justenoughdrugz.medium_quality_blue_meth_sludge": "Medium Quality Blue Meth Sludge",
+  "item.justenoughdrugz.high_quality_meth_sludge": "High Quality Meth Sludge",
+  "item.justenoughdrugz.medium_quality_meth_sludge": "Medium Quality Meth Sludge",
+  "item.justenoughdrugz.low_quality_meth_sludge": "Low Quality Meth Sludge",
+  "item.justenoughdrugz.undercooked_meth_sludge": "Undercooked Meth Sludge",
+  "item.justenoughdrugz.burnt_meth_sludge": "Burnt Meth Sludge",
+  "block.justenoughdrugz.flask": "Flask",
+  "block.justenoughdrugz.pan": "Pan"
 
 
 }

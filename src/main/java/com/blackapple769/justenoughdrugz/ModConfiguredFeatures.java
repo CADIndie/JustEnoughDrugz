@@ -30,7 +30,7 @@ public class ModConfiguredFeatures {
 
 			List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(15),
 					VerticalAnchor.absolute(196)
-			), BiomeFilter.biome(), InSquarePlacement.spread(), CountPlacement.of(10)));
+			), BiomeFilter.biome(), InSquarePlacement.spread(), CountPlacement.of(7)));
 
 	public static final PlacedFeature PATCH_MIMOSA_PLANT = new PlacedFeature(
 			Holder.direct(new ConfiguredFeature<>(Feature.RANDOM_PATCH,
@@ -38,7 +38,7 @@ public class ModConfiguredFeatures {
 
 			List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(15),
 					VerticalAnchor.absolute(196)
-			), BiomeFilter.biome(), InSquarePlacement.spread(), CountPlacement.of(32)));
+			), BiomeFilter.biome(), InSquarePlacement.spread(), CountPlacement.of(20)));
 
 	private static RandomPatchConfiguration patch(BlockStateProvider stateProvider, int tries) {
 		return FeatureUtils.simpleRandomPatchConfiguration(tries, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(stateProvider)));
