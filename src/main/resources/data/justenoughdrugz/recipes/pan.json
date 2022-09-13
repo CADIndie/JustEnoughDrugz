@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "i i",
+    "iii"
+  ],
+  "key":
+  {
+
+    "i":
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result":
+  {
+    "item": "justenoughdrugz:pan_item",
+    "count": 1
+  }
+}
