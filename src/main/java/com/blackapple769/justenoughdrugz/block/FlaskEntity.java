@@ -226,7 +226,7 @@ public class FlaskEntity extends BlockEntity {
             }
             if(item.is(RegistryHandler.PURE_EPHEDRINE.get())){
                 methColor = "white";
-                methQuality += 0.6f;
+                methQuality += 0.80f;
             }
             if(item.is(RegistryHandler.EPHEDRINE.get())){
                 methColor = "white";
