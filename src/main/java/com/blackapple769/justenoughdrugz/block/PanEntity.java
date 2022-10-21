@@ -40,7 +40,6 @@ public class PanEntity extends BlockEntity {
     }
 
     public void getMeth(Player player, InteractionHand handIn) {
-        JustEnoughDrugz.LOGGER.debug(String.valueOf(this.methType.get(0)));
         if(isBroken[0] == 1){
             if(this.methType.get(0).is(RegistryHandler.HIGH_QUALITY_BLUE_METH_SLUDGE.get())){
                 player.getItemInHand(handIn).shrink(1);
@@ -124,7 +123,6 @@ public class PanEntity extends BlockEntity {
         return ClientboundBlockEntityDataPacket.create(this);
     }
     public void breakMeth(){
-        JustEnoughDrugz.LOGGER.debug(String.valueOf(this.methType.get(0)));
         if(this.methType.get(0) != ItemStack.EMPTY){
             Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Pan.ISBROKEN, true), 3);
             isBroken[0] = 1;
@@ -133,7 +131,6 @@ public class PanEntity extends BlockEntity {
     }
     public boolean setMeth( Player player, InteractionHand handIn){
         ItemStack item = new ItemStack(player.getItemInHand(handIn).getItem());
-        JustEnoughDrugz.LOGGER.debug(String.valueOf(item));
         if(!item.isEmpty() && this.methType.get(0) == ItemStack.EMPTY){
             if(item.is(RegistryHandler.HIGH_QUALITY_BLUE_METH_SLUDGE.get())){
                 Objects.requireNonNull(this.getLevel()).setBlock(this.getBlockPos(), this.getBlockState().setValue(Pan.TYPE, 1), 3);
