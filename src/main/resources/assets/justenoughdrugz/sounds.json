@@ -1,0 +1,19 @@
+{
+  "bong_use": {
+    "subtitle": "justenoughdrugz.subtitle.item.bong.use",
+    "sounds": [
+      {
+        "name": "justenoughdrugz:bong_use"
+      }
+    ]
+  },
+  "used_up_bong": {
+    "subtitle": "justenoughdrugz.subtitle.item.bong.used_up",
+    "sounds": [
+      {
+        "name": "justenoughdrugz:used_up_bong"
+      }
+    ]
+  }
+
+}

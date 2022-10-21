@@ -2,15 +2,15 @@ package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import com.blackapple769.justenoughdrugz.util.CommonConfig;
-import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.Holder;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
@@ -21,93 +21,97 @@ public class OreGeneratorHandler {
     public static PlacedFeature SODIUM_BICARBONATE_FEATURE;
     public static PlacedFeature SULFUR_FEATURE;
     public static PlacedFeature LITHIUM_FEATURE;
-
-    static final List<Integer> OIL_ORE_CONFIG = CommonConfig.OIL_ORE_CONFIG.get();
-    static final List<Integer> SODIUM_BICARBONATE_CONFIG = CommonConfig.SODIUM_BICARBONATE_ORE_CONFIG.get();
-    static final List<Integer> SULFUR_ORE_CONFIG = CommonConfig.SULFUR_ORE_CONFIG.get();
-    static final List<Integer> LITHIUM_ORE_CONFIG = CommonConfig.LITHIUM_ORE_CONFIG.get();
-
-    static List<OreConfiguration.TargetBlockState> targetBlockStates;
-    static ConfiguredFeature<?, ?> configuredFeature;
+    public static PlacedFeature RED_PHOSPHORUS_FEATURE;
 
 
     public static void init() {
-        setupOilOre();
-        setupSodiumBicarbonateOre();
-        setupSulfurOre();
-        setupLithiumOre();
+        OIL_ORE_FEATURE = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.SCATTERED_ORE,
+                        new OreConfiguration(OreReplacementTargets.OIL_ORE_TARGETS, CommonConfig.OIL_ORE_SIZE.get(),
+                                (float) ((double) CommonConfig.OIL_ORE_EXPOSED_DISCARD_CHANCE.get())))),
+
+                List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(CommonConfig.OIL_ORE_BOTTOM_ANCHOR.get()),
+                                VerticalAnchor.absolute(CommonConfig.OIL_ORE_TOP_ANCHOR.get())),
+                        BiomeFilter.biome(),
+                        InSquarePlacement.spread(),
+                        CountPlacement.of(CommonConfig.OIL_ORE_WEIGHT.get())
+                ));
+        RED_PHOSPHORUS_FEATURE = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.SCATTERED_ORE,
+                        new OreConfiguration(OreReplacementTargets.RED_PHOSPHORUS_TARGETS, CommonConfig.RED_PHOSPHORUS_SIZE.get(),
+                                (float) ((double) CommonConfig.RED_PHOSPHORUS_EXPOSED_DISCARD_CHANCE.get())))),
+
+                List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(CommonConfig.RED_PHOSPHORUS_BOTTOM_ANCHOR.get()),
+                                VerticalAnchor.absolute(CommonConfig.RED_PHOSPHORUS_TOP_ANCHOR.get())),
+                        BiomeFilter.biome(),
+                        InSquarePlacement.spread(),
+                        CountPlacement.of(CommonConfig.RED_PHOSPHORUS_WEIGHT.get())
+                ));
+
+        SODIUM_BICARBONATE_FEATURE = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.SCATTERED_ORE,
+                        new OreConfiguration(OreReplacementTargets.SODIUM_BICARBONATE_TARGETS, CommonConfig.SODIUM_BICARBONATE_SIZE.get(),
+                                (float) ((double) CommonConfig.SODIUM_BICARBONATE_EXPOSED_DISCARD_CHANCE.get())))),
+
+                List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(CommonConfig.SODIUM_BICARBONATE_BOTTOM_ANCHOR.get()),
+                                VerticalAnchor.absolute(CommonConfig.SODIUM_BICARBONATE_TOP_ANCHOR.get())),
+                        BiomeFilter.biome(),
+                        InSquarePlacement.spread(),
+                        CountPlacement.of(CommonConfig.SODIUM_BICARBONATE_WEIGHT.get())
+                ));
+
+        SULFUR_FEATURE = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.SCATTERED_ORE,
+                        new OreConfiguration(OreReplacementTargets.SULFUR_ORE_TARGETS, CommonConfig.SULFUR_ORE_SIZE.get(),
+                                (float) ((double) CommonConfig.SULFUR_ORE_EXPOSED_DISCARD_CHANCE.get())))),
+
+                List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(CommonConfig.SULFUR_ORE_BOTTOM_ANCHOR.get()),
+                                VerticalAnchor.absolute(CommonConfig.SULFUR_ORE_TOP_ANCHOR.get())),
+                        BiomeFilter.biome(),
+                        InSquarePlacement.spread(),
+                        CountPlacement.of(CommonConfig.SULFUR_ORE_WEIGHT.get())
+                ));
+
+        LITHIUM_FEATURE = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.SCATTERED_ORE,
+                        new OreConfiguration(OreReplacementTargets.LITHIUM_ORE_TARGETS, CommonConfig.LITHIUM_ORE_SIZE.get(),
+                                (float) ((double) CommonConfig.LITHIUM_ORE_EXPOSED_DISCARD_CHANCE.get())))),
+
+                List.of(HeightRangePlacement.triangle(VerticalAnchor.absolute(CommonConfig.LITHIUM_ORE_BOTTOM_ANCHOR.get()),
+                                VerticalAnchor.absolute(CommonConfig.LITHIUM_ORE_TOP_ANCHOR.get())),
+                        BiomeFilter.biome(),
+                        InSquarePlacement.spread(),
+                        CountPlacement.of(CommonConfig.LITHIUM_ORE_WEIGHT.get())
+                ));
     }
 
-    public static void setupOilOre() {
-        int orePerVein = OIL_ORE_CONFIG.get(0), veinsPerChunk = OIL_ORE_CONFIG.get(1), belowTop = OIL_ORE_CONFIG.get(2);
+    public static class OreReplacementTargets {
+        public static final List<OreConfiguration.TargetBlockState> OIL_ORE_TARGETS = List.of(
+                OreConfiguration.target(ReplacementRules.REGULAR_STONE,
+                        RegistryHandler.OIL_ORE.get().defaultBlockState())
+        );
+        public static final List<OreConfiguration.TargetBlockState> SULFUR_ORE_TARGETS = List.of(
+                OreConfiguration.target(ReplacementRules.REGULAR_STONE,
+                        RegistryHandler.SULFUR_ORE.get().defaultBlockState())
 
-        BlockState blockState = RegistryHandler.OIL_ORE.get().defaultBlockState();
+        );
+        public static final List<OreConfiguration.TargetBlockState> LITHIUM_ORE_TARGETS = List.of(
+                OreConfiguration.target(ReplacementRules.REGULAR_STONE,
+                        RegistryHandler.LITHIUM_ORE.get().defaultBlockState())
 
-        targetBlockStates = List.of(OreConfiguration.target(OreFeatures.NATURAL_STONE, blockState));
-
-        configuredFeature = FeatureUtils.register(JustEnoughDrugz.MOD_ID + "block/oil_ore",
-                Feature.ORE.configured(new OreConfiguration(targetBlockStates, orePerVein)));
-
-        OIL_ORE_FEATURE = PlacementUtils.register(JustEnoughDrugz.MOD_ID + "block/oil_ore",
-                configuredFeature.placed(List.of(CountPlacement.of(veinsPerChunk), InSquarePlacement.spread(),
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(7),
-                                VerticalAnchor.belowTop(belowTop)),
-                        BiomeFilter.biome())));
-
+        );
+        public static final List<OreConfiguration.TargetBlockState> SODIUM_BICARBONATE_TARGETS = List.of(
+                OreConfiguration.target(ReplacementRules.REGULAR_STONE,
+                        RegistryHandler.SODIUM_BICARBONATE_ORE.get().defaultBlockState())
+        );
+        public static final List<OreConfiguration.TargetBlockState> RED_PHOSPHORUS_TARGETS = List.of(
+                OreConfiguration.target(ReplacementRules.SAND,
+                        RegistryHandler.RED_PHOSPHORUS_BLOCK.get().defaultBlockState())
+        );
     }
 
-    public static void setupSodiumBicarbonateOre() {
-        int orePerVein = SODIUM_BICARBONATE_CONFIG.get(0), veinsPerChunk = SODIUM_BICARBONATE_CONFIG.get(1), belowTop = SODIUM_BICARBONATE_CONFIG.get(2);
-
-        BlockState blockState = RegistryHandler.SODIUM_BICARBONATE_ORE.get().defaultBlockState();
-
-        targetBlockStates = List.of(OreConfiguration.target(OreFeatures.NATURAL_STONE, blockState));
-
-        configuredFeature = FeatureUtils.register(JustEnoughDrugz.MOD_ID + "block/sodium_bicarbonate_ore",
-                Feature.ORE.configured(new OreConfiguration(targetBlockStates, orePerVein)));
-
-        SODIUM_BICARBONATE_FEATURE = PlacementUtils.register(JustEnoughDrugz.MOD_ID + "block/sodium_bicarbonate_ore",
-                configuredFeature.placed(List.of(CountPlacement.of(veinsPerChunk), InSquarePlacement.spread(),
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(7),
-                                VerticalAnchor.belowTop(belowTop)),
-                        BiomeFilter.biome())));
-
+    public static final class ReplacementRules {
+        public static final RuleTest REGULAR_STONE = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        public static final RuleTest SAND = new TagMatchTest(BlockTags.SAND);
     }
-
-    public static void setupSulfurOre() {
-        int orePerVein = SULFUR_ORE_CONFIG.get(0), veinsPerChunk = SULFUR_ORE_CONFIG.get(1), belowTop = SULFUR_ORE_CONFIG.get(2);
-
-        BlockState blockState = RegistryHandler.SULFUR_ORE.get().defaultBlockState();
-
-        targetBlockStates = List.of(OreConfiguration.target(OreFeatures.NATURAL_STONE, blockState));
-
-        configuredFeature = FeatureUtils.register(JustEnoughDrugz.MOD_ID + "block/sulfur_ore",
-                Feature.ORE.configured(new OreConfiguration(targetBlockStates, orePerVein)));
-
-        SULFUR_FEATURE = PlacementUtils.register(JustEnoughDrugz.MOD_ID + "block/sulfur_ore",
-                configuredFeature.placed(List.of(CountPlacement.of(veinsPerChunk), InSquarePlacement.spread(),
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(7),
-                                VerticalAnchor.belowTop(belowTop)),
-                        BiomeFilter.biome())));
-
-    }
-
-    public static void setupLithiumOre() {
-        int orePerVein = LITHIUM_ORE_CONFIG.get(0), veinsPerChunk = LITHIUM_ORE_CONFIG.get(1), belowTop = LITHIUM_ORE_CONFIG.get(2);
-
-        BlockState blockState = RegistryHandler.LITHIUM_ORE.get().defaultBlockState();
-
-        targetBlockStates = List.of(OreConfiguration.target(OreFeatures.NATURAL_STONE, blockState));
-
-        configuredFeature = FeatureUtils.register(JustEnoughDrugz.MOD_ID + "block/lithium_ore",
-                Feature.ORE.configured(new OreConfiguration(targetBlockStates, orePerVein)));
-
-        LITHIUM_FEATURE = PlacementUtils.register(JustEnoughDrugz.MOD_ID + "block/lithium_ore",
-                configuredFeature.placed(List.of(CountPlacement.of(veinsPerChunk), InSquarePlacement.spread(),
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(7),
-                                VerticalAnchor.belowTop(belowTop)),
-                        BiomeFilter.biome())));
-
-    }
-
 }

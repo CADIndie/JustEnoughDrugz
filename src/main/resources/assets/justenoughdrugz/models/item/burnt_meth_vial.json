@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "justenoughdrugz:item/burnt_meth_vial"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "variants": {
+    "facing=east,type=0,broken=false": {
+      "model": "justenoughdrugz:block/pan"
+    },
+    "facing=east,type=0,broken=true": {
+      "model": "justenoughdrugz:block/pan"
+
+    },
+    "facing=east,type=1,broken=false": {
+      "model": "justenoughdrugz:block/pan_blue_meth"
+    },
+    "facing=east,type=2,broken=false": {
+      "model": "justenoughdrugz:block/pan_white_meth"
+    },
+    "facing=east,type=3,broken=false": {
+      "model": "justenoughdrugz:block/pan_burnt_meth"
+    },
+    "facing=east,type=4,broken=false": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth"
+    },
+
+    "facing=east,type=1,broken=true": {
+      "model": "justenoughdrugz:block/pan_blue_meth_broken"
+    },
+    "facing=east,type=2,broken=true": {
+      "model": "justenoughdrugz:block/pan_white_meth_broken"
+    },
+    "facing=east,type=3,broken=true": {
+      "model": "justenoughdrugz:block/pan_burnt_meth_broken"
+    },
+    "facing=east,type=4,broken=true": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth_broken"
+    },
+
+    "facing=north,type=0,broken=false": {
+      "model": "justenoughdrugz:block/pan",
+      "y": 90
+
+    },
+    "facing=north,type=0,broken=true": {
+      "model": "justenoughdrugz:block/pan",
+      "y": 90
+
+    },
+    "facing=north,type=1,broken=false": {
+      "model": "justenoughdrugz:block/pan_blue_meth",
+      "y": 90
+
+    },
+    "facing=north,type=2,broken=false": {
+      "model": "justenoughdrugz:block/pan_white_meth",
+      "y": 90
+
+    },
+    "facing=north,type=3,broken=false": {
+      "model": "justenoughdrugz:block/pan_burnt_meth",
+      "y": 90
+
+    },
+    "facing=north,type=4,broken=false": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth",
+      "y": 90
+
+    },
+    "facing=north,type=1,broken=true": {
+      "model": "justenoughdrugz:block/pan_blue_meth_broken",
+      "y": 90
+
+    },
+    "facing=north,type=2,broken=true": {
+      "model": "justenoughdrugz:block/pan_white_meth_broken",
+      "y": 90
+
+    },
+    "facing=north,type=3,broken=true": {
+      "model": "justenoughdrugz:block/pan_burnt_meth_broken",
+      "y": 90
+
+    },
+    "facing=north,type=4,broken=true": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth_broken",
+      "y": 90
+
+    },
+
+
+    "facing=south,type=0,broken=false": {
+      "model": "justenoughdrugz:block/pan",
+      "y": 270
+
+    },
+    "facing=south,type=0,broken=true": {
+      "model": "justenoughdrugz:block/pan",
+      "y": 270
+    },
+    "facing=south,type=1,broken=false": {
+      "model": "justenoughdrugz:block/pan_blue_meth",
+      "y": 270
+    },
+    "facing=south,type=2,broken=false": {
+      "model": "justenoughdrugz:block/pan_white_meth",
+      "y": 270
+    },
+    "facing=south,type=3,broken=false": {
+      "model": "justenoughdrugz:block/pan_burnt_meth",
+      "y": 270
+    },
+    "facing=south,type=4,broken=false": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth",
+      "y": 270
+    },
+    "facing=south,type=1,broken=true": {
+      "model": "justenoughdrugz:block/pan_blue_meth_broken",
+      "y": 270
+    },
+    "facing=south,type=2,broken=true": {
+      "model": "justenoughdrugz:block/pan_white_meth_broken",
+      "y": 270
+    },
+    "facing=south,type=3,broken=true": {
+      "model": "justenoughdrugz:block/pan_burnt_meth_broken",
+      "y": 270
+    },
+    "facing=south,type=4,broken=true": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth_broken",
+      "y": 270
+    },
+
+
+    "facing=west,type=0,broken=false": {
+      "model": "justenoughdrugz:block/pan",
+      "y": 180
+    },
+    "facing=west,type=0,broken=true": {
+      "model": "justenoughdrugz:block/pan",
+      "y": 180
+    },
+    "facing=west,type=1,broken=false": {
+      "model": "justenoughdrugz:block/pan_blue_meth",
+      "y": 180
+    },
+    "facing=west,type=2,broken=false": {
+      "model": "justenoughdrugz:block/pan_white_meth",
+      "y": 180
+    },
+    "facing=west,type=3,broken=false": {
+      "model": "justenoughdrugz:block/pan_burnt_meth",
+      "y": 180
+    },
+    "facing=west,type=4,broken=false": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth",
+      "y": 180
+    },
+    "facing=west,type=1,broken=true": {
+      "model": "justenoughdrugz:block/pan_blue_meth_broken",
+      "y": 180
+    },
+    "facing=west,type=2,broken=true": {
+      "model": "justenoughdrugz:block/pan_white_meth_broken",
+      "y": 180
+    },
+    "facing=west,type=3,broken=true": {
+      "model": "justenoughdrugz:block/pan_burnt_meth_broken",
+      "y": 180
+    },
+    "facing=west,type=4,broken=true": {
+      "model": "justenoughdrugz:block/pan_undercooked_meth_broken",
+      "y": 180
+    }
+  }
+}

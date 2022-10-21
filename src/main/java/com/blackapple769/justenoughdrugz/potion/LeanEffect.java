@@ -19,8 +19,6 @@ public class LeanEffect extends MobEffect {
         livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration - 100, amplifier, false, false));
         livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, duration, amplifier, false, false));
 
-
-
     }
 
     /**

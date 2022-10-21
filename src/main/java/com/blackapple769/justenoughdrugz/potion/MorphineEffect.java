@@ -8,19 +8,25 @@ import net.minecraft.world.entity.LivingEntity;
 import org.antlr.v4.runtime.misc.NotNull;
 
 public class MorphineEffect extends MobEffect {
+
     private int duration;
+
     public MorphineEffect(MobEffectCategory p_19451_, int p_19452_) {
         super(p_19451_, p_19452_);
     }
 
-
+    /**
+     * Runs once each tick while the effect is active.
+     * @param livingEntity the <code>LivingEntity</code> with the effect
+     * @param amplifier the effect amplifier
+     */
     @Override
     public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
-        if (duration > 100) {
-            livingEntity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, duration - 100, amplifier, false, false));
-            livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, duration - 100, amplifier, false, false));
+        if (duration > 200) {
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, duration - 200, amplifier, false, false));
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, duration - 200, amplifier, false, false));
         }
-        if (duration <= 100) {
+        if (duration <= 200) {
             livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration, amplifier, false, false));
             livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, duration, amplifier, false, false));
             livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration, amplifier, false, false));

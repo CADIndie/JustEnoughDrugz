@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "justenoughdrugz:block/mimosa_hostilis_plant"
+    "cross": "justenoughdrugz:item/mimosa_hostilis_plant"
   }
 }

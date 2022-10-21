@@ -3,16 +3,16 @@ package com.blackapple769.justenoughdrugz.item;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
+public class MimosaBark extends Item {
 
-public class mimosaBark extends Item {
-    public mimosaBark(Properties pProperties) {
-        super(pProperties);
-    }
+	public MimosaBark(Item.Properties pProperties) {
+		super(pProperties);
+	}
 
-    @Override
-    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-        return 100;
-    }
+	@Override
+	public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+		return 100;
+	}
 }

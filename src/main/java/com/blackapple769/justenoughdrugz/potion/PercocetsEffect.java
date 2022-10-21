@@ -18,14 +18,12 @@ public class PercocetsEffect extends MobEffect {
     public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
         if (duration > 600) {
             livingEntity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, duration - 600, amplifier, false, false));
-
         }
         if (duration <= 600) {
             livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, duration, amplifier, false, false));
             livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration, amplifier, false, false));
             livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, duration, amplifier, false, false));
             livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, duration, amplifier, false, false));
-
             livingEntity.addEffect(new MobEffectInstance(MobEffects.SATURATION, duration, amplifier, false, false));
         }
     }

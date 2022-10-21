@@ -15,12 +15,8 @@ public class CaffeineEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
-
         livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, duration, amplifier, false, false));
         livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, duration, amplifier, false, false));
-
-
-
     }
 
     /**

@@ -14,20 +14,19 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class Lean extends Item {
     public Lean(Properties pProperties) {
         super(pProperties);
     }
-    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
-        if (pEntityLiving instanceof ServerPlayer) {
-            ServerPlayer serverplayer = (ServerPlayer)pEntityLiving;
+    public @NotNull ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
+        if (pEntityLiving instanceof ServerPlayer serverplayer) {
             CriteriaTriggers.CONSUME_ITEM.trigger(serverplayer, pStack);
             serverplayer.awardStat(Stats.ITEM_USED.get(this));
         }
 
-        if (pEntityLiving instanceof Player) {
-            Player pEntityLiving1 = (Player) pEntityLiving;
+        if (pEntityLiving instanceof Player pEntityLiving1) {
             pEntityLiving1.addEffect(new MobEffectInstance(RegistryHandler.LEAN_EFFECT.get(), 650, 1, false, true));
             if (!(pEntityLiving1).getAbilities().instabuild) {
                 if (pStack.getDamageValue() == pStack.getMaxDamage() - 1) {

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "justenoughdrugz:ephedra_plant_item"
+    "item": "justenoughdrugz:ephedra_berries"
   },
   "result": "justenoughdrugz:ephedrine",
   "experience": 0.7,

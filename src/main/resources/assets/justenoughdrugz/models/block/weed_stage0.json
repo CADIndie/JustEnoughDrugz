@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:block/crop",
   "textures": {
-    "cross": "justenoughdrugz:block/weed_stage0"
+    "crop": "justenoughdrugz:block/weed_stage0"
   }
 }

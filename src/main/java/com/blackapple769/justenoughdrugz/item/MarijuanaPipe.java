@@ -20,24 +20,13 @@ public class MarijuanaPipe extends Item {
     public @NotNull
     InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, Player playerIn, @NotNull InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
+        playerIn.addEffect(new MobEffectInstance(RegistryHandler.WEED_EFFECT.get(), 250, 1, false, true));
 
         if(!playerIn.isCreative()){
-            if(itemstack.is(RegistryHandler.GOLDEN_MARIJUANA_PIPE.get())){
-                playerIn.getInventory().add(new ItemStack(RegistryHandler.GOLDEN_PIPE.get()));
-
-            }else{
-                playerIn.getInventory().add(new ItemStack(RegistryHandler.PIPE.get()));
-
-            }
             itemstack.shrink(1);
-
+            playerIn.addItem(new ItemStack(RegistryHandler.PIPE.get(), 1));
         }
 
-        playerIn.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.LUCK, 400, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, false, true));
-        playerIn.addEffect(new MobEffectInstance(MobEffects.HUNGER, 400, 0, false, true));
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }
 }

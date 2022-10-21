@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "justenoughdrugz:empty_syringe"
+    },
+    {
+      "item": "justenoughdrugz:undercooked_meth_vial"
+    }
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:undercooked_meth_syringe"
+  }
+}

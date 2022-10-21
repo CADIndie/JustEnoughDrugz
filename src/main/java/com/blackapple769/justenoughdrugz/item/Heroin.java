@@ -34,9 +34,9 @@ public class Heroin extends Item {
         if (!playerIn.isCreative()) {
             itemstack.shrink(1);
             playerIn.getInventory().add(new ItemStack(RegistryHandler.EMPTY_SYRINGE.get()));
+
         }
+
         return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
     }
-
-
 }
