@@ -32,7 +32,7 @@ public class BluntItem extends Item {
 
     @Override
     public int getUseDuration(ItemStack pStack) {
-        return 50;
+        return 5;
     }
 
     @Override

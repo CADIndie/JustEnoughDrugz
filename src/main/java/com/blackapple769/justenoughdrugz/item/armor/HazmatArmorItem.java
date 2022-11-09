@@ -40,7 +40,7 @@ public class HazmatArmorItem extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        maskEquipped = false;
+        // TODO add back maskEquipped = false;
         if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == RegistryHandler.HAZMAT_MASK.get()){
             if(player.getItemBySlot(EquipmentSlot.CHEST).getItem() == RegistryHandler.HAZMAT_SHIRT.get() &&
                     player.getItemBySlot(EquipmentSlot.LEGS).getItem() == RegistryHandler.HAZMAT_LEGGINGS.get() &&
@@ -49,10 +49,9 @@ public class HazmatArmorItem extends ArmorItem {
                 setEffectState(!effectEnabled);
                 player.removeAllEffects();
             }
-            maskEquipped = true;
-        }
-        JustEnoughDrugz.LOGGER.debug(String.valueOf(maskEquipped));
+            // TODO add back maskEquipped = true;
 
+        }
     }
 
 }
