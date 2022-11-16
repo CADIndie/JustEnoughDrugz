@@ -8,10 +8,10 @@ import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.brewing.BrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
-import net.minecraftforge.common.crafting.NBTIngredient;
+import net.minecraftforge.common.crafting.StrictNBTIngredient;
 
 public class PotionRecipe {
-	static class MyNbtIngredient extends NBTIngredient {
+	static class MyNbtIngredient extends StrictNBTIngredient {
 		protected MyNbtIngredient(ItemStack stack) {
 			super(stack);
 		}

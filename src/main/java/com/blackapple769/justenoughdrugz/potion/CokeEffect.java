@@ -16,11 +16,9 @@ public class CokeEffect extends MobEffect {
     @Override
     public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
         Data.data.player = livingEntity;
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, amplifier, false, true));
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 1+amplifier, false, true));
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 2+amplifier, false, true));
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, amplifier, false, true));
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 600, amplifier, false, true));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration, 1+amplifier, false, false));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, duration, amplifier, false, false));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, duration, amplifier, false, false));
     }
 
     /**

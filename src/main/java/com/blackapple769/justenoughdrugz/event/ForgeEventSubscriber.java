@@ -1,23 +1,17 @@
 package com.blackapple769.justenoughdrugz.event;
 
 import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
-import com.blackapple769.justenoughdrugz.OreGeneratorHandler;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
-import com.blackapple769.justenoughdrugz.util.CommonConfig;
-import com.google.common.collect.ImmutableList;
-import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.biome.Biome.BiomeCategory;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
-import net.minecraftforge.event.RegistryEvent.MissingMappings;
-import net.minecraftforge.event.RegistryEvent.MissingMappings.Mapping;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.MissingMappingsEvent;
+import net.minecraftforge.registries.MissingMappingsEvent.Mapping;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +20,8 @@ import java.util.List;
 public class ForgeEventSubscriber {
 
     @SubscribeEvent
-    public static void missingItemMappings(MissingMappings<Item> event) {
-        ImmutableList<Mapping<Item>> mappings = event.getMappings(JustEnoughDrugz.MOD_ID);
+    public static void missingItemMappings(MissingMappingsEvent event) {
+        List<Mapping<Item>> mappings = event.getMappings(ForgeRegistries.ITEMS.getRegistryKey(), JustEnoughDrugz.MOD_ID);
 
         if (!mappings.isEmpty()) {
 
@@ -57,79 +51,79 @@ public class ForgeEventSubscriber {
 
 
             for (Mapping<Item> itemMapping : mappings) {
-                if (itemMapping.key.equals(BLUE_METH)) {
+                if (itemMapping.getKey().equals(BLUE_METH)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_BLUE_METH.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CLEAR_METH)) {
+                if (itemMapping.getKey().equals(CLEAR_METH)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_METH.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(GREEN_METH) || itemMapping.key.equals(ORANGE_METH)) {
+                if (itemMapping.getKey().equals(GREEN_METH) || itemMapping.getKey().equals(ORANGE_METH)) {
                     itemMapping.remap(RegistryHandler.LOW_QUALITY_METH.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CHEAP_METH_VILE)) {
+                if (itemMapping.getKey().equals(CHEAP_METH_VILE)) {
                     itemMapping.remap(RegistryHandler.LOW_QUALITY_METH_VIAL.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(BLUE_METH_VILE)) {
+                if (itemMapping.getKey().equals(BLUE_METH_VILE)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_BLUE_METH_VIAL.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CLEAR_METH_VILE)) {
+                if (itemMapping.getKey().equals(CLEAR_METH_VILE)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_METH_VIAL.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CHEAP_METH_SYRINGE)) {
+                if (itemMapping.getKey().equals(CHEAP_METH_SYRINGE)) {
                     itemMapping.remap(RegistryHandler.LOW_QUALITY_METH_SYRINGE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(BLUE_METH_SYRINGE)) {
+                if (itemMapping.getKey().equals(BLUE_METH_SYRINGE)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_BLUE_METH_SYRINGE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CLEAR_METH_SYRINGE)) {
+                if (itemMapping.getKey().equals(CLEAR_METH_SYRINGE)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_METH_SYRINGE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CHEAP_METH_PIPE)) {
+                if (itemMapping.getKey().equals(CHEAP_METH_PIPE)) {
                     itemMapping.remap(RegistryHandler.LOW_QUALITY_METH_PIPE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(BLUE_METH_PIPE)) {
+                if (itemMapping.getKey().equals(BLUE_METH_PIPE)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_BLUE_METH_PIPE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(CLEAR_METH_PIPE)) {
+                if (itemMapping.getKey().equals(CLEAR_METH_PIPE)) {
                     itemMapping.remap(RegistryHandler.MEDIUM_QUALITY_METH_PIPE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(GOLDEN_CHEAP_METH_PIPE)) {
+                if (itemMapping.getKey().equals(GOLDEN_CHEAP_METH_PIPE)) {
                     itemMapping.remap(RegistryHandler.GOLDEN_LOW_QUALITY_METH_PIPE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(GOLDEN_BLUE_METH_PIPE)) {
+                if (itemMapping.getKey().equals(GOLDEN_BLUE_METH_PIPE)) {
                     itemMapping.remap(RegistryHandler.GOLDEN_MEDIUM_QUALITY_BLUE_METH_PIPE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
-                if (itemMapping.key.equals(GOLDEN_CLEAR_METH_PIPE)) {
+                if (itemMapping.getKey().equals(GOLDEN_CLEAR_METH_PIPE)) {
                     itemMapping.remap(RegistryHandler.GOLDEN_MEDIUM_QUALITY_METH_PIPE.get());
-                    remappedItems.add(itemMapping.key.getPath());
+                    remappedItems.add(itemMapping.getKey().getPath());
                 }
 
             }

@@ -16,11 +16,9 @@ public class WeedEffect extends MobEffect {
     @Override
     public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
         Data.data.player = livingEntity;
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration, amplifier, false, true));
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, duration, amplifier, false, true));
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, duration, amplifier, false, true));
-
-
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, duration, amplifier, false, false));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, duration, amplifier, false, false));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, duration, amplifier, false, false));
     }
 
     /**

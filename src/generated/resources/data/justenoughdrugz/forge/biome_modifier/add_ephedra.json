@@ -1,0 +1,7 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "justenoughdrugz:patch_ephedra_plant",
+  "step": "vegetal_decoration"
+
+}

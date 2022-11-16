@@ -23,7 +23,6 @@ public class Cocaine extends Item {
             itemstack.shrink(1);
             playerIn.addItem(new ItemStack(RegistryHandler.BAGGIE.get(), 1));
         }
-
         playerIn.addEffect(new MobEffectInstance(RegistryHandler.COKE_EFFECT.get(), 300, 1, false, true));
 
 

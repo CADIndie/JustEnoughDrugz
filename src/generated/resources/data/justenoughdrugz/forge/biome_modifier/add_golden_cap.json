@@ -1,0 +1,7 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_swamp",
+  "features": "justenoughdrugz:patch_golden_cap_mushroom",
+  "step": "vegetal_decoration"
+
+}
