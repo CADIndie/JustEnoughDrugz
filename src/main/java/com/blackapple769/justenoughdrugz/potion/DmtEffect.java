@@ -14,8 +14,7 @@ public class DmtEffect extends MobEffect {
 	@Override
 	public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
 		livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, this.duration - 100, amplifier + 10, false, false));
-		livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, this.duration - 100, 0, false, false));
-		livingEntity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, this.duration - 100, 0, false, false));
+
 	}
 
 	@Override

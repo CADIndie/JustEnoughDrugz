@@ -16,7 +16,8 @@ public class ShroomEffect extends MobEffect {
     @Override
     public void applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
         Data.data.player = livingEntity;
-        livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, duration, amplifier, false, true));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, duration, amplifier, false, false));
+        livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, duration, amplifier, false, false));
     }
 
     /**

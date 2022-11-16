@@ -15,7 +15,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraftforge.client.gui.IIngameOverlay;
 import net.minecraftforge.client.gui.OverlayRegistry;
-import net.minecraftforge.registries.RegistryObject;
 
 
 public class JEDZOverlays {
@@ -46,10 +45,9 @@ public class JEDZOverlays {
                     || minecraft.player.hasEffect(RegistryHandler.COKE_EFFECT.get())
                     || minecraft.player.hasEffect(RegistryHandler.SHROOM_EFFECT.get())
                     || minecraft.player.hasEffect(RegistryHandler.DMT_EFFECT.get())) {
-                renderShroomOverlay();
+                float Scaler = 0.1f;
+                renderShroomOverlay(Scaler);
             }
-
-
         });
 
         HAZMAT_OVERLAY_ELEMENT = OverlayRegistry.registerOverlayTop("Hazmat Overlay", (gui, poseStack, partialTick, screenWidth, screenHeight) -> {
@@ -63,13 +61,15 @@ public class JEDZOverlays {
 
 
     }
-    private static void renderShroomOverlay() {
+    private static void renderShroomOverlay(float pScalar) {
         int i = minecraft.getWindow().getGuiScaledWidth();
         int j = minecraft.getWindow().getGuiScaledHeight();
-        double d0 = Mth.lerp((double)0.3F, 2.0D, 1.0D);
-        float f = 0.2F * 0.3F;
-        float f1 = 0.4F * 0.3F;
-        float f2 = 0.2F * 0.3F;
+        double d0 = Mth.lerp((double)pScalar, 2.0D, 1.0D);
+        float randomizer = Mth.lerp(1f, 1.0f, 5.0f);
+
+        float f = 0.2F * pScalar;
+        float f1 = 0.4F * pScalar;
+        float f2 = 0.2F * pScalar;
         double d1 = (double)i * d0;
         double d2 = (double)j * d0;
         double d3 = ((double)i - d1) / 2.0D;

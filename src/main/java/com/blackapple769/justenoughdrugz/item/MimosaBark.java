@@ -7,12 +7,12 @@ import org.jetbrains.annotations.Nullable;
 
 public class MimosaBark extends Item {
 
-	public MimosaBark(Item.Properties pProperties) {
-		super(pProperties);
-	}
+    public MimosaBark(Item.Properties pProperties) {
+        super(pProperties);
+    }
 
-	@Override
-	public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-		return 100;
-	}
+    @Override
+    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+        return 100;
+    }
 }
