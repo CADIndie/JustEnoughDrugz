@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage1"
+    },
+    "age=1": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage1"
+    },
+    "age=2": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage2"
+    },
+    "age=3": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage2"
+    },
+    "age=4": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage3"
+    },
+    "age=5": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage3"
+    },
+    "age=6": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage4"
+    },
+    "age=7": {
+      "model": "justenoughdrugz:block/golden_cap_mushroom_stage5"
+    }
+
+
+  }
+}

@@ -147,5 +147,7 @@
   "item.justenoughdrugz.undercooked_meth_sludge": "Lodo de metanfetamina poco cocido",
   "item.justenoughdrugz.burnt_meth_sludge": "Lodo de metanfetamina quemada",
   "block.justenoughdrugz.flask": "Matraz",
-  "block.justenoughdrugz.pan": "Caballero"
+  "block.justenoughdrugz.pan": "Caballero",
+  "block.justenoughdrugz.plantable_golden_cap_mushroom": "Arany sapka gomba spórák"
+
 }

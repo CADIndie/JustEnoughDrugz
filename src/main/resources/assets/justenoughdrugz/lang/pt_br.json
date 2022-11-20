@@ -164,5 +164,7 @@
   "item.justenoughdrugz.undercooked_meth_sludge": "Sludge mal feito",
   "item.justenoughdrugz.burnt_meth_sludge": "Sludge Queimado",
   "block.justenoughdrugz.flask": "Frasco",
-  "block.justenoughdrugz.pan": "Frigideira"
+  "block.justenoughdrugz.pan": "Frigideira",
+  "block.justenoughdrugz.plantable_golden_cap_mushroom": "Esporos de cogumelo de boné dourado"
+
 }
