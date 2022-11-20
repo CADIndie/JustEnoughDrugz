@@ -193,10 +193,6 @@ public class RegistryHandler {
 
 
     //block
-    public static final RegistryObject<Block> PLANTABLE_EPHEDRA = BLOCKS.register("plantable_ephedra", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-    public static final RegistryObject<Block> WEED_PLANT = BLOCKS.register("weed_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-    public static final RegistryObject<Block> COCA_PLANT = BLOCKS.register("coca_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-    public static final RegistryObject<Block> COFFEE_PLANT = BLOCKS.register("coffee_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
     public static final RegistryObject<FlowerBlock> MIMOSA_HOSTILIS_PLANT = BLOCKS.register("mimosa_hostilis_plant", () -> new FlowerBlock(MobEffects.CONFUSION, 600, BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak()));
     public static final RegistryObject<FlowerBlock> GOLDEN_CAP_MUSHROOM = BLOCKS.register("golden_cap_mushroom", () -> new FlowerBlock(MobEffects.CONFUSION, 600, BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak()));
     public static final RegistryObject<FlowerBlock> EPHEDRA_PLANT = BLOCKS.register("ephedra_plant", () -> new FlowerBlock(MobEffects.CONFUSION, 600, BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak()));
@@ -207,6 +203,14 @@ public class RegistryHandler {
     public static final RegistryObject<Block> FLASK = BLOCKS.register("flask", () -> new Flask(BlockBehaviour.Properties.of(Material.GLASS).strength(0.1f, 0.5f).sound(SoundType.GLASS).noOcclusion()));
     public static final RegistryObject<DropExperienceBlock> RED_PHOSPHORUS_BLOCK = BLOCKS.register("red_phosphorus_block", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(0.5F, 1.0F)));
     public static final RegistryObject<Pan> PAN = BLOCKS.register("pan", () -> new Pan(BlockBehaviour.Properties.of(Material.METAL).strength(0.1f, 0.5f).sound(SoundType.METAL).noOcclusion()));
+
+
+    //crops
+    public static final RegistryObject<Block> PLANTABLE_EPHEDRA = BLOCKS.register("plantable_ephedra", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+    public static final RegistryObject<Block> WEED_PLANT = BLOCKS.register("weed_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+    public static final RegistryObject<Block> COCA_PLANT = BLOCKS.register("coca_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+    public static final RegistryObject<Block> COFFEE_PLANT = BLOCKS.register("coffee_plant", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+    public static final RegistryObject<Block> PLANTABLE_GOLDEN_CAP_MUSHROOM = BLOCKS.register("plantable_golden_cap_mushroom", () -> new CropBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
 
     //blockItems
@@ -224,6 +228,8 @@ public class RegistryHandler {
     public static final RegistryObject<BlockItem> RED_PHOSPHORUS_BLOCK_ITEM = ITEMS.register("red_phosphorus_block_item", () -> new BlockItem(RED_PHOSPHORUS_BLOCK.get(), (new Item.Properties()).tab(METH_GROUP)));
     public static final RegistryObject<BlockItem> FLASK_ITEM = ITEMS.register("flask_item", () -> new BlockItem(FLASK.get(), (new Item.Properties()).tab(METH_GROUP)));
     public static final RegistryObject<BlockItem> PAN_ITEM = ITEMS.register("pan_item", () -> new BlockItem(PAN.get(), (new Item.Properties()).tab(METH_GROUP)));
+    public static final RegistryObject<BlockItem> GOLDEN_CAP_MUSHROOM_SPORES = ITEMS.register("golden_cap_mushroom_spores", () -> new BlockItem(PLANTABLE_GOLDEN_CAP_MUSHROOM.get(), (new Item.Properties()).tab(ITEM_GROUP)));
+
 
 
 

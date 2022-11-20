@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "justenoughdrugz:block/golden_cap_mushroom_stage5"
+  }
+}

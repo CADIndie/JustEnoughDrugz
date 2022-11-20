@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "justenoughdrugz:golden_cap_mushroom_item"
+    }
+
+
+  ],
+  "result": {
+    "item": "justenoughdrugz:golden_cap_mushroom_spores"
+  }
+}
