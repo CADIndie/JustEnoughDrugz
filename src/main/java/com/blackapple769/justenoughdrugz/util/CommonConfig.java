@@ -1,5 +1,6 @@
 package com.blackapple769.justenoughdrugz.util;
 
+import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.Builder;
 import org.apache.commons.lang3.tuple.Pair;
@@ -49,6 +50,7 @@ public class CommonConfig {
 
 
 	CommonConfig(ForgeConfigSpec.Builder builder) {
+		JustEnoughDrugz.LOGGER.debug("Ore config");
 		builder.push("Common Configuration");
 
 		builder.push("Oil Ore");
@@ -103,6 +105,8 @@ public class CommonConfig {
 		LITHIUM_ORE_SIZE = builder.defineInRange("Lithium ore size", 10, 0, Integer.MAX_VALUE);
 		LITHIUM_ORE_EXPOSED_DISCARD_CHANCE = builder.defineInRange("Lithium ore exposed to air discard chance", 0.85D, 0D, 1D);
 		builder.pop();
+		builder.pop();
+
 
 	}
 

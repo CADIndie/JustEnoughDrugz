@@ -2,7 +2,9 @@ package com.blackapple769.justenoughdrugz;
 
 import com.blackapple769.justenoughdrugz.init.PostSetupHandler;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import com.blackapple769.justenoughdrugz.util.CommonConfig;
 import com.mojang.logging.LogUtils;
+import net.minecraftforge.fml.config.ModConfig.Type;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,6 +13,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.core.Holder;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,6 +29,9 @@ public class JustEnoughDrugz {
     public JustEnoughDrugz() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        // Load configuration
+        LOGGER.info("Registering configuration files");
+        ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.COMMON_SPEC);
 
         RegistryHandler.init();
 
