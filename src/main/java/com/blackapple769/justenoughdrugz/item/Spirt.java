@@ -24,20 +24,16 @@ public class Spirt extends Item {
 			player.awardStat(Stats.ITEM_USED.get(this));
 		}
 		if (livingEntity instanceof Player player) {
-			player.addEffect(new MobEffectInstance(RegistryHandler.CAFFEINE_EFFECT.get(), 100, 0, false, true));
+			player.addEffect(new MobEffectInstance(RegistryHandler.CAFFEINE_EFFECT.get(), 200, 0, false, true));
 			if (!player.isCreative())
-				if (stack.getDamageValue() == stack.getMaxDamage() - 1) {
-					stack.shrink(1);
-				} else {
-					stack.hurtAndBreak(1, (LivingEntity) player, entity -> entity.broadcastBreakEvent(player.getUsedItemHand()));
-				}
+				stack.shrink(1);
 		}
 		return stack;
 	}
 
 	@Override
 	public int getUseDuration(ItemStack pStack) {
-		return 32;
+		return 64;
 	}
 
 	@Override

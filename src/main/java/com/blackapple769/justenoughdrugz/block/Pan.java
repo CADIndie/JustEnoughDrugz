@@ -49,10 +49,8 @@ public class Pan extends HorizontalDirectionalBlock implements EntityBlock {
                           @NotNull Player player, @NotNull InteractionHand handIn,
                           @NotNull BlockHitResult blockRayTraceResult) {
         if(!worldIn.isClientSide()){
-            JustEnoughDrugz.LOGGER.debug("Client side");
             BlockEntity blockEntity = worldIn.getBlockEntity(blockPos);
             if (blockEntity instanceof PanEntity panEntity) {
-                JustEnoughDrugz.LOGGER.debug("Pan entity");
                 ItemStack itemInHand = player.getItemInHand(handIn);
                 if (itemInHand.getItem().equals(RegistryHandler.HIGH_QUALITY_BLUE_METH_SLUDGE.get()) ||
                         itemInHand.getItem().equals(RegistryHandler.MEDIUM_QUALITY_BLUE_METH_SLUDGE.get()) ||
@@ -68,13 +66,10 @@ public class Pan extends HorizontalDirectionalBlock implements EntityBlock {
                             player.getItemInHand(handIn).shrink(1);
                         }
                     }
-                    JustEnoughDrugz.LOGGER.debug("Correct item");
-
                 }else if(itemInHand.getItem().equals(Items.STICK)){
                     panEntity.breakMeth();
                 }else if(itemInHand.getItem().equals(RegistryHandler.BAGGIE.get())){
                     panEntity.getMeth(player, handIn);
-                    JustEnoughDrugz.LOGGER.debug("Get Meth");
 
                 }
             }
