@@ -44,7 +44,7 @@ public class Bong extends Item {
             boolean hasWeed = weed.getItem() == RegistryHandler.WEED.get();
             if(hasWeed){
                 level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                        getUseSound(), SoundSource.PLAYERS, 1.0F,
+                        getUseSound(), SoundSource.AMBIENT, 0.5F,
                         1.0F);
 
                 CriteriaTriggers.CONSUME_ITEM.trigger(player, stack);
@@ -55,7 +55,7 @@ public class Bong extends Item {
                 }
             }else{
                 level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                        getNoUseSound(), SoundSource.PLAYERS, 1.0F,
+                        getNoUseSound(), SoundSource.AMBIENT, 0.5F,
                         1.0F);
             }
         }

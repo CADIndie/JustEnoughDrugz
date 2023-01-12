@@ -95,7 +95,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> GOLDEN_CAP_SHROOM = ITEMS.register("golden_cap_shroom", () -> new Shroom((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> STYROFOAM_CUP = ITEMS.register("styrofoam_cup", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> LEAN = ITEMS.register("lean", () -> new Lean((new Item.Properties()).tab(ITEM_GROUP).durability(2)));
-    public static final RegistryObject<Item> SPIRT = ITEMS.register("spirt", () -> new Spirt((new Item.Properties()).tab(ITEM_GROUP).durability(2)));
+    public static final RegistryObject<Item> SPIRT = ITEMS.register("spirt", () -> new Spirt((new Item.Properties()).tab(ITEM_GROUP).stacksTo(12)));
     public static final RegistryObject<Item> CUP_OF_COFFEE = ITEMS.register("cup_of_coffee", () -> new CupOfCoffee((new Item.Properties()).tab(ITEM_GROUP).durability(5)));
     public static final RegistryObject<Item> COUGH_SYRUP = ITEMS.register("cough_syrup", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
     public static final RegistryObject<Item> DRIED_COFFEE_BEANS = ITEMS.register("dried_coffee_beans", () -> new Item((new Item.Properties()).tab(ITEM_GROUP)));
