@@ -12,12 +12,10 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
-
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
-version = '1.1.8'
+version = '1.1.9'
 group = 'com.blackapple769.justenoughdrugz' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

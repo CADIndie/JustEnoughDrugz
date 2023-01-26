@@ -28,7 +28,7 @@
   "item.justenoughdrugz.crack_pipe": "Crack Pipa",
   "item.justenoughdrugz.crack": "Crack Kokain",
   "item.justenoughdrugz.marijuana_pipe": "Kannabisz Pipa",
-  "item.justenoughdrugz.golden_marijuana_pipe": "Aranyozott Fű Pipa",
+  "item.justenoughdrugz.golden_marijuana_pipe": "Kannabisz Pipa",
   "item.justenoughdrugz.golden_crack_pipe": "Aranyozott Crack Pipa",
   "item.justenoughdrugz.golden_pipe": "Aranyozott Pipa",
   "block.justenoughdrugz.golden_cap_mushroom": "Aranyozott Varázsgomba",
@@ -41,12 +41,9 @@
   "effect.justenoughdrugz.meth_effect": "Met",
   "effect.justenoughdrugz.lean_effect": "Lean",
   "effect.justenoughdrugz.caffeine_effect": "Koffein",
-
-
   "item.justenoughdrugz.empty_syringe": "Üres Fecskendő",
   "item.justenoughdrugz.empty_pill_bottle": "Üres ",
   "item.justenoughdrugz.percs_pill_bottle": "Perkocet",
-
   "item.justenoughdrugz.clear_meth": "Egy zacskó met",
   "item.justenoughdrugz.blue_meth": "Egy zacskó met",
   "item.justenoughdrugz.orange_meth": "Egy zacskó met",

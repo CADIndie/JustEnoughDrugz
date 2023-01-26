@@ -1,6 +1,8 @@
 package com.blackapple769.justenoughdrugz.item;
 
+import com.blackapple769.justenoughdrugz.JustEnoughDrugz;
 import com.blackapple769.justenoughdrugz.init.RegistryHandler;
+import com.blackapple769.justenoughdrugz.item.data.Data;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
+import org.lwjgl.system.CallbackI;
 
 
 public class Bong extends Item {
@@ -39,30 +42,38 @@ public class Bong extends Item {
 
     public @org.jetbrains.annotations.NotNull ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
         if (livingEntity instanceof ServerPlayer player) {
-            boolean isCreative = player.isCreative();
-            ItemStack weed = findWeed(livingEntity);
-            boolean hasWeed = weed.getItem() == RegistryHandler.WEED.get();
-            if(hasWeed){
-                level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                        getUseSound(), SoundSource.AMBIENT, 0.5F,
-                        1.0F);
+            if(Data.data.bong_cool_down == 0){
+                boolean isCreative = player.isCreative();
+                ItemStack weed = findWeed(livingEntity);
+                boolean hasWeed = weed.getItem() == RegistryHandler.WEED.get();
+                if(hasWeed){
+                    level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                            getUseSound(), SoundSource.AMBIENT, 0.5F,
+                            1.0F);
 
-                CriteriaTriggers.CONSUME_ITEM.trigger(player, stack);
-                player.awardStat(Stats.ITEM_USED.get(this));
-                player.addEffect(new MobEffectInstance(RegistryHandler.WEED_EFFECT.get(), 250, 1, false, true));
-                if(!isCreative){
-                    weed.shrink(1);
+                    CriteriaTriggers.CONSUME_ITEM.trigger(player, stack);
+                    player.awardStat(Stats.ITEM_USED.get(this));
+                    player.addEffect(new MobEffectInstance(RegistryHandler.WEED_EFFECT.get(), 250, 1, false, true));
+                    if(!isCreative){
+                        weed.shrink(1);
+                    }
+                }else{
+                    level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                            getNoUseSound(), SoundSource.AMBIENT, 0.5F,
+                            1.0F);
                 }
+                Data.data.bong_cool_down = 2;
+                return stack;
             }else{
-                level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                        getNoUseSound(), SoundSource.AMBIENT, 0.5F,
-                        1.0F);
+                if(Data.data.bong_cool_down-0.75f >= 0){
+                    Data.data.bong_cool_down -= 0.75F;
+                }else{
+                    Data.data.bong_cool_down = 0;
+                }
             }
         }
         return stack;
     }
-
-
     @Override
     public int getUseDuration(ItemStack pStack) {
         return 12;

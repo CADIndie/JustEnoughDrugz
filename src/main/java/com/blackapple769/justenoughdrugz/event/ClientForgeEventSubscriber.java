@@ -24,31 +24,12 @@ public class ClientForgeEventSubscriber {
                 int screenHeight = event.getWindow().getGuiScaledHeight();
                 int screenWidth = event.getWindow().getGuiScaledWidth();
 
-
                 JEDZOverlays.HALLUCINATION_EFFECT_ELEMENT.render((ForgeIngameGui) minecraft.gui,
                             event.getMatrixStack(),
                             event.getPartialTicks(),
                             screenWidth,
                             screenHeight);
 
-
-                if (Data.data.player.hasEffect(RegistryHandler.WEED_EFFECT.get())
-                        || Data.data.player.hasEffect(RegistryHandler.METH_EFFECT.get())
-                        || Data.data.player.hasEffect(RegistryHandler.PERC_EFFECT.get())) {
-                    JEDZOverlays.GENERIC_EFFECT_ELEMENT.render((ForgeIngameGui) minecraft.gui,
-                            event.getMatrixStack(),
-                            event.getPartialTicks(),
-                            screenWidth,
-                            screenHeight);
-                }
-
-                if(HazmatArmorItem.maskEquipped){
-                    JEDZOverlays.HAZMAT_OVERLAY_ELEMENT.render((ForgeIngameGui) minecraft.gui,
-                            event.getMatrixStack(),
-                            event.getPartialTicks(),
-                            screenWidth,
-                            screenHeight);
-                }
             }
         }
     }
