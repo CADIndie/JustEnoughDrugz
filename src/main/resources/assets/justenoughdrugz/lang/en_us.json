@@ -29,7 +29,7 @@
   "item.justenoughdrugz.crack_pipe": "Crack Pipe",
   "item.justenoughdrugz.crack": "Crack Cocaine",
   "item.justenoughdrugz.marijuana_pipe": "Cannabis Pipe",
-  "item.justenoughdrugz.golden_marijuana_pipe": "Weed Pipe",
+  "item.justenoughdrugz.golden_marijuana_pipe": "Cannabis Pipe",
   "item.justenoughdrugz.golden_crack_pipe": "Crack Pipe",
   "item.justenoughdrugz.golden_pipe": "Golden Pipe",
   "block.justenoughdrugz.golden_cap_mushroom": "Golden Cap Mushroom",
@@ -165,6 +165,5 @@
   "block.justenoughdrugz.flask": "Flask",
   "block.justenoughdrugz.pan": "Pan",
   "block.justenoughdrugz.plantable_golden_cap_mushroom": "Golden Cap Mushroom Spores"
-
 
 }

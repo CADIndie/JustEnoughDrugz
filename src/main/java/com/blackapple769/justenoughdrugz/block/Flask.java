@@ -1,10 +1,13 @@
 package com.blackapple769.justenoughdrugz.block;
-import com.blackapple769.justenoughdrugz.init.RegistryHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -27,6 +30,9 @@ public class Flask extends HorizontalDirectionalBlock implements EntityBlock{
     public static final BooleanProperty HASADDITIONAL = BooleanProperty.create("hasadditional");
     public static final BooleanProperty ISSTIRRED = BooleanProperty.create("isstirred");
 
+    public static final TagKey<Item> additionalChemicalTag = ItemTags.create(new ResourceLocation("justenoughdrugz", "additional_chemical"));
+    public static final TagKey<Item> baseChemicalTag = ItemTags.create(new ResourceLocation("justenoughdrugz", "base_chemical"));
+
     public Flask(Properties p_49224_) {
         super(p_49224_);
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HASBASE, Boolean.FALSE).setValue(HASADDITIONAL, Boolean.FALSE).setValue(ISSTIRRED, Boolean.FALSE));
@@ -39,52 +45,39 @@ public class Flask extends HorizontalDirectionalBlock implements EntityBlock{
                           @NotNull Player player, @NotNull InteractionHand handIn,
                           @NotNull BlockHitResult blockRayTraceResult) {
 
-                BlockEntity blockentity = worldIn.getBlockEntity(blockPos);
-                if (blockentity instanceof FlaskEntity flaskEntity) {
-                    if(!worldIn.isClientSide()){
-                        if(player.getItemInHand(handIn).is(RegistryHandler.EPHEDRINE.get())
-                                || player.getItemInHand(handIn).is(RegistryHandler.METHYLAMINE.get())
-                                || player.getItemInHand(handIn).is(RegistryHandler.EPHEDRA_BERRIES.get())
-                                || player.getItemInHand(handIn).is(RegistryHandler.PURE_EPHEDRINE.get()))
-                        {
-                            flaskEntity.setChemicalBase(player, handIn);
-                            return InteractionResult.SUCCESS;
-                        }
-
-                        if(player.getItemInHand(handIn).is(RegistryHandler.SULFUR.get())
-                                || player.getItemInHand(handIn).is(RegistryHandler.UNREFINED_LITHIUM.get())
-                                || player.getItemInHand(handIn).is(RegistryHandler.REFINED_LITHIUM.get())
-                                || player.getItemInHand(handIn).is(RegistryHandler.RED_PHOSPHORUS.get()))
-                        {
-                            flaskEntity.setAdditionalChemical(player, handIn);
-                            return InteractionResult.SUCCESS;
-                        }
-
-
-                        if(player.getItemInHand(handIn).is(Items.STICK) && flaskEntity.canBeStirred) {
-                            flaskEntity.stir();
-                            return InteractionResult.SUCCESS;
-                        }
-
-                        if(player.getItemInHand(handIn).is(Items.BUCKET)){
-                            flaskEntity.giveSludge(player, handIn);
-                        }
-                    }
-
-                    if(player.getItemInHand(handIn).is(Items.FLINT_AND_STEEL)){
-                        flaskEntity.cook();
-                        return InteractionResult.SUCCESS;
-                    }
+        BlockEntity blockentity = worldIn.getBlockEntity(blockPos);
+        if (blockentity instanceof FlaskEntity flaskEntity) {
+            if(!worldIn.isClientSide()){
+                if(player.getItemInHand(handIn).is(baseChemicalTag))
+                {
+                    flaskEntity.setChemicalBase(player, handIn);
+                    return InteractionResult.SUCCESS;
+                }
+                if(player.getItemInHand(handIn).is(additionalChemicalTag))
+                {
+                    flaskEntity.setAdditionalChemical(player, handIn);
+                    return InteractionResult.SUCCESS;
+                }
+                if(player.getItemInHand(handIn).is(Items.STICK) && flaskEntity.canBeStirred) {
+                    flaskEntity.stir();
+                    return InteractionResult.SUCCESS;
+                }
+                if(player.getItemInHand(handIn).is(Items.BUCKET)){
+                    flaskEntity.giveSludge(player, handIn);
+                }
             }
+            if(player.getItemInHand(handIn).is(Items.FLINT_AND_STEEL)){
+                flaskEntity.cook();
+                return InteractionResult.SUCCESS;
+            }
+        }
 
         return InteractionResult.SUCCESS;
     }
-
     @Override
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, HASADDITIONAL, HASBASE, ISSTIRRED);
     }
-
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
